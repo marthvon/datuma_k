@@ -4,6 +4,8 @@ A data contract (`*.dtct`) plus templates (`*.ngin`) that generate source. Decla
 
 An API backend and a React client both need the same records: capacity 1–500, `starts_at` a datetime, title required. Without a shared contract those rules are rewritten in Pydantic, Zod, forms, and serializers, and they drift. datuma_k keeps the shape in `*.dtct`. Shared attributes (`min`, `max`, `local`, `required`) mean the same thing everywhere. ngin turns them into *different* code on purpose: Pydantic `Field(ge=, le=)` on Python, Zod `.min().max()` on TypeScript.
 
+**Guide:** [guide/README.md](guide/README.md) — getting started, contracts, templates, the scripting language, `dk` queries, and generation.
+
 ## Install
 
 Prebuilt binaries (see [`release/README.md`](release/README.md)):
