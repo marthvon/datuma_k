@@ -1,0 +1,9 @@
+fn walk(xs) {
+  for (e in xs) {
+    is_null = e == null;
+    if (is_null) { c = 0; } else if (e) { c = 1; } else { c = 2; };
+  }
+  for (i = 0; i < 3; ++i) { t = i; }
+  for (;false;) { done = true; }
+}
+out = walk([null, true, false]);

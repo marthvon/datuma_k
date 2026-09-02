@@ -1,0 +1,29 @@
+[package]
+name = "datuma_k"
+version = "1.0.0"
+edition = "2024"
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+parse-trace = []
+
+[[test]]
+name = "core_program"
+path = "tests/core_program.rs"
+required-features = ["parse-trace"]
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["macros", "rt"] }
+
+[dependencies]
+indexmap = { version = "2.14.0", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.151"
+lasso = { version = "0.7.3", features = ["multi-threaded"] }
+pastey = "0.2.3"
+tinyvec = { version = "1", features = ["alloc"] }
+dotenvy = "0.15.7"
+tokio = { version = "1.53.1", features = ["fs", "io-util", "rt", "rt-multi-thread", "macros"] }
+walkdir = "2.5.0"

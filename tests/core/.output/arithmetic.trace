@@ -1,0 +1,278 @@
+# stack changes
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'*' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'/' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'4' -> /program/instruction
+'4' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'%' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'*' -> /program/instruction/operator
+'*' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'*' -> /program/instruction/operator
+'*' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+'.' -> /program/instruction/float
+' ' -> /program/instruction/float
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+'.' -> /program/instruction/float
+';' -> /program/instruction/float
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+'.' -> /program/instruction/float
+' ' -> /program/instruction/float
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'.' -> /program/instruction
+'.' -> /program/instruction/float
+'d' -> /program/instruction/double
+'d' -> /program/instruction/double
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+'.' -> /program/instruction/float
+';' -> /program/instruction/float
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'.' -> /program/instruction
+'.' -> /program/instruction/float
+' ' -> /program/instruction/float
+'*' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'4' -> /program/instruction
+'4' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'<' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'-' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'8' -> /program/instruction
+'8' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'&' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'|' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'^' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 1, col 1, idx 2)
+    ident("sum")
+    operator(Assign)
+    integer("1")
+    operator(Add)
+    integer("2")
+    operator(Mul)
+    integer("3")
+    operator(Div)
+    integer("4")
+    operator(Mod)
+    integer("5")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 2, col 1, idx 3)
+    ident("pow")
+    operator(Assign)
+    integer("2")
+    operator(Pow)
+    integer("3")
+    operator(Pow)
+    integer("2")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 3, col 1, idx 4)
+    ident("mixf")
+    operator(Assign)
+    float("1.5")
+    operator(Add)
+    float("2.5")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 4, col 1, idx 5)
+    ident("mixd")
+    operator(Assign)
+    float("1.5")
+    operator(Add)
+    double(".5")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 5, col 1, idx 6)
+    ident("promote")
+    operator(Assign)
+    integer("1")
+    operator(Add)
+    float("1.5")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 6, col 1, idx 7)
+    ident("frac")
+    operator(Assign)
+    float(".25")
+    operator(Mul)
+    integer("4")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 7, col 1, idx 8)
+    ident("cmp")
+    operator(Assign)
+    integer("1")
+    operator(LessEqual)
+    integer("2")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 8, col 1, idx 9)
+    ident("neg")
+    operator(Assign)
+    integer("0")
+    operator(Sub)
+    integer("8")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 9, col 1, idx 10)
+    ident("bits")
+    operator(Assign)
+    integer("5")
+    operator(BitAnd)
+    integer("3")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 10, col 1, idx 11)
+    ident("bor")
+    operator(Assign)
+    integer("5")
+    operator(BitOr)
+    integer("2")
+  instruction(|arithmetic.dk; 183b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/arithmetic.dk> @ line 11, col 1, idx 12)
+    ident("bxor")
+    operator(Assign)
+    integer("5")
+    operator(Xor)
+    integer("1")

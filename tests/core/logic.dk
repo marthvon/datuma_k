@@ -1,0 +1,7 @@
+andv = true && false;
+orv = true || false;
+xorv = true ^ false;
+nullor = null || false;
+nulleq = null == null;
+numeq = 1 == 1.0;
+mix = 1 != 2;

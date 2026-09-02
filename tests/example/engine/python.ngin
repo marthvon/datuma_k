@@ -1,0 +1,49 @@
+|$ROOT_DIRECTORY/backend/generated/models.py>
+```
+from datetime import datetime
+
+from pydantic import BaseModel, Field
+
+
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  => ```
+class @{ => pascal_case(model) }@(BaseModel):
+@{
+    for (field in model.fields) {
+      min_attr = field.attribute("min");
+      max_attr = field.attribute("max");
+      suffix = "";
+      if (min_attr) {
+        if (max_attr) {
+          suffix = " = Field(ge=" + min_attr.args[0] + ", le=" + max_attr.args[0] + ")";
+        } else {
+          suffix = " = Field(ge=" + min_attr.args[0] + ")";
+        }
+      } else if (max_attr) {
+        suffix = " = Field(le=" + max_attr.args[0] + ")";
+      }
+      => ```    @{ => field }@: @{ => py_type(field.type) }@@{ => suffix }@
+```
+    }
+}@
+
+class @{ => pascal_case(model) }@Record(@{ => pascal_case(model) }@):
+    id: int
+
+```
+}
+}@
+```
+
+|$ROOT_DIRECTORY/backend/generated/__init__.py>
+```
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  => ```from .models import @{ => pascal_case(model) }@, @{ => pascal_case(model) }@Record
+```
+}
+}@
+```

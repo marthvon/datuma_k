@@ -1,0 +1,8 @@
+cat = "a" + "b";
+rep = "xy" * 3;
+len = "hello".length;
+eq = "a" == "a";
+ne = "a" != "b";
+ch = "abc"[1];
+up = "Ab".upper();
+low = "Ab".lower();

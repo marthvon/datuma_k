@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "files": {},
+  "dirs": [
+    "backend/generated",
+    "frontend/src/generated"
+  ]
+}

@@ -1,0 +1,431 @@
+|$ROOT_DIRECTORY/frontend/src/generated/types.ts>
+```
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  => ```
+export type @{ => pascal_case(model) }@ = {
+@{
+    for (field in model.fields) {
+      => ```  @{ => field }@: @{ => ts_type(field.type) }@;
+```
+    }
+}@
+};
+
+export type @{ => pascal_case(model) }@Record = { id: number } & @{ => pascal_case(model) }@;
+
+```
+}
+}@
+```
+
+|$ROOT_DIRECTORY/frontend/src/generated/schemas.ts>
+```
+import { z } from "zod";
+
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  => ```
+export const @{ => pascal_case(model) }@Schema = z.object({
+@{
+    for (field in model.fields) {
+      min_attr = field.attribute("min");
+      max_attr = field.attribute("max");
+      zbase = zod_base(field.type);
+      => ```  @{ => field }@: @{ => zbase }@```
+      is_zstr = zbase == "z.string()";
+      if (field.attribute("required")) {
+        if (is_zstr) {
+          => ```.min(1)```
+        }
+      }
+      if (min_attr) {
+        => ```.min(@{ => min_attr.args[0] }@)```
+      }
+      if (max_attr) {
+        => ```.max(@{ => max_attr.args[0] }@)```
+      }
+      => ```,
+```
+    }
+}@
+});
+
+```
+}
+}@
+```
+
+|$ROOT_DIRECTORY/frontend/src/generated/transforms.ts>
+```
+@{
+first = true;
+names = "";
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  cls = pascal_case(model);
+  if (first) {
+    first = false;
+  } else {
+    names = names + ", ";
+  }
+  names = names + cls + ", " + cls + "Record";
+}
+=> ```import type { @{ => names }@ } from "./types";
+```
+}@
+
+function pad(n: number): string {
+  if (n < 10) {
+    return "0" + n;
+  } else {
+    return "" + n;
+  }
+}
+
+export function toLocalDate(iso: string): Date {
+  return new Date(iso);
+}
+
+export function toDatetimeLocalInput(value: Date): string {
+  return value.getFullYear() + "-" + pad(value.getMonth() + 1) + "-" + pad(value.getDate()) + "T" + pad(value.getHours()) + ":" + pad(value.getMinutes());
+}
+
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  => ```
+export function parse@{ => pascal_case(model) }@(raw: any): @{ => pascal_case(model) }@Record {
+  return {
+    id: raw.id,
+@{
+    for (field in model.fields) {
+      local = is_local(field);
+      if (local) {
+        => ```    @{ => field }@: toLocalDate(raw.@{ => field }@),
+```
+      } else {
+        => ```    @{ => field }@: raw.@{ => field }@,
+```
+      }
+    }
+}@
+  };
+}
+
+export function serialize@{ => pascal_case(model) }@(row: @{ => pascal_case(model) }@): Record<string, unknown> {
+  return {
+@{
+    for (field in model.fields) {
+      dt = is_datetime(field.type);
+      if (dt) {
+        => ```    @{ => field }@: row.@{ => field }@ instanceof Date ? row.@{ => field }@.toISOString() : toLocalDate("" + row.@{ => field }@).toISOString(),
+```
+      } else {
+        => ```    @{ => field }@: row.@{ => field }@,
+```
+      }
+    }
+}@
+  };
+}
+
+```
+}
+}@
+```
+
+@{
+resources = dk.trait("Resource");
+for (model in resources.models) {
+  cls = pascal_case(model);
+  path = route_of(model);
+  record_ty = cls + "Record";
+  list_fn = cls + "List";
+  detail_fn = cls + "Detail";
+  form_fn = cls + "Form";
+  schema_ty = cls + "Schema";
+  heading = cls + "s";
+  need_dt = false;
+  for (field in model.fields) {
+    dt = is_datetime(field.type);
+    if (dt) {
+      need_dt = true;
+    }
+  }
+
+  |$ROOT_DIRECTORY/frontend/src/generated/@{ => cls }@List.tsx>
+  ```
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { api } from "../api";
+import type { @{ => record_ty }@ } from "./types";
+
+export function @{ => list_fn }@() {
+  const [rows, setRows] = useState([] as @{ => record_ty }@[]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    api.@{ => cls }@.list().then(setRows).catch(function (err) {
+      setError(String(err));
+    });
+  }, []);
+
+  if (error.length > 0) {
+    return <p className="error">{error}</p>;
+  } else {
+    return (
+      <section>
+        <h1>@{ => heading }@</h1>
+        <p><Link to="@{ => path }@/new">Create</Link></p>
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+@{
+    for (field in model.fields) {
+      => ```              <th>@{ => field }@</th>
+```
+    }
+}@
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(function (row) {
+              return (
+                <tr key={row.id}>
+                  <td>{row.id}</td>
+@{
+    for (field in model.fields) {
+      dt = is_datetime(field.type);
+      if (dt) {
+        => ```                  <td>{row.@{ => field }@.toLocaleString()}</td>
+```
+      } else {
+        => ```                  <td>{row.@{ => field }@}</td>
+```
+      }
+    }
+}@
+                  <td>
+                    <Link to={"@{ => path }@/" + row.id}>View</Link>
+                    {" "}
+                    <Link to={"@{ => path }@/" + row.id + "/edit"}>Edit</Link>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </section>
+    );
+  }
+}
+```
+
+  |$ROOT_DIRECTORY/frontend/src/generated/@{ => cls }@Detail.tsx>
+  ```
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { api } from "../api";
+import type { @{ => record_ty }@ } from "./types";
+
+export function @{ => detail_fn }@() {
+  const params = useParams();
+  const navigate = useNavigate();
+  const [row, setRow] = useState(null as @{ => record_ty }@ | null);
+  const [error, setError] = useState("");
+  const id = Number(params.id);
+
+  useEffect(() => {
+    api.@{ => cls }@.get(id).then(setRow).catch(function (err) {
+      setError(String(err));
+    });
+  }, [id]);
+
+  if (error.length > 0) {
+    return <p className="error">{error}</p>;
+  } else if (row === null) {
+    return <p>Loading...</p>;
+  } else {
+    return (
+      <section>
+        <p><Link to="@{ => path }@">Back to list</Link></p>
+        <h1>@{ => cls }@ {row.id}</h1>
+        <dl>
+@{
+    for (field in model.fields) {
+      dt = is_datetime(field.type);
+      if (dt) {
+        => ```          <dt>@{ => field }@</dt>
+          <dd>{row.@{ => field }@.toLocaleString()}</dd>
+```
+      } else {
+        => ```          <dt>@{ => field }@</dt>
+          <dd>{row.@{ => field }@}</dd>
+```
+      }
+    }
+}@
+        </dl>
+        <p>
+          <Link to={"@{ => path }@/" + row.id + "/edit"}>Edit</Link>
+          {" "}
+          <button type="button" onClick={function () {
+            api.@{ => cls }@.remove(row.id).then(function () {
+              navigate("@{ => path }@");
+            }).catch(function (err) {
+              setError(String(err));
+            });
+          }}>Delete</button>
+        </p>
+      </section>
+    );
+  }
+}
+```
+
+  |$ROOT_DIRECTORY/frontend/src/generated/@{ => cls }@Form.tsx>
+  ```
+import { useEffect, useState, type FormEvent } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { api } from "../api";
+import { @{ => schema_ty }@ } from "./schemas";
+@{
+    if (need_dt) {
+      => ```import { toDatetimeLocalInput, toLocalDate } from "./transforms";
+```
+    }
+}@
+import type { @{ => cls }@ } from "./types";
+
+type FormState = {
+@{
+    for (field in model.fields) {
+      => ```  @{ => field }@: string;
+```
+    }
+}@
+};
+
+const empty: FormState = {
+@{
+    for (field in model.fields) {
+      => ```  @{ => field }@: "",
+```
+    }
+}@
+};
+
+export function @{ => form_fn }@() {
+  const params = useParams();
+  const navigate = useNavigate();
+  const editing = params.id !== undefined;
+  const [form, setForm] = useState(empty);
+  const [error, setError] = useState("");
+  const id = Number(params.id);
+
+  useEffect(() => {
+    if (editing) {
+      api.@{ => cls }@.get(id).then(function (row) {
+        setForm({
+@{
+    for (field in model.fields) {
+      dt = is_datetime(field.type);
+      if (dt) {
+        => ```          @{ => field }@: toDatetimeLocalInput(row.@{ => field }@),
+```
+      } else {
+        => ```          @{ => field }@: String(row.@{ => field }@),
+```
+      }
+    }
+}@
+        });
+      }).catch(function (err) {
+        setError(String(err));
+      });
+    }
+  }, [editing, id]);
+
+  function setField(name: keyof FormState, value: string) {
+    setForm(function (prev) {
+      return { ...prev, [name]: value };
+    });
+  }
+
+  function onSubmit(ev: FormEvent) {
+    ev.preventDefault();
+    const checked = @{ => schema_ty }@.safeParse({
+@{
+    for (field in model.fields) {
+      is_num = ts_type(field.type) == "number";
+      if (is_num) {
+        => ```      @{ => field }@: Number(form.@{ => field }@),
+```
+      } else {
+        => ```      @{ => field }@: form.@{ => field }@,
+```
+      }
+    }
+}@
+    });
+    if (!checked.success) {
+      setError(checked.error.issues.map(function (issue) { return issue.message; }).join("; "));
+    } else {
+      const payload: @{ => cls }@ = {
+@{
+    for (field in model.fields) {
+      dt = is_datetime(field.type);
+      is_num = ts_type(field.type) == "number";
+      if (dt) {
+        => ```        @{ => field }@: toLocalDate(form.@{ => field }@),
+```
+      } else {
+        if (is_num) {
+          => ```        @{ => field }@: Number(form.@{ => field }@),
+```
+        } else {
+          => ```        @{ => field }@: form.@{ => field }@,
+```
+        }
+      }
+    }
+}@
+      };
+      const saved = editing ? api.@{ => cls }@.update(id, payload) : api.@{ => cls }@.create(payload);
+      saved.then(function (row) {
+        navigate("@{ => path }@/" + row.id);
+      }).catch(function (err) {
+        setError(String(err));
+      });
+    }
+  }
+
+  return (
+    <section>
+      <p><Link to="@{ => path }@">Back to list</Link></p>
+      <h1>{editing ? "Update" : "Create"} @{ => cls }@</h1>
+      {error.length > 0 ? <p className="error">{error}</p> : null}
+      <form onSubmit={onSubmit}>
+@{
+    for (field in model.fields) {
+      itype = input_type(field.type);
+      => ```        <label>
+          @{ => field }@
+          <input type="@{ => itype }@" value={form.@{ => field }@} onChange={function (ev) { setField("@{ => field }@", ev.target.value); }} />
+        </label>
+```
+    }
+}@
+        <button type="submit">Save</button>
+      </form>
+    </section>
+  );
+}
+```
+}
+}@

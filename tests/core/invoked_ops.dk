@@ -1,0 +1,17 @@
+fn f() { return 0; }
+fn t() { return true; }
+a = f() - 1;
+b = f() * 2;
+c = f() / 2;
+d = f() % 2;
+e = f() ** 2;
+g = f() ^ 1;
+h = f() & 1;
+i = f() | 1;
+j = t() && true;
+k = t() || false;
+m = f() != 1;
+n = f() < 1;
+o = f() <= 1;
+p = f() > 1;
+q = f() >= 1;

@@ -1,0 +1,168 @@
+# stack changes
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/boolean
+' ' -> /program/instruction/boolean
+'&' -> /program/instruction/operator
+'&' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'o' -> /program
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/boolean
+' ' -> /program/instruction/boolean
+'|' -> /program/instruction/operator
+'|' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/boolean
+' ' -> /program/instruction/boolean
+'^' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/null
+' ' -> /program/instruction/null
+'|' -> /program/instruction/operator
+'|' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/null
+' ' -> /program/instruction/null
+'=' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+';' -> /program/instruction/null
+';' -> /program/instruction/null
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'=' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+'.' -> /program/instruction/float
+';' -> /program/instruction/float
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'!' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 1, col 1, idx 2)
+    ident("andv")
+    operator(Assign)
+    boolean(true)
+    operator(And)
+    boolean(false)
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 2, col 1, idx 3)
+    ident("orv")
+    operator(Assign)
+    boolean(true)
+    operator(Or)
+    boolean(false)
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 3, col 1, idx 4)
+    ident("xorv")
+    operator(Assign)
+    boolean(true)
+    operator(Xor)
+    boolean(false)
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 4, col 1, idx 5)
+    ident("nullor")
+    operator(Assign)
+    null
+    operator(Or)
+    boolean(false)
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 5, col 1, idx 6)
+    ident("nulleq")
+    operator(Assign)
+    null
+    operator(Equal)
+    null
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 6, col 1, idx 7)
+    ident("numeq")
+    operator(Assign)
+    integer("1")
+    operator(Equal)
+    float("1.0")
+  instruction(|logic.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/logic.dk> @ line 7, col 1, idx 8)
+    ident("mix")
+    operator(Assign)
+    integer("1")
+    operator(NotEqual)
+    integer("2")

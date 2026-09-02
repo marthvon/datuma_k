@@ -1,0 +1,26 @@
+fn foo() { return ["k"]; }
+xs = [[1, 2], [3, 4]];
+deep = xs[0][1];
+xs[0][1] = 9;
+after = xs[0][1];
+d = {a: 1};
+d["b"] = 2;
+db = d["b"];
+d.c = 3;
+dc = d.c;
+plus = 0;
+plus += 5;
+xs[1][0] += 10;
+inc = xs[1][0];
+i = 0;
+k = 0;
+obj = {"k": 7};
+arr = [2];
+pa = xs[0];
+pb = "hi"[i];
+pc = foo()[k];
+pd = obj["k"];
+pe = xs[0][1];
+pm = arr + [1];
+pn = xs[i + 1];
+pp = (xs)[0];

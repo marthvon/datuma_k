@@ -1,0 +1,131 @@
+{"op":"assign","target":"flag","value":"true","fn":null,"stack":[],"frame":["flag"],"scope":{"flag":"true"}}
+
+{"op":"assign","target":"out","value":"0","fn":null,"stack":[],"frame":["flag","out"],"scope":{"flag":"true","out":"0"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":null,"stack":[],"frame":["flag","out"],"scope":{"flag":"true","out":"0"}}
+
+{"op":"assign","target":"out","value":"1","fn":null,"stack":[],"frame":["flag","out"],"scope":{"flag":"true","out":"1"}}
+
+{"op":"assign","target":"tier","value":"0","fn":null,"stack":[],"frame":["flag","out","tier"],"scope":{"flag":"true","out":"1","tier":"0"}}
+
+{"op":"assign","target":"c1","value":"false","fn":null,"stack":[],"frame":["flag","out","tier","c1"],"scope":{"c1":"false","flag":"true","out":"1","tier":"0"}}
+
+{"op":"assign","target":"c2","value":"true","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tier":"0"}}
+
+{"op":"branch","condition":false,"taken":"elseif","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tier":"0"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tier":"0"}}
+
+{"op":"assign","target":"tier","value":"2","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tier":"2"}}
+
+{"op":"assign","target":"tern","value":"10","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tern":"10","tier":"2"}}
+
+{"op":"assign","target":"tern2","value":"20","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tern":"10","tern2":"20","tier":"2"}}
+
+{"op":"assign","target":"total","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total"],"scope":{"c1":"false","c2":"true","flag":"true","out":"1","tern":"10","tern2":"20","tier":"2","total":"0"}}
+
+{"op":"assign","target":"i","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"0"}}
+
+{"op":"iterate","index":0,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"0"}}
+
+{"op":"assign","target":"total","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"0"}}
+
+{"op":"iterate","index":1,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"1","out":"1","tern":"10","tern2":"20","tier":"2","total":"0"}}
+
+{"op":"assign","target":"total","value":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"1","out":"1","tern":"10","tern2":"20","tier":"2","total":"1"}}
+
+{"op":"iterate","index":2,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"2","out":"1","tern":"10","tern2":"20","tier":"2","total":"1"}}
+
+{"op":"assign","target":"total","value":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"2","out":"1","tern":"10","tern2":"20","tier":"2","total":"3"}}
+
+{"op":"iterate","index":3,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"3","out":"1","tern":"10","tern2":"20","tier":"2","total":"3"}}
+
+{"op":"assign","target":"total","value":"6","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"3","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":4,"condition":false,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i"],"scope":{"c1":"false","c2":"true","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"count","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count"],"scope":{"c1":"false","c2":"true","count":"0","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":0,"variable":"e","element":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"0","e":"1","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"count","value":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"1","e":"1","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":1,"variable":"e","element":"2","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"1","e":"2","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"count","value":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"3","e":"2","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":2,"variable":"e","element":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"3","e":"3","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"count","value":"6","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e"],"scope":{"c1":"false","c2":"true","count":"6","e":"3","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"cond_only","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only"],"scope":{"c1":"false","c2":"true","cond_only":"0","count":"6","e":"3","flag":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"guard","value":"true","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard"],"scope":{"c1":"false","c2":"true","cond_only":"0","count":"6","e":"3","flag":"true","guard":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":0,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard"],"scope":{"c1":"false","c2":"true","cond_only":"0","count":"6","e":"3","flag":"true","guard":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"cond_only","value":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"true","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"guard","value":"false","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":1,"condition":false,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"init_only","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"init_only","value":"7","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":0,"condition":true,"fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"break","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"keys","value":"\"\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","keys":"\"\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":0,"variable":"k","element":"\"a\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"a\"","keys":"\"\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"keys","value":"\"a\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"a\"","keys":"\"a\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":1,"variable":"k","element":"\"b\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"a\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"keys","value":"\"ab\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k"],"scope":{"c1":"false","c2":"true","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"chars","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars"],"scope":{"c1":"false","c2":"true","chars":"0","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":0,"variable":"ch","element":"\"a\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"a\"","chars":"0","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"chars","value":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"a\"","chars":"1","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":1,"variable":"ch","element":"\"b\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"b\"","chars":"1","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"chars","value":"2","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"b\"","chars":"2","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"iterate","index":2,"variable":"ch","element":"\"c\"","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"2","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"chars","value":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6"}}
+
+{"op":"assign","target":"xs","value":"{items: [1, 2, 3]}","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"member_sum","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"iterate","index":0,"variable":"e","element":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"1","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"0","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"member_sum","value":"1","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"1","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"1","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"iterate","index":1,"variable":"e","element":"2","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"2","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"1","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"member_sum","value":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"2","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"3","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"iterate","index":2,"variable":"e","element":"3","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"3","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"member_sum","value":"6","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"nested","value":"{inner: {items: [4, 5]}}","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"chain_sum","value":"0","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested","chain_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chain_sum":"0","chars":"3","cond_only":"1","count":"6","e":"3","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"iterate","index":0,"variable":"e","element":"4","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested","chain_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chain_sum":"0","chars":"3","cond_only":"1","count":"6","e":"4","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"chain_sum","value":"4","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested","chain_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chain_sum":"4","chars":"3","cond_only":"1","count":"6","e":"4","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"iterate","index":1,"variable":"e","element":"5","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested","chain_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chain_sum":"4","chars":"3","cond_only":"1","count":"6","e":"5","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}
+
+{"op":"assign","target":"chain_sum","value":"9","fn":null,"stack":[],"frame":["flag","out","tier","c1","c2","tern","tern2","total","i","count","e","cond_only","guard","init_only","keys","k","chars","ch","xs","member_sum","nested","chain_sum"],"scope":{"c1":"false","c2":"true","ch":"\"c\"","chain_sum":"9","chars":"3","cond_only":"1","count":"6","e":"5","flag":"true","guard":"false","i":"4","init_only":"7","k":"\"b\"","keys":"\"ab\"","member_sum":"6","nested":"{inner: {items: [4, 5]}}","out":"1","tern":"10","tern2":"20","tier":"2","total":"6","xs":"{items: [1, 2, 3]}"}}

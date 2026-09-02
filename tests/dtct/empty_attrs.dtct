@@ -1,0 +1,5 @@
+BareRecord {
+  id: uuid_type<>,
+  payload: blob_type<>,
+  note: text_type<indexed>
+}

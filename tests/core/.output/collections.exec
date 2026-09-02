@@ -1,0 +1,23 @@
+{"op":"assign","target":"lit","value":"[1]","fn":null,"stack":[],"frame":["lit"],"scope":{"lit":"[1]"}}
+
+{"op":"assign","target":"chain","value":"[1, 2]","fn":null,"stack":[],"frame":["lit","chain"],"scope":{"chain":"[1, 2]","lit":"[1]"}}
+
+{"op":"assign","target":"a","value":"[1, 2]","fn":null,"stack":[],"frame":["lit","chain","a"],"scope":{"a":"[1, 2]","chain":"[1, 2]","lit":"[1]"}}
+
+{"op":"assign","target":"b","value":"[2, 3]","fn":null,"stack":[],"frame":["lit","chain","a","b"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","lit":"[1]"}}
+
+{"op":"assign","target":"merge","value":"[1, 2, 2, 3]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","lit":"[1]","merge":"[1, 2, 2, 3]"}}
+
+{"op":"assign","target":"sub","value":"[1]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","lit":"[1]","merge":"[1, 2, 2, 3]","sub":"[1]"}}
+
+{"op":"assign","target":"sym","value":"[1, 3]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","lit":"[1]","merge":"[1, 2, 2, 3]","sub":"[1]","sym":"[1, 3]"}}
+
+{"op":"assign","target":"inter","value":"[2]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym","inter"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","inter":"[2]","lit":"[1]","merge":"[1, 2, 2, 3]","sub":"[1]","sym":"[1, 3]"}}
+
+{"op":"assign","target":"ldiff","value":"[1]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym","inter","ldiff"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","inter":"[2]","ldiff":"[1]","lit":"[1]","merge":"[1, 2, 2, 3]","sub":"[1]","sym":"[1, 3]"}}
+
+{"op":"assign","target":"rdiff","value":"[3]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym","inter","ldiff","rdiff"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","inter":"[2]","ldiff":"[1]","lit":"[1]","merge":"[1, 2, 2, 3]","rdiff":"[3]","sub":"[1]","sym":"[1, 3]"}}
+
+{"op":"assign","target":"nested","value":"[[1, 2], [3]]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym","inter","ldiff","rdiff","nested"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","inter":"[2]","ldiff":"[1]","lit":"[1]","merge":"[1, 2, 2, 3]","nested":"[[1, 2], [3]]","rdiff":"[3]","sub":"[1]","sym":"[1, 3]"}}
+
+{"op":"assign","target":"grouped","value":"[3, 3]","fn":null,"stack":[],"frame":["lit","chain","a","b","merge","sub","sym","inter","ldiff","rdiff","nested","grouped"],"scope":{"a":"[1, 2]","b":"[2, 3]","chain":"[1, 2]","grouped":"[3, 3]","inter":"[2]","ldiff":"[1]","lit":"[1]","merge":"[1, 2, 2, 3]","nested":"[[1, 2], [3]]","rdiff":"[3]","sub":"[1]","sym":"[1, 3]"}}

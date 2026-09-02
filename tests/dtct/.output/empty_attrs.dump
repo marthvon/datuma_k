@@ -1,0 +1,17 @@
+# facts 3
+[0] trait=- model=BareRecord field=id type=uuid_type attribute=- args=[]
+[1] trait=- model=BareRecord field=payload type=blob_type attribute=- args=[]
+[2] trait=- model=BareRecord field=note type=text_type attribute=indexed args=[]
+# index by_trait
+# index by_model
+BareRecord -> {0,1,2}
+# index by_field
+id -> {0}
+note -> {2}
+payload -> {1}
+# index by_type
+blob_type -> {1}
+text_type -> {2}
+uuid_type -> {0}
+# index by_attribute
+indexed -> {2}

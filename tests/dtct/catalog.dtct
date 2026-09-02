@@ -1,0 +1,17 @@
+SessionToken [OauthSession, CookieSession] {
+  token_id: uuid_type<required>,
+  issued_at: timestamp_type<indexed>,
+  expires_at: timestamp_type<ttl(3600)>
+}
+
+InventoryItem [Archivable, Reservable] {
+  sku: product_code<required, pattern("INV-[0-9]+")>,
+  quantity: count_type<min(0), max(9999)>,
+  warehouse: text_type<max_length(64)>
+}
+
+BillingAddress {
+  line1: text_type<required, max_length(120)>,
+  city: text_type<max_length(80)>,
+  postal_code: text_type<pattern("[0-9A-Z]+")>
+}

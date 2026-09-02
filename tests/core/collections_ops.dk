@@ -1,0 +1,12 @@
+a = [1, "x", true, null, {k: 2}];
+d = {a: 1, "b": [2, 3]};
+empty_a = [];
+empty_d = {};
+m = [] + [1];
+md = {} + {a: 1};
+sub = [] - [1];
+dsub = {} - [];
+sym = [] ^ [];
+inter = [] & [];
+ldiff = [] &^ [];
+rdiff = {} ^& {};

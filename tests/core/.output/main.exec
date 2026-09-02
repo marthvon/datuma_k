@@ -1,0 +1,13 @@
+{"op":"assign","target":"neg","value":"true","fn":"abs","stack":["main","abs"],"frame":["n","neg"],"scope":{"n":"-3","neg":"true"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":"abs","stack":["main","abs"],"frame":["n","neg"],"scope":{"n":"-3","neg":"true"}}
+
+{"op":"assign","target":"a","value":"null","fn":"main","stack":["main"],"frame":["a"],"scope":{"a":"null"}}
+
+{"op":"assign","target":"neg","value":"false","fn":"abs","stack":["main","abs"],"frame":["n","neg"],"scope":{"a":"null","n":"2","neg":"false"}}
+
+{"op":"branch","condition":false,"taken":"else","fn":"abs","stack":["main","abs"],"frame":["n","neg"],"scope":{"a":"null","n":"2","neg":"false"}}
+
+{"op":"assign","target":"b","value":"null","fn":"main","stack":["main"],"frame":["a","b"],"scope":{"a":"null","b":"null"}}
+
+{"op":"assign","target":"ret","value":"null","fn":null,"stack":[],"frame":["ret"],"scope":{"ret":"null"}}

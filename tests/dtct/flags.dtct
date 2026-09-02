@@ -1,0 +1,11 @@
+FeatureFlag [Toggleable] {
+  name: text_type<required, indexed>,
+  enabled: bool_type<default(true)>,
+  rollout: percent_type<min(0), max(100)>
+}
+
+RateLimit [Throttled] {
+  window: duration_type<seconds(60)>,
+  max_hits: count_type<required>,
+  burst: count_type<optional, default(10)>
+}

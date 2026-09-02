@@ -1,0 +1,11 @@
+xs = [1, 2, 3];
+n = xs.length;
+pushed = xs.insert(4);
+xs.insert(0, 9);
+popped = xs.remove();
+removed = xs.remove(0);
+d = {a: 1};
+prev = d.insert("b", 2);
+gone = d.remove("a");
+pairs = d.asArray();
+dn = d.length;

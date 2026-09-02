@@ -1,0 +1,265 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'x' -> /program/instruction/function-def/args
+'x' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'i' -> /program/instruction/function-def/program/instruction
+'i' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/if
+'(' -> /program/instruction/function-def/program/instruction/if/grouped
+'x' -> /program/instruction/function-def/program/instruction/if/grouped/ident
+')' -> /program/instruction/function-def/program/instruction/if/grouped/ident
+')' -> /program/instruction/function-def/program/instruction/if/grouped
+')' -> /program/instruction/function-def/program/instruction/if/grouped
+'{' -> /program/instruction/function-def/program/instruction/if
+'{' -> /program/instruction/function-def/program/instruction/if/program
+'r' -> /program/instruction/function-def/program/instruction/if/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/if/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/if/program/instruction/return
+'1' -> /program/instruction/function-def/program/instruction/if/program/instruction/return/integer
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/return/integer
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction/if/program/instruction
+'}' -> /program/instruction/function-def/program/instruction/if/program
+'}' -> /program/instruction/function-def/program/instruction/if/program
+';' -> /program/instruction/function-def/program/instruction/if
+';' -> /program/instruction/function-def/program/instruction/if
+';' -> /program/instruction/function-def/program/instruction/if
+'\n' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'0' -> /program/instruction/function-def/program/instruction/return/integer
+';' -> /program/instruction/function-def/program/instruction/return/integer
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'y' -> /program
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/if
+'(' -> /program/instruction/if/grouped
+'c' -> /program/instruction/if/grouped/ident
+')' -> /program/instruction/if/grouped/ident
+')' -> /program/instruction/if/grouped
+')' -> /program/instruction/if/grouped
+'{' -> /program/instruction/if
+'{' -> /program/instruction/if/program
+'y' -> /program/instruction/if/program/instruction
+'y' -> /program/instruction/if/program/instruction/ident
+' ' -> /program/instruction/if/program/instruction/yield
+'1' -> /program/instruction/if/program/instruction/yield/integer
+';' -> /program/instruction/if/program/instruction/yield/integer
+';' -> /program/instruction/if/program/instruction/yield
+';' -> /program/instruction/if/program/instruction/yield
+';' -> /program/instruction/if/program/instruction/yield
+'}' -> /program/instruction/if/program/instruction
+'}' -> /program/instruction/if/program
+'}' -> /program/instruction/if/program
+' ' -> /program/instruction/if
+'e' -> /program/instruction/if/ident
+' ' -> /program/instruction/if/else
+'{' -> /program/instruction/if/else/program
+'y' -> /program/instruction/if/else/program/instruction
+'y' -> /program/instruction/if/else/program/instruction/ident
+' ' -> /program/instruction/if/else/program/instruction/yield
+'2' -> /program/instruction/if/else/program/instruction/yield/integer
+';' -> /program/instruction/if/else/program/instruction/yield/integer
+';' -> /program/instruction/if/else/program/instruction/yield
+';' -> /program/instruction/if/else/program/instruction/yield
+';' -> /program/instruction/if/else/program/instruction/yield
+'}' -> /program/instruction/if/else/program/instruction
+'}' -> /program/instruction/if/else/program
+'}' -> /program/instruction/if/else/program
+'}' -> /program/instruction/if/else/program
+'}' -> /program/instruction/if/else/program
+';' -> /program/instruction/if/else
+';' -> /program/instruction/if
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/for
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+'=' -> /program/instruction/for/instruction
+'=' -> /program/instruction/for
+'=' -> /program/instruction/for/instruction
+'=' -> /program/instruction/for/instruction/operator
+' ' -> /program/instruction/for/instruction/operator
+'0' -> /program/instruction/for/instruction
+'0' -> /program/instruction/for/instruction/integer
+';' -> /program/instruction/for/instruction/integer
+';' -> /program/instruction/for/instruction
+';' -> /program/instruction/for/instruction
+';' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+'<' -> /program/instruction/for/instruction/operator
+' ' -> /program/instruction/for/instruction/operator
+'3' -> /program/instruction/for/instruction
+'3' -> /program/instruction/for/instruction/integer
+';' -> /program/instruction/for/instruction/integer
+';' -> /program/instruction/for/instruction
+';' -> /program/instruction/for/instruction
+';' -> /program/instruction/for/instruction
+'+' -> /program/instruction/for
+'+' -> /program/instruction/for/instruction
+'+' -> /program/instruction/for/instruction/operator
+'+' -> /program/instruction/for/instruction/operator
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for/instruction/ident
+')' -> /program/instruction/for/instruction/ident
+')' -> /program/instruction/for/instruction
+')' -> /program/instruction/for/instruction
+')' -> /program/instruction/for/instruction
+')' -> /program/instruction/for
+'{' -> /program/instruction/for/program
+'i' -> /program/instruction/for/program/instruction
+'i' -> /program/instruction/for/program/instruction/ident
+' ' -> /program/instruction/for/program/instruction/if
+'(' -> /program/instruction/for/program/instruction/if/grouped
+'i' -> /program/instruction/for/program/instruction/if/grouped/ident
+')' -> /program/instruction/for/program/instruction/if/grouped/ident
+')' -> /program/instruction/for/program/instruction/if/grouped
+')' -> /program/instruction/for/program/instruction/if/grouped
+'{' -> /program/instruction/for/program/instruction/if
+'{' -> /program/instruction/for/program/instruction/if/program
+'b' -> /program/instruction/for/program/instruction/if/program/instruction
+'b' -> /program/instruction/for/program/instruction/if/program/instruction/ident
+';' -> /program/instruction/for/program/instruction/if/program/instruction/break
+';' -> /program/instruction/for/program/instruction/if/program/instruction/break
+';' -> /program/instruction/for/program/instruction/if/program/instruction/break
+'}' -> /program/instruction/for/program/instruction/if/program/instruction
+'}' -> /program/instruction/for/program/instruction/if/program
+'}' -> /program/instruction/for/program/instruction/if/program
+';' -> /program/instruction/for/program/instruction/if
+';' -> /program/instruction/for/program/instruction/if
+';' -> /program/instruction/for/program/instruction/if
+'\n' -> /program/instruction/for/program/instruction
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'\n' -> /program/instruction/for
+'\n' -> /program/instruction
+'z' -> /program
+'z' -> /program/instruction
+'z' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'w' -> /program/instruction
+'w' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'t' -> /program/instruction/call/args
+'t' -> /program/instruction/call/args/ident
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/return
+'z' -> /program/instruction/return/ident
+';' -> /program/instruction/return/ident
+';' -> /program/instruction/return
+';' -> /program/instruction/return
+';' -> /program/instruction/return
+
+# tree
+program
+  function_def("walk")
+    (anon)
+      ident("x")
+    program
+      if
+        grouped
+          ident("x")
+        program
+          return
+            integer("1")
+      return
+        integer("0")
+  instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 5, col 1, idx 6)
+    ident("c")
+    operator(Assign)
+    boolean(true)
+  instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 6, col 1, idx 7)
+    ident("y")
+    operator(Assign)
+    if
+      grouped
+        ident("c")
+      integer("1")
+      integer("2")
+  for
+    (anon)
+      instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 7, col 8, idx 15)
+        ident("i")
+        operator(Assign)
+        integer("0")
+      instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 7, col 13, idx 20)
+        ident("i")
+        operator(Lt)
+        integer("3")
+      instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 7, col 20, idx 27)
+        operator(Increment)
+        ident("i")
+    program
+      if
+        grouped
+          ident("i")
+        program
+          break
+  instruction(|jumps.dk; 179b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/jumps.dk> @ line 10, col 1, idx 11)
+    ident("z")
+    operator(Assign)
+    invoked_function("walk")
+      boolean(true)
+  return
+    ident("z")

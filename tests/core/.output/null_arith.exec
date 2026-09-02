@@ -1,0 +1,3 @@
+{"op":"assign","target":"nothing","value":"null","fn":null,"stack":[],"frame":["nothing"],"scope":{"nothing":"null"}}
+
+{"op":"failed","error":"[Null Reference] |null_arith.dk; 35b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/null_arith.dk> (line 2, col 1, idx 3) null reference during operator","fn":null,"stack":[],"frame":["nothing"],"scope":{"nothing":"null"}}

@@ -1,0 +1,5 @@
+{"op":"assign","target":"left","value":"\"a\"","fn":null,"stack":[],"frame":["left"],"scope":{"left":"\"a\""}}
+
+{"op":"assign","target":"right","value":"\"b\"","fn":null,"stack":[],"frame":["left","right"],"scope":{"left":"\"a\"","right":"\"b\""}}
+
+{"op":"failed","error":"[Invalid Operation] |string_sub.dk; 45b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_sub.dk> (line 3, col 1, idx 4) invalid operation Sub between string and string","fn":null,"stack":[],"frame":["left","right"],"scope":{"left":"\"a\"","right":"\"b\""}}

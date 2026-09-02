@@ -1,0 +1,189 @@
+{
+  "scopeName": "source.ngin",
+  "name": "ngin",
+  "patterns": [
+    { "include": "#path" },
+    { "include": "#fence" },
+    { "include": "#interp" },
+    { "include": "#code" }
+  ],
+  "repository": {
+    "ngin": {
+      "patterns": [
+        { "include": "#path" },
+        { "include": "#guard" },
+        { "include": "#emit" },
+        { "include": "#plus" },
+        { "include": "#fence" },
+        { "include": "#interp" },
+        { "include": "#block" },
+        { "include": "#code" }
+      ]
+    },
+    "path": {
+      "name": "meta.file-rule.ngin",
+      "begin": "\\|",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.tag.begin.ngin" }
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.tag.end.ngin" }
+      },
+      "patterns": [
+        { "include": "#interp" },
+        { "include": "#string" },
+        {
+          "match": "\\$\\{[A-Za-z_][A-Za-z0-9_]*\\}",
+          "name": "variable.language.ngin"
+        },
+        {
+          "match": "\\$[A-Za-z_][A-Za-z0-9_]*",
+          "name": "variable.language.ngin"
+        },
+        {
+          "match": "[^|>$@]+",
+          "name": "string.unquoted.path.ngin"
+        }
+      ]
+    },
+    "fence": {
+      "name": "meta.template.ngin",
+      "begin": "```",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.tag.begin.ngin" }
+      },
+      "end": "```",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.generic.end.ngin" }
+      },
+      "patterns": [
+        { "include": "#ngin" }
+      ]
+    },
+    "interp": {
+      "name": "meta.embedded.ngin",
+      "begin": "@\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.embedded.begin.ngin" }
+      },
+      "end": "\\}@",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.embedded.end.ngin" }
+      },
+      "patterns": [
+        { "include": "#ngin" }
+      ]
+    },
+    "block": {
+      "name": "meta.block.ngin",
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.block.begin.ngin" }
+      },
+      "end": "\\}(?!@)",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.block.end.ngin" }
+      },
+      "patterns": [
+        { "include": "#ngin" }
+      ]
+    },
+    "emit": {
+      "match": "=>",
+      "name": "keyword.control.emit.ngin"
+    },
+    "plus": {
+      "match": "\\+=",
+      "name": "keyword.control.concat.ngin"
+    },
+    "guard": {
+      "name": "meta.guard.ngin",
+      "begin": "\\?\\(",
+      "beginCaptures": {
+        "0": { "name": "keyword.control.guard.ngin" }
+      },
+      "end": "\\)\\?",
+      "endCaptures": {
+        "0": { "name": "keyword.control.guard.ngin" }
+      },
+      "patterns": [
+        { "include": "#code" }
+      ]
+    },
+    "code": {
+      "patterns": [
+        { "include": "#directive" },
+        { "include": "#keywords" },
+        { "include": "#call" },
+        { "include": "#member" },
+        { "include": "#variable" },
+        { "include": "#plus" },
+        { "include": "#operator" },
+        { "include": "#string" },
+        { "include": "#number" }
+      ]
+    },
+    "directive": {
+      "match": "#(include|define|ifdef|ifndef|endif|pragma|elif|if|else)\\b",
+      "name": "keyword.control.directive.ngin"
+    },
+    "keywords": {
+      "match": "\\b(class|var|let|int|string|public|function|fn|type|struct|interface|if|else|for|return|in|import|from|include|use|require|export|package|module|def|func|const|new|this|true|false|null|and|or|not|while|break|continue|switch|case|as)\\b",
+      "name": "keyword.other.ngin"
+    },
+    "call": {
+      "patterns": [
+        {
+          "match": "\\.([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": { "name": "entity.name.function.ngin" }
+          }
+        },
+        {
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": { "name": "entity.name.function.ngin" }
+          }
+        }
+      ]
+    },
+    "member": {
+      "match": "\\.([A-Za-z_][A-Za-z0-9_]*)\\b(?!\\s*\\()",
+      "captures": {
+        "1": { "name": "variable.other.property.ngin" }
+      }
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "\\bdk\\b",
+          "name": "variable.language.ngin"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.readwrite.ngin"
+        }
+      ]
+    },
+    "operator": {
+      "match": "==|!=|<=|>=|&&|\\|\\||<|>|=",
+      "name": "keyword.operator.ngin"
+    },
+    "string": {
+      "name": "string.quoted.double.ngin",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.ngin",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.ngin",
+      "match": "\\b\\d+(?:\\.\\d+)?\\b"
+    }
+  }
+}

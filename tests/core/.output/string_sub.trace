@@ -1,0 +1,55 @@
+# stack changes
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'-' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|string_sub.dk; 45b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_sub.dk> @ line 1, col 1, idx 2)
+    ident("left")
+    operator(Assign)
+    string("a")
+  instruction(|string_sub.dk; 45b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_sub.dk> @ line 2, col 1, idx 3)
+    ident("right")
+    operator(Assign)
+    string("b")
+  instruction(|string_sub.dk; 45b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_sub.dk> @ line 3, col 1, idx 4)
+    ident("bad")
+    operator(Assign)
+    ident("left")
+    operator(Sub)
+    ident("right")

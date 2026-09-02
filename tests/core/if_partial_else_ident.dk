@@ -1,0 +1,3 @@
+x = false;
+elsemyvar = 0;
+if (x) { y = 1; } elsemyvar;

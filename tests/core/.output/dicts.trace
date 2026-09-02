@@ -1,0 +1,286 @@
+# stack changes
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'a' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'1' -> /program/instruction/dict/integer
+',' -> /program/instruction/dict/integer
+',' -> /program/instruction/dict
+'b' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'2' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'o' -> /program
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'b' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'9' -> /program/instruction/dict/integer
+',' -> /program/instruction/dict/integer
+',' -> /program/instruction/dict
+'c' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'3' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'l' -> /program
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+'+' -> /program/instruction/dict/operator
+'{' -> /program/instruction/dict/operator
+'{' -> /program/instruction/dict/operator
+'{' -> /program/instruction/dict/operator/dict
+'a' -> /program/instruction/dict/operator/dict/ident
+':' -> /program/instruction/dict/operator/dict/ident
+':' -> /program/instruction/dict/operator/dict
+'1' -> /program/instruction/dict/operator/dict/integer
+'}' -> /program/instruction/dict/operator/dict/integer
+'}' -> /program/instruction/dict/operator/dict
+'}' -> /program/instruction/dict/operator/dict
+'}' -> /program/instruction/dict/operator/dict
+'}' -> /program/instruction/dict/operator/dict
+';' -> /program/instruction/dict/operator
+';' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'-' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'^' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'a' -> /program/instruction/ident/operator
+'a' -> /program/instruction/ident/operator/ident
+'(' -> /program/instruction/ident/operator/call
+')' -> /program/instruction/ident/operator/call
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'l' -> /program/instruction/ident/operator
+'l' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'g' -> /program
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'"' -> /program/instruction/ident/accessor/string
+'"' -> /program/instruction/ident/accessor/string
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'b' -> /program/instruction/ident/operator
+'b' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 1, col 1, idx 2)
+    ident("base")
+    operator(Assign)
+    dict
+      (anon)
+        ident("a")
+        integer("1")
+      (anon)
+        ident("b")
+        integer("2")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 2, col 1, idx 3)
+    ident("other")
+    operator(Assign)
+    dict
+      (anon)
+        ident("b")
+        integer("9")
+      (anon)
+        ident("c")
+        integer("3")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 3, col 1, idx 4)
+    ident("merged")
+    operator(Assign)
+    ident("base")
+    operator(Add)
+    ident("other")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 4, col 1, idx 5)
+    ident("lit")
+    operator(Assign)
+    dict
+    dict
+      operator(Add)
+      dict
+        (anon)
+          ident("a")
+          integer("1")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 5, col 1, idx 6)
+    ident("subd")
+    operator(Assign)
+    ident("base")
+    operator(Sub)
+    ident("other")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 6, col 1, idx 7)
+    ident("interd")
+    operator(Assign)
+    ident("base")
+    operator(BitAnd)
+    ident("other")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 7, col 1, idx 8)
+    ident("symd")
+    operator(Assign)
+    ident("base")
+    operator(Xor)
+    ident("other")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 8, col 1, idx 9)
+    ident("pairs")
+    operator(Assign)
+    ident("base")
+    operator(Dot)
+    invoked_function("asArray")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 9, col 1, idx 10)
+    ident("n")
+    operator(Assign)
+    ident("base")
+    operator(Dot)
+    ident("length")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 10, col 1, idx 11)
+    ident("got")
+    operator(Assign)
+    ident("base")
+    accessor
+      string("a")
+  instruction(|dicts.dk; 222b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/dicts.dk> @ line 11, col 1, idx 12)
+    ident("dot")
+    operator(Assign)
+    ident("base")
+    operator(Dot)
+    ident("b")

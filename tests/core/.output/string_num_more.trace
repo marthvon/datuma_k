@@ -1,0 +1,240 @@
+# stack changes
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'u' -> /program
+'u' -> /program/instruction
+'u' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+'.' -> /program/instruction/float
+'8' -> /program/instruction/double
+';' -> /program/instruction/double
+';' -> /program/instruction
+';' -> /program/instruction
+'l' -> /program
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'.' -> /program/instruction
+'.' -> /program/instruction/float
+'8' -> /program/instruction/double
+';' -> /program/instruction/double
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+'^' -> /program/instruction/dict/operator
+' ' -> /program/instruction/dict/operator
+' ' -> /program/instruction/dict/operator
+'{' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+';' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+'&' -> /program/instruction/dict/operator
+' ' -> /program/instruction/dict/operator
+' ' -> /program/instruction/dict/operator
+'{' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+';' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'a' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'x' -> /program/instruction/dict/ident
+',' -> /program/instruction/dict/ident
+',' -> /program/instruction/dict
+'b' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'.' -> /program/instruction/dict/float
+',' -> /program/instruction/dict/float
+',' -> /program/instruction/dict
+'c' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'-' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'a' -> /program/instruction/ident/operator
+'a' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'q' -> /program
+'q' -> /program/instruction
+'q' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'q' -> /program
+'q' -> /program/instruction
+'q' -> /program/instruction/ident
+'+' -> /program/instruction/ident
+'+' -> /program/instruction/ident/operator
+'+' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'q' -> /program/instruction
+'q' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 1, col 1, idx 2)
+    ident("s")
+    operator(Assign)
+    string("'?\0\u{7}\u{8}\u{c}\r\u{b}\u{1b}")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 2, col 1, idx 3)
+    ident("u")
+    operator(Assign)
+    string("\\q")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 3, col 1, idx 4)
+    ident("maxd")
+    operator(Assign)
+    double("1.123456789012345")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 4, col 1, idx 5)
+    ident("ld")
+    operator(Assign)
+    double(".12345678")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 5, col 1, idx 6)
+    ident("ds")
+    operator(Assign)
+    dict
+    dict
+      operator(SymmetricDiff)
+      dict
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 6, col 1, idx 7)
+    ident("di")
+    operator(Assign)
+    dict
+    dict
+      operator(Intersect)
+      dict
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 7, col 1, idx 8)
+    ident("x")
+    operator(Assign)
+    integer("0")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 8, col 1, idx 9)
+    ident("dv")
+    operator(Assign)
+    dict
+      (anon)
+        ident("a")
+        ident("x")
+      (anon)
+        ident("b")
+        float(".5")
+      (anon)
+        ident("c")
+        integer("-1")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 9, col 1, idx 10)
+    ident("n")
+    operator(Assign)
+    ident("dv")
+    operator(Dot)
+    ident("a")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 10, col 1, idx 11)
+    ident("q")
+    operator(Assign)
+    integer("1")
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 11, col 1, idx 12)
+    ident("q")
+    operator(Increment)
+  instruction(|string_num_more.dk; 169b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/string_num_more.dk> @ line 12, col 1, idx 13)
+    ident("p")
+    operator(Assign)
+    ident("q")

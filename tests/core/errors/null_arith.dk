@@ -1,0 +1,2 @@
+nothing = null;
+bad = nothing + 1;

@@ -1,0 +1,96 @@
+# facts 46
+[0] trait=ExampleTrait model=UserAccount field=user_id type=uuid_type attribute=required args=[]
+[1] trait=OauthSession model=UserAccount field=user_id type=uuid_type attribute=required args=[]
+[2] trait=CookieSession model=UserAccount field=user_id type=uuid_type attribute=required args=[]
+[3] trait=ExampleTrait model=UserAccount field=email type=email_type attribute=format args=[user@example.com]
+[4] trait=ExampleTrait model=UserAccount field=email type=email_type attribute=max_length args=[255]
+[5] trait=OauthSession model=UserAccount field=email type=email_type attribute=format args=[user@example.com]
+[6] trait=OauthSession model=UserAccount field=email type=email_type attribute=max_length args=[255]
+[7] trait=CookieSession model=UserAccount field=email type=email_type attribute=format args=[user@example.com]
+[8] trait=CookieSession model=UserAccount field=email type=email_type attribute=max_length args=[255]
+[9] trait=ExampleTrait model=UserAccount field=display_name type=text_type attribute=min_length args=[1]
+[10] trait=ExampleTrait model=UserAccount field=display_name type=text_type attribute=max_length args=[64]
+[11] trait=OauthSession model=UserAccount field=display_name type=text_type attribute=min_length args=[1]
+[12] trait=OauthSession model=UserAccount field=display_name type=text_type attribute=max_length args=[64]
+[13] trait=CookieSession model=UserAccount field=display_name type=text_type attribute=min_length args=[1]
+[14] trait=CookieSession model=UserAccount field=display_name type=text_type attribute=max_length args=[64]
+[15] trait=ExampleTrait model=UserAccount field=status type=account_status attribute=active_only args=[]
+[16] trait=ExampleTrait model=UserAccount field=status type=account_status attribute=audit_trail args=[enabled]
+[17] trait=OauthSession model=UserAccount field=status type=account_status attribute=active_only args=[]
+[18] trait=OauthSession model=UserAccount field=status type=account_status attribute=audit_trail args=[enabled]
+[19] trait=CookieSession model=UserAccount field=status type=account_status attribute=active_only args=[]
+[20] trait=CookieSession model=UserAccount field=status type=account_status attribute=audit_trail args=[enabled]
+[21] trait=Archivable model=ProductCatalog field=sku type=product_code attribute=required args=[]
+[22] trait=Archivable model=ProductCatalog field=sku type=product_code attribute=pattern args=[SKU-[0-9]+]
+[23] trait=Reservable model=ProductCatalog field=sku type=product_code attribute=required args=[]
+[24] trait=Reservable model=ProductCatalog field=sku type=product_code attribute=pattern args=[SKU-[0-9]+]
+[25] trait=Archivable model=ProductCatalog field=title type=text_type attribute=max_length args=[200]
+[26] trait=Reservable model=ProductCatalog field=title type=text_type attribute=max_length args=[200]
+[27] trait=Archivable model=ProductCatalog field=price type=money_type attribute=currency args=[USD]
+[28] trait=Archivable model=ProductCatalog field=price type=money_type attribute=precision args=[2]
+[29] trait=Reservable model=ProductCatalog field=price type=money_type attribute=currency args=[USD]
+[30] trait=Reservable model=ProductCatalog field=price type=money_type attribute=precision args=[2]
+[31] trait=Archivable model=ProductCatalog field=tags type=label_set attribute=indexed args=[]
+[32] trait=Archivable model=ProductCatalog field=tags type=label_set attribute=case_insensitive args=[]
+[33] trait=Reservable model=ProductCatalog field=tags type=label_set attribute=indexed args=[]
+[34] trait=Reservable model=ProductCatalog field=tags type=label_set attribute=case_insensitive args=[]
+[35] trait=- model=OrderSummary field=order_id type=uuid_type attribute=required args=[]
+[36] trait=- model=OrderSummary field=buyer type=email_type attribute=format args=[buyer@shop.test]
+[37] trait=- model=OrderSummary field=line_item type=product_code attribute=required args=[]
+[38] trait=- model=OrderSummary field=line_item type=product_code attribute=pattern args=[SKU-[0-9]+]
+[39] trait=- model=OrderSummary field=total type=money_type attribute=currency args=[USD]
+[40] trait=- model=OrderSummary field=total type=money_type attribute=precision args=[2]
+[41] trait=- model=OrderSummary field=shipped type=account_status attribute=audit_trail args=[order_flow]
+[42] trait=Immutable model=AuditEvent field=actor type=email_type attribute=max_length args=[128]
+[43] trait=Immutable model=AuditEvent field=target type=uuid_type attribute=required args=[]
+[44] trait=Immutable model=AuditEvent field=note type=text_type attribute=max_length args=[512]
+[45] trait=Immutable model=AuditEvent field=note type=text_type attribute=min_length args=[0]
+# index by_trait
+Archivable -> {21,22,25,27,28,31,32}
+CookieSession -> {2,7,8,13,14,19,20}
+ExampleTrait -> {0,3,4,9,10,15,16}
+Immutable -> {42,43,44,45}
+OauthSession -> {1,5,6,11,12,17,18}
+Reservable -> {23,24,26,29,30,33,34}
+# index by_model
+AuditEvent -> {42,43,44,45}
+OrderSummary -> {35,36,37,38,39,40,41}
+ProductCatalog -> {21,22,23,24,25,26,27,28,29,30,31,32,33,34}
+UserAccount -> {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+# index by_field
+actor -> {42}
+buyer -> {36}
+display_name -> {9,10,11,12,13,14}
+email -> {3,4,5,6,7,8}
+line_item -> {37,38}
+note -> {44,45}
+order_id -> {35}
+price -> {27,28,29,30}
+shipped -> {41}
+sku -> {21,22,23,24}
+status -> {15,16,17,18,19,20}
+tags -> {31,32,33,34}
+target -> {43}
+title -> {25,26}
+total -> {39,40}
+user_id -> {0,1,2}
+# index by_type
+account_status -> {15,16,17,18,19,20,41}
+email_type -> {3,4,5,6,7,8,36,42}
+label_set -> {31,32,33,34}
+money_type -> {27,28,29,30,39,40}
+product_code -> {21,22,23,24,37,38}
+text_type -> {9,10,11,12,13,14,25,26,44,45}
+uuid_type -> {0,1,2,35,43}
+# index by_attribute
+active_only -> {15,17,19}
+audit_trail -> {16,18,20,41}
+case_insensitive -> {32,34}
+currency -> {27,29,39}
+format -> {3,5,7,36}
+indexed -> {31,33}
+max_length -> {4,6,8,10,12,14,25,26,42,44}
+min_length -> {9,11,13,45}
+pattern -> {22,24,38}
+precision -> {28,30,40}
+required -> {0,1,2,21,23,35,37,43}

@@ -1,0 +1,16 @@
+fn fact(n) { return if (n) { yield n * fact(n - 1); } else { yield 1; }; }
+fn add(a, b) { return a + b; }
+fn noop() { return; }
+fn outer() {
+  fn inner(v) { return v * 2; }
+  return inner(21);
+}
+fn shade(shadow) { return shadow + 1; }
+f5 = fact(5);
+sum = add(2, 3);
+nothing = noop();
+nested = outer();
+shadow = 1;
+shaded = shade(10);
+after = shadow;
+return sum;

@@ -1,0 +1,23 @@
+{"op":"assign","target":"a","value":"[1, \"x\", true, null, {k: 2}]","fn":null,"stack":[],"frame":["a"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]"}}
+
+{"op":"assign","target":"d","value":"{a: 1, b: [2, 3]}","fn":null,"stack":[],"frame":["a","d"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}"}}
+
+{"op":"assign","target":"empty_a","value":"[]","fn":null,"stack":[],"frame":["a","d","empty_a"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","empty_a":"[]"}}
+
+{"op":"assign","target":"empty_d","value":"{}","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","empty_a":"[]","empty_d":"{}"}}
+
+{"op":"assign","target":"m","value":"[1]","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","empty_a":"[]","empty_d":"{}","m":"[1]"}}
+
+{"op":"assign","target":"md","value":"{a: 1}","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","empty_a":"[]","empty_d":"{}","m":"[1]","md":"{a: 1}"}}
+
+{"op":"assign","target":"sub","value":"[]","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","empty_a":"[]","empty_d":"{}","m":"[1]","md":"{a: 1}","sub":"[]"}}
+
+{"op":"assign","target":"dsub","value":"{}","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub","dsub"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","dsub":"{}","empty_a":"[]","empty_d":"{}","m":"[1]","md":"{a: 1}","sub":"[]"}}
+
+{"op":"assign","target":"sym","value":"[]","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub","dsub","sym"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","dsub":"{}","empty_a":"[]","empty_d":"{}","m":"[1]","md":"{a: 1}","sub":"[]","sym":"[]"}}
+
+{"op":"assign","target":"inter","value":"[]","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub","dsub","sym","inter"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","dsub":"{}","empty_a":"[]","empty_d":"{}","inter":"[]","m":"[1]","md":"{a: 1}","sub":"[]","sym":"[]"}}
+
+{"op":"assign","target":"ldiff","value":"[]","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub","dsub","sym","inter","ldiff"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","dsub":"{}","empty_a":"[]","empty_d":"{}","inter":"[]","ldiff":"[]","m":"[1]","md":"{a: 1}","sub":"[]","sym":"[]"}}
+
+{"op":"assign","target":"rdiff","value":"{}","fn":null,"stack":[],"frame":["a","d","empty_a","empty_d","m","md","sub","dsub","sym","inter","ldiff","rdiff"],"scope":{"a":"[1, \"x\", true, null, {k: 2}]","d":"{a: 1, b: [2, 3]}","dsub":"{}","empty_a":"[]","empty_d":"{}","inter":"[]","ldiff":"[]","m":"[1]","md":"{a: 1}","rdiff":"{}","sub":"[]","sym":"[]"}}

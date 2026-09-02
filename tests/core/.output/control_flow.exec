@@ -1,0 +1,47 @@
+{"op":"iterate","index":0,"variable":"e","element":"null","fn":"walk","stack":["walk"],"frame":["xs","e"],"scope":{"e":"null","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"is_null","value":"true","fn":"walk","stack":["walk"],"frame":["xs","e","is_null"],"scope":{"e":"null","is_null":"true","xs":"[null, true, false]"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":"walk","stack":["walk"],"frame":["xs","e","is_null"],"scope":{"e":"null","is_null":"true","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"c","value":"0","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"0","e":"null","is_null":"true","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":1,"variable":"e","element":"true","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"0","e":"true","is_null":"true","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"is_null","value":"false","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"0","e":"true","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"branch","condition":false,"taken":"elseif","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"0","e":"true","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"0","e":"true","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"c","value":"1","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"1","e":"true","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":2,"variable":"e","element":"false","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"1","e":"false","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"is_null","value":"false","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"1","e":"false","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"branch","condition":false,"taken":"elseif","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"1","e":"false","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"branch","condition":false,"taken":"else","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"1","e":"false","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"c","value":"2","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c"],"scope":{"c":"2","e":"false","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"i","value":"0","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i"],"scope":{"c":"2","e":"false","i":"0","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":0,"condition":true,"fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i"],"scope":{"c":"2","e":"false","i":"0","is_null":"false","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"t","value":"0","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"0","is_null":"false","t":"0","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":1,"condition":true,"fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"1","is_null":"false","t":"0","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"t","value":"1","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"1","is_null":"false","t":"1","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":2,"condition":true,"fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"2","is_null":"false","t":"1","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"t","value":"2","fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"2","is_null":"false","t":"2","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":3,"condition":false,"fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"3","is_null":"false","t":"2","xs":"[null, true, false]"}}
+
+{"op":"iterate","index":0,"condition":false,"fn":"walk","stack":["walk"],"frame":["xs","e","is_null","c","i","t"],"scope":{"c":"2","e":"false","i":"3","is_null":"false","t":"2","xs":"[null, true, false]"}}
+
+{"op":"assign","target":"out","value":"null","fn":null,"stack":[],"frame":["out"],"scope":{"out":"null"}}

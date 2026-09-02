@@ -1,0 +1,43 @@
+|${ROOT_DIRECTORY}/myfolder/myfile.d.ts>
+```
+public main() {
+    @{ => dk.traits("Bootstrap").fields("on_init").models }@.init();
+}
+``` 
+
+@{
+
+for (model in dk.models) {
+    |$ROOT_DIRECTORY/"My Models"/@{ => snake_case(model) }@.ts>
+    ```
+    @{ += ```
+        import {
+            @{ filterables_fields = model.attribute("filterable").fields;
+            emailable_fields = model.attribute("emailable").fields;
+            ?(filterables_fields.length > 1)?","=> ```"myfilterfunction"```
+            ?(emailable_fields.length > 1)?","=> ```"myemailfunction"``` }@
+        } from "@/vendor/custompackage";
+    ``` }@
+
+    class @{ => pascal_case(model) }@ {
+        @{ 
+            @{ 
+                for (field in model.fields) {
+                    => ```
+
+                    public @{ => field }@: @{ => field.type }@;
+                    public function set@{ => pascal_case(field) }@ (@{ => field }@: @{ => field.type }@) { 
+                        this.@{ => field }@ = @{ => field }@; 
+                    }
+                    public function get@{ => pascal_case(field) }@ () { return this.@{ => field }@; }
+
+                    ``` 
+                }
+            }@
+        }@
+    }
+    ```
+}
+
+}@
+

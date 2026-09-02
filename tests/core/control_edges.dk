@@ -1,0 +1,9 @@
+fn tick(flag) {
+  if (flag) { a = 1; };
+  if (flag) { b = 2; } else if (flag) { b = 3; };
+  for (i = 0;false;) { c = i; }
+  d = 0;
+  for (; d < 1;) { d = 1; }
+  for (;i < 3; ++i) { e = i; }
+}
+ret = tick(true);

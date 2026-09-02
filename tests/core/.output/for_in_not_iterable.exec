@@ -1,0 +1,3 @@
+{"op":"assign","target":"obj","value":"{x: 1}","fn":null,"stack":[],"frame":["obj"],"scope":{"obj":"{x: 1}"}}
+
+{"op":"failed","error":"[Not Iterable] integer is not iterable","fn":null,"stack":[],"frame":["obj"],"scope":{"obj":"{x: 1}"}}

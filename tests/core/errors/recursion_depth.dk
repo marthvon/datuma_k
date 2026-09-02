@@ -1,0 +1,2 @@
+fn spin(n) { return spin(n + 1); }
+bad = spin(0);

@@ -1,0 +1,32 @@
+UserAccount [
+  ExampleTrait,
+  OauthSession,
+  CookieSession,
+] {
+  user_id: uuid_type<required>,
+  email: email_type<format("user@example.com"), max_length(255)>,
+  display_name: text_type<min_length(1), max_length(64)>,
+  status: account_status<active_only, audit_trail("enabled")>
+}
+
+
+ProductCatalog [Archivable, Reservable] {
+  sku: product_code<required, pattern("SKU-[0-9]+")>,
+  title: text_type<max_length(200)>,
+  price: money_type<currency("USD"), precision(2)>,
+  tags: label_set<indexed, case_insensitive>
+}
+
+OrderSummary {
+  order_id: uuid_type<required>,
+  buyer: email_type<format("buyer@shop.test")>,
+  line_item: product_code<required, pattern("SKU-[0-9]+")>,
+  total: money_type<currency("USD"), precision(2)>,
+  shipped: account_status<audit_trail("order_flow")>
+}
+
+AuditEvent[Immutable] {
+  actor: email_type<max_length(128)>,
+  target: uuid_type<required>,
+  note: text_type<max_length(512), min_length(0)>
+}

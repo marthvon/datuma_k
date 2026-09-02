@@ -1,0 +1,205 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'v' -> /program/instruction/function-def/args
+'v' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'v' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'e' -> /program
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'a' -> /program
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'[' -> /program/instruction/grouped/array
+'1' -> /program/instruction/grouped/array/integer
+']' -> /program/instruction/grouped/array/integer
+']' -> /program/instruction/grouped/array
+']' -> /program/instruction/grouped/array
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'{' -> /program/instruction/grouped/dict
+'k' -> /program/instruction/grouped/dict/ident
+':' -> /program/instruction/grouped/dict/ident
+':' -> /program/instruction/grouped/dict
+'1' -> /program/instruction/grouped/dict/integer
+'}' -> /program/instruction/grouped/dict/integer
+'}' -> /program/instruction/grouped/dict
+'}' -> /program/instruction/grouped/dict
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'"' -> /program/instruction/grouped/string
+'"' -> /program/instruction/grouped/string
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'t' -> /program/instruction/grouped/ident
+')' -> /program/instruction/grouped/boolean
+')' -> /program/instruction/grouped/boolean
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'.' -> /program/instruction/grouped/float
+')' -> /program/instruction/grouped/float
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'g' -> /program
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'-' -> /program/instruction/grouped/integer
+')' -> /program/instruction/grouped/integer
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'h' -> /program
+'h' -> /program/instruction
+'h' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'w' -> /program/instruction/grouped/ident
+'(' -> /program/instruction/grouped/call
+'1' -> /program/instruction/grouped/call/args
+'1' -> /program/instruction/grouped/call/args/integer
+')' -> /program/instruction/grouped/call/args/integer
+')' -> /program/instruction/grouped/call/args
+')' -> /program/instruction/grouped/call/args
+')' -> /program/instruction/grouped/call
+')' -> /program/instruction/grouped/call
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("wrap")
+    (anon)
+      ident("v")
+    program
+      return
+        ident("v")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 2, col 1, idx 3)
+    ident("e")
+    operator(Assign)
+    grouped
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 3, col 1, idx 4)
+    ident("a")
+    operator(Assign)
+    grouped
+      array
+        integer("1")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 4, col 1, idx 5)
+    ident("b")
+    operator(Assign)
+    grouped
+      dict
+        (anon)
+          ident("k")
+          integer("1")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 5, col 1, idx 6)
+    ident("c")
+    operator(Assign)
+    grouped
+      string("x")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 6, col 1, idx 7)
+    ident("d")
+    operator(Assign)
+    grouped
+      boolean(true)
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 7, col 1, idx 8)
+    ident("f")
+    operator(Assign)
+    grouped
+      float(".5")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 8, col 1, idx 9)
+    ident("g")
+    operator(Assign)
+    grouped
+      integer("-1")
+  instruction(|grouped_exprs.dk; 116b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/grouped_exprs.dk> @ line 9, col 1, idx 10)
+    ident("h")
+    operator(Assign)
+    grouped
+      invoked_function("wrap")
+        integer("1")

@@ -1,0 +1,294 @@
+fn ident(x) { return x; }
+
+fn is_letter(c) {
+  low = c.lower();
+  up = c.upper();
+  return low != up;
+}
+
+fn is_upper(c) {
+  letter = is_letter(c);
+  up = c.upper();
+  same = up == c;
+  return letter && same;
+}
+
+fn is_digit(c) {
+  for (d in "0123456789") {
+    if (d == c) {
+      return true;
+    }
+  }
+  return false;
+}
+
+fn is_word_char(c) {
+  letter = is_letter(c);
+  digit = is_digit(c);
+  return letter || digit || c == "_";
+}
+
+fn is_break(c) {
+  u = c == "_";
+  d = c == "-";
+  s = c == " ";
+  return u || d || s;
+}
+
+fn slice_eq(s, i, from) {
+  j = 0;
+  for (c in from) {
+    got = s[i + j];
+    if (got != c) {
+      return false;
+    } else {
+      j = j + 1;
+    }
+  }
+  return true;
+}
+
+fn replace_all(s, from, to) {
+  if (from.length == 0) {
+    return s;
+  } else {
+    out = "";
+    n = s.length;
+    m = from.length;
+    for (i = 0; i < n; i = i + 1) {
+      matched = false;
+      if (i + m <= n) {
+        if (slice_eq(s, i, from)) {
+          out = out + to;
+          i = i + m - 1;
+          matched = true;
+        }
+      }
+      skip = matched == false;
+      if (skip) {
+        out = out + s[i];
+      }
+    }
+    return out;
+  }
+}
+
+fn collapse_initials(s) {
+  out = "";
+  n = s.length;
+  for (i = 0; i < n; i = i + 1) {
+    c = s[i];
+    if (i == 0) {
+      at_bound = true;
+    } else {
+      prev = is_word_char(s[i - 1]);
+      at_bound = prev == false;
+    }
+    matched = false;
+    upper_c = is_upper(c);
+    if (at_bound && upper_c) {
+      if (i + 1 < n) {
+        nxt_ch = s[i + 1];
+        if (nxt_ch == " ") {
+          is_yz = false;
+          if (i + 3 < n) {
+            nxt = s[i + 2];
+            after = s[i + 3];
+            after_low = after.lower();
+            upper_n = is_upper(nxt);
+            letter_a = is_letter(after);
+            if (upper_n && letter_a && after_low == after) {
+              is_yz = true;
+            }
+          }
+          skip_yz = is_yz == false;
+          if (skip_yz) {
+            out = out + c;
+            i = i + 1;
+            matched = true;
+          }
+        }
+      }
+    }
+    skip = matched == false;
+    if (skip) {
+      out = out + c;
+    }
+  }
+  return out;
+}
+
+fn upper_case(s) {
+  t = "" + s;
+  return t.upper();
+}
+
+fn lower_case(s) {
+  t = "" + s;
+  return t.lower();
+}
+
+fn snake_case(s) {
+  t = "" + s;
+  out = "";
+  prev_break = true;
+  for (c in t) {
+    if (is_break(c)) {
+      mid = prev_break == false;
+      if (mid && out.length > 0) {
+        out = out + "_";
+      }
+      prev_break = true;
+    } else {
+      upper_c = is_upper(c);
+      mid = prev_break == false;
+      if (upper_c && mid) {
+        out = out + "_";
+      }
+      out = out + c.lower();
+      prev_break = false;
+    }
+  }
+  return out;
+}
+
+fn pascal_case(s) {
+  t = "" + s;
+  out = "";
+  cap = true;
+  for (c in t) {
+    if (is_break(c)) {
+      cap = true;
+    } else {
+      if (cap) {
+        out = out + c.upper();
+        cap = false;
+      } else {
+        out = out + c.lower();
+      }
+    }
+  }
+  return out;
+}
+
+fn camel_case(s) {
+  p = pascal_case(s);
+  if (p.length == 0) {
+    return p;
+  } else {
+    first = p[0].lower();
+    rest = "";
+    i = 0;
+    for (c in p) {
+      if (i != 0) {
+        rest = rest + c;
+      }
+      i = i + 1;
+    }
+    return first + rest;
+  }
+}
+
+fn title_case(s, separator) {
+  t = "" + s;
+  sep = "" + separator;
+  spaced = replace_all(t, sep, " ");
+  titled = "";
+  prev_word = false;
+  for (c in spaced) {
+    if (is_word_char(c)) {
+      if (prev_word) {
+        titled = titled + c;
+      } else {
+        titled = titled + c.upper();
+      }
+      prev_word = true;
+    } else {
+      titled = titled + c;
+      prev_word = false;
+    }
+  }
+  return collapse_initials(titled);
+}
+
+fn py_type(name) {
+  t = "" + name;
+  if (t == "int_type") {
+    return "int";
+  } else if (t == "float_type") {
+    return "float";
+  } else if (t == "double_type") {
+    return "float";
+  } else if (t == "datetime_type") {
+    return "datetime";
+  } else if (t == "bool_type") {
+    return "bool";
+  } else {
+    return "str";
+  }
+}
+
+fn ts_type(name) {
+  t = "" + name;
+  is_int = t == "int_type";
+  is_float = t == "float_type";
+  is_double = t == "double_type";
+  is_num = is_int || is_float;
+  is_num = is_num || is_double;
+  if (is_num) {
+    return "number";
+  } else if (t == "datetime_type") {
+    return "Date";
+  } else if (t == "bool_type") {
+    return "boolean";
+  } else {
+    return "string";
+  }
+}
+
+fn zod_base(name) {
+  t = "" + name;
+  is_int = t == "int_type";
+  is_float = t == "float_type";
+  is_double = t == "double_type";
+  is_num = is_int || is_float;
+  is_num = is_num || is_double;
+  if (is_num) {
+    return "z.number()";
+  } else if (t == "bool_type") {
+    return "z.boolean()";
+  } else {
+    return "z.string()";
+  }
+}
+
+fn input_type(name) {
+  t = "" + name;
+  is_int = t == "int_type";
+  is_float = t == "float_type";
+  is_double = t == "double_type";
+  is_num = is_int || is_float;
+  is_num = is_num || is_double;
+  if (is_num) {
+    return "number";
+  } else if (t == "datetime_type") {
+    return "datetime-local";
+  } else if (t == "bool_type") {
+    return "checkbox";
+  } else {
+    return "text";
+  }
+}
+
+fn is_datetime(name) {
+  t = "" + name;
+  return t == "datetime_type";
+}
+
+fn is_local(field) {
+  return field.attribute("local");
+}
+
+fn route_of(model) {
+  return "/" + snake_case(model) + "s";
+}

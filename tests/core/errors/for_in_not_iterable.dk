@@ -1,0 +1,2 @@
+obj = {x: 1};
+for (e in obj.x) { a = e; }

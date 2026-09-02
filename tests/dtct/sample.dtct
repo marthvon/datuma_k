@@ -1,0 +1,8 @@
+MyModel {
+  my_field: my_type<my_attribute(arg1, arg2, arg3), my_attribute2>,
+  other: other_type<flag("on")>
+}
+
+OtherModel {
+  ref_field: my_type<my_attribute2>
+}

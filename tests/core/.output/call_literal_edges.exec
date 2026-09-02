@@ -1,0 +1,27 @@
+{"op":"return","value":"\"hi\\t\"","fn":"echo","stack":["echo"],"frame":["v"],"scope":{"v":"\"hi\\t\""}}
+
+{"op":"assign","target":"a","value":"\"hi\\t\"","fn":null,"stack":[],"frame":["a"],"scope":{"a":"\"hi\\t\""}}
+
+{"op":"return","value":"true","fn":"echo","stack":["echo"],"frame":["v"],"scope":{"a":"\"hi\\t\"","v":"true"}}
+
+{"op":"assign","target":"b","value":"true","fn":null,"stack":[],"frame":["a","b"],"scope":{"a":"\"hi\\t\"","b":"true"}}
+
+{"op":"return","value":"false","fn":"echo","stack":["echo"],"frame":["v"],"scope":{"a":"\"hi\\t\"","b":"true","v":"false"}}
+
+{"op":"assign","target":"b2","value":"false","fn":null,"stack":[],"frame":["a","b","b2"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false"}}
+
+{"op":"return","value":"null","fn":"echo","stack":["echo"],"frame":["v"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","v":"null"}}
+
+{"op":"assign","target":"c","value":"null","fn":null,"stack":[],"frame":["a","b","b2","c"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null"}}
+
+{"op":"return","value":"{k: 1}","fn":"echo","stack":["echo"],"frame":["v"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","v":"{k: 1}"}}
+
+{"op":"assign","target":"d","value":"{k: 1}","fn":null,"stack":[],"frame":["a","b","b2","c","d"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","d":"{k: 1}"}}
+
+{"op":"assign","target":"z","value":"0","fn":"blank","stack":["blank"],"frame":["z"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","d":"{k: 1}","z":"0"}}
+
+{"op":"return","value":"0","fn":"blank","stack":["blank"],"frame":["z"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","d":"{k: 1}","z":"0"}}
+
+{"op":"assign","target":"e","value":"0","fn":null,"stack":[],"frame":["a","b","b2","c","d","e"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","d":"{k: 1}","e":"0"}}
+
+{"op":"assign","target":"esc","value":"\"a\\\\\\\"b\\\\\\\\c\"","fn":null,"stack":[],"frame":["a","b","b2","c","d","e","esc"],"scope":{"a":"\"hi\\t\"","b":"true","b2":"false","c":"null","d":"{k: 1}","e":"0","esc":"\"a\\\\\\\"b\\\\\\\\c\""}}

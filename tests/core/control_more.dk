@@ -1,0 +1,10 @@
+fn xs() { return [1]; }
+fn run(a, b, c) {
+  if (a) { x = 1; } else if (b) { x = 2; } else if (c) { x = 3; } else { x = 4; };
+  for (e in xs()) { t = e; }
+}
+ret = run(true, false, false);
+nf = -1.5;
+df = .5d;
+sf = "a".length;
+mix = 1.5 + 2.5;

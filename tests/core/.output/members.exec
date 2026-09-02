@@ -1,0 +1,21 @@
+{"op":"assign","target":"xs","value":"[1, 2, 3]","fn":null,"stack":[],"frame":["xs"],"scope":{"xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"n","value":"3","fn":null,"stack":[],"frame":["xs","n"],"scope":{"n":"3","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"pushed","value":"4","fn":null,"stack":[],"frame":["xs","n","pushed"],"scope":{"n":"3","pushed":"4","xs":"[1, 2, 3, 4]"}}
+
+{"op":"expression","value":"5","fn":null,"stack":[],"frame":["xs","n","pushed"],"scope":{"n":"3","pushed":"4","xs":"[9, 1, 2, 3, 4]"}}
+
+{"op":"assign","target":"popped","value":"4","fn":null,"stack":[],"frame":["xs","n","pushed","popped"],"scope":{"n":"3","popped":"4","pushed":"4","xs":"[9, 1, 2, 3]"}}
+
+{"op":"assign","target":"removed","value":"9","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed"],"scope":{"n":"3","popped":"4","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"d","value":"{a: 1}","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed","d"],"scope":{"d":"{a: 1}","n":"3","popped":"4","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"prev","value":"null","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed","d","prev"],"scope":{"d":"{a: 1, b: 2}","n":"3","popped":"4","prev":"null","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"gone","value":"1","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed","d","prev","gone"],"scope":{"d":"{b: 2}","gone":"1","n":"3","popped":"4","prev":"null","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"pairs","value":"[[\"b\", 2]]","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed","d","prev","gone","pairs"],"scope":{"d":"{b: 2}","gone":"1","n":"3","pairs":"[[\"b\", 2]]","popped":"4","prev":"null","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}
+
+{"op":"assign","target":"dn","value":"1","fn":null,"stack":[],"frame":["xs","n","pushed","popped","removed","d","prev","gone","pairs","dn"],"scope":{"d":"{b: 2}","dn":"1","gone":"1","n":"3","pairs":"[[\"b\", 2]]","popped":"4","prev":"null","pushed":"4","removed":"9","xs":"[1, 2, 3]"}}

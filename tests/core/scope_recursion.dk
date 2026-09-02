@@ -1,0 +1,2 @@
+fn depth(n) { mine = n; inner = if (n) { yield depth(n - 1); } else { yield 0; }; return mine + inner; }
+total = depth(3);

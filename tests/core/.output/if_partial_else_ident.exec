@@ -1,0 +1,7 @@
+{"op":"assign","target":"x","value":"false","fn":null,"stack":[],"frame":["x"],"scope":{"x":"false"}}
+
+{"op":"assign","target":"elsemyvar","value":"0","fn":null,"stack":[],"frame":["x","elsemyvar"],"scope":{"elsemyvar":"0","x":"false"}}
+
+{"op":"branch","condition":false,"taken":"none","fn":null,"stack":[],"frame":["x","elsemyvar"],"scope":{"elsemyvar":"0","x":"false"}}
+
+{"op":"expression","value":"0","fn":null,"stack":[],"frame":["x","elsemyvar"],"scope":{"elsemyvar":"0","x":"false"}}

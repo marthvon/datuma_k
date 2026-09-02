@@ -1,0 +1,11 @@
+fn walk(x) {
+  if (x) { return 1; };
+  return 0;
+}
+c = true;
+y = if (c) { yield 1; } else { yield 2; };
+for (i = 0; i < 3; ++i) {
+  if (i) { break; };
+}
+z = walk(true);
+return z;

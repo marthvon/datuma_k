@@ -1,0 +1,9 @@
+fn echo(v) { return v; }
+fn blank() { z = 0; return z; }
+a = echo("hi\t");
+b = echo(TRUE);
+b2 = echo(FALSE);
+c = echo(NULL);
+d = echo({k: 1,});
+e = blank();
+esc = "a\\\"b\\\\c";

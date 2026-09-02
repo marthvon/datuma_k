@@ -1,0 +1,9 @@
+{"op":"assign","target":"x","value":"true","fn":null,"stack":[],"frame":["x"],"scope":{"x":"true"}}
+
+{"op":"assign","target":"foo","value":"0","fn":null,"stack":[],"frame":["x","foo"],"scope":{"foo":"0","x":"true"}}
+
+{"op":"branch","condition":true,"taken":"then","fn":null,"stack":[],"frame":["x","foo"],"scope":{"foo":"0","x":"true"}}
+
+{"op":"assign","target":"y","value":"1","fn":null,"stack":[],"frame":["x","foo","y"],"scope":{"foo":"0","x":"true","y":"1"}}
+
+{"op":"expression","value":"0","fn":null,"stack":[],"frame":["x","foo","y"],"scope":{"foo":"0","x":"true","y":"1"}}

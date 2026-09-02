@@ -1,0 +1,1 @@
+x = if (c) { yield 1; } else { yield 2; };

@@ -1,0 +1,55 @@
+# stack changes
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'/' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|string_div.dk; 43b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_div.dk> @ line 1, col 1, idx 2)
+    ident("text")
+    operator(Assign)
+    string("a")
+  instruction(|string_div.dk; 43b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_div.dk> @ line 2, col 1, idx 3)
+    ident("count")
+    operator(Assign)
+    integer("2")
+  instruction(|string_div.dk; 43b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_div.dk> @ line 3, col 1, idx 4)
+    ident("bad")
+    operator(Assign)
+    ident("text")
+    operator(Div)
+    ident("count")

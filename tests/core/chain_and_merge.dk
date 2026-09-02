@@ -1,0 +1,12 @@
+fn get() { return { "a": { "b": "c" } }; }
+a = get();
+x = 0;
+p = a.a.b;
+q = get().a.b;
+m = [] + [1] + [2];
+md = {} + {a: 1} + {b: 2};
+dd = {} - {};
+arr = [x, .5,];
+bare = "hi";
+lst = [1];
+obj = {a: 1};

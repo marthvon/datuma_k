@@ -1,0 +1,233 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'v' -> /program/instruction/function-def/args
+'v' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'v' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'z' -> /program/instruction/function-def/program/instruction
+'z' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'0' -> /program/instruction/function-def/program/instruction
+'0' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'z' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'a' -> /program
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'"' -> /program/instruction/call/args
+'"' -> /program/instruction/call/args/string
+'"' -> /program/instruction/call/args/string
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'T' -> /program/instruction/call/args
+'T' -> /program/instruction/call/args/ident
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'F' -> /program/instruction/call/args
+'F' -> /program/instruction/call/args/ident
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args/boolean
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'N' -> /program/instruction/call/args
+'N' -> /program/instruction/call/args/ident
+')' -> /program/instruction/call/args/null
+')' -> /program/instruction/call/args/null
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'{' -> /program/instruction/call/args
+'{' -> /program/instruction/call/args/dict
+'k' -> /program/instruction/call/args/dict/ident
+':' -> /program/instruction/call/args/dict/ident
+':' -> /program/instruction/call/args/dict
+'1' -> /program/instruction/call/args/dict/integer
+',' -> /program/instruction/call/args/dict/integer
+',' -> /program/instruction/call/args/dict
+'}' -> /program/instruction/call/args/dict
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'e' -> /program
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+'(' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'e' -> /program
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("echo")
+    (anon)
+      ident("v")
+    program
+      return
+        ident("v")
+  function_def("blank")
+    (anon)
+    program
+      instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 2, col 14, idx 16)
+        ident("z")
+        operator(Assign)
+        integer("0")
+      return
+        ident("z")
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 3, col 1, idx 4)
+    ident("a")
+    operator(Assign)
+    invoked_function("echo")
+      string("hi\t")
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 4, col 1, idx 5)
+    ident("b")
+    operator(Assign)
+    invoked_function("echo")
+      boolean(true)
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 5, col 1, idx 6)
+    ident("b2")
+    operator(Assign)
+    invoked_function("echo")
+      boolean(false)
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 6, col 1, idx 7)
+    ident("c")
+    operator(Assign)
+    invoked_function("echo")
+      null
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 7, col 1, idx 8)
+    ident("d")
+    operator(Assign)
+    invoked_function("echo")
+      dict
+        (anon)
+          ident("k")
+          integer("1")
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 8, col 1, idx 9)
+    ident("e")
+    operator(Assign)
+    invoked_function("blank")
+  instruction(|call_literal_edges.dk; 178b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/call_literal_edges.dk> @ line 9, col 1, idx 10)
+    ident("esc")
+    operator(Assign)
+    string("a\\\"b\\\\c")

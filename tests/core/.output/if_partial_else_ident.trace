@@ -1,0 +1,75 @@
+# stack changes
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'e' -> /program
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/if
+'(' -> /program/instruction/if/grouped
+'x' -> /program/instruction/if/grouped/ident
+')' -> /program/instruction/if/grouped/ident
+')' -> /program/instruction/if/grouped
+')' -> /program/instruction/if/grouped
+'{' -> /program/instruction/if
+'{' -> /program/instruction/if/program
+'y' -> /program/instruction/if/program/instruction
+'y' -> /program/instruction/if/program/instruction/ident
+' ' -> /program/instruction/if/program/instruction/ident
+'=' -> /program/instruction/if/program/instruction/operator
+' ' -> /program/instruction/if/program/instruction/operator
+'1' -> /program/instruction/if/program/instruction
+'1' -> /program/instruction/if/program/instruction/integer
+';' -> /program/instruction/if/program/instruction/integer
+';' -> /program/instruction/if/program/instruction
+';' -> /program/instruction/if/program/instruction
+'}' -> /program/instruction/if/program
+'}' -> /program/instruction/if/program
+' ' -> /program/instruction/if
+'e' -> /program/instruction/if/ident
+';' -> /program/instruction/if/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction/instruction/ident
+';' -> /program/instruction/instruction/ident
+';' -> /program/instruction/instruction
+';' -> /program/instruction/instruction
+
+# tree
+program
+  instruction(|if_partial_else_ident.dk; 55b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/if_partial_else_ident.dk> @ line 1, col 1, idx 2)
+    ident("x")
+    operator(Assign)
+    boolean(false)
+  instruction(|if_partial_else_ident.dk; 55b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/if_partial_else_ident.dk> @ line 2, col 1, idx 3)
+    ident("elsemyvar")
+    operator(Assign)
+    integer("0")
+  if
+    grouped
+      ident("x")
+    program
+      instruction(|if_partial_else_ident.dk; 55b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/if_partial_else_ident.dk> @ line 3, col 10, idx 13)
+        ident("y")
+        operator(Assign)
+        integer("1")
+  instruction(|if_partial_else_ident.dk; 55b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/if_partial_else_ident.dk> @ line 3, col 28, idx 31)
+    ident("elsemyvar")

@@ -1,0 +1,13 @@
+# facts 3
+[0] trait=- model=Marker field=- type=- attribute=- args=[]
+[1] trait=TagA model=Tagged field=- type=- attribute=- args=[]
+[2] trait=TagB model=Tagged field=- type=- attribute=- args=[]
+# index by_trait
+TagA -> {1}
+TagB -> {2}
+# index by_model
+Marker -> {0}
+Tagged -> {1,2}
+# index by_field
+# index by_type
+# index by_attribute

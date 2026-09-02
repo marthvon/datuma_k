@@ -1,0 +1,25 @@
+# stack changes
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|undefined_var.dk; 19b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/undefined_var.dk> @ line 1, col 1, idx 2)
+    ident("bad")
+    operator(Assign)
+    ident("missing")
+    operator(Add)
+    integer("1")

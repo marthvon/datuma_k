@@ -1,0 +1,42 @@
+# stack changes
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+';' -> /program/instruction/null
+';' -> /program/instruction/null
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'f' -> /program/instruction/ident/operator
+'f' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|null_member.dk; 25b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/null_member.dk> @ line 1, col 1, idx 2)
+    ident("x")
+    operator(Assign)
+    null
+  instruction(|null_member.dk; 25b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/null_member.dk> @ line 2, col 1, idx 3)
+    ident("bad")
+    operator(Assign)
+    ident("x")
+    operator(Dot)
+    ident("field")

@@ -1,0 +1,10 @@
+Event [Resource] {
+  title: text_type<required>,
+  capacity: int_type<min(1), max(500)>,
+  starts_at: datetime_type<local>
+}
+
+Venue [Resource] {
+  name: text_type<required>,
+  capacity: int_type<min(1), max(10000)>
+}

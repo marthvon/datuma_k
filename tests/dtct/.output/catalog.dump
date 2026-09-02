@@ -1,0 +1,54 @@
+# facts 20
+[0] trait=OauthSession model=SessionToken field=token_id type=uuid_type attribute=required args=[]
+[1] trait=CookieSession model=SessionToken field=token_id type=uuid_type attribute=required args=[]
+[2] trait=OauthSession model=SessionToken field=issued_at type=timestamp_type attribute=indexed args=[]
+[3] trait=CookieSession model=SessionToken field=issued_at type=timestamp_type attribute=indexed args=[]
+[4] trait=OauthSession model=SessionToken field=expires_at type=timestamp_type attribute=ttl args=[3600]
+[5] trait=CookieSession model=SessionToken field=expires_at type=timestamp_type attribute=ttl args=[3600]
+[6] trait=Archivable model=InventoryItem field=sku type=product_code attribute=required args=[]
+[7] trait=Archivable model=InventoryItem field=sku type=product_code attribute=pattern args=[INV-[0-9]+]
+[8] trait=Reservable model=InventoryItem field=sku type=product_code attribute=required args=[]
+[9] trait=Reservable model=InventoryItem field=sku type=product_code attribute=pattern args=[INV-[0-9]+]
+[10] trait=Archivable model=InventoryItem field=quantity type=count_type attribute=min args=[0]
+[11] trait=Archivable model=InventoryItem field=quantity type=count_type attribute=max args=[9999]
+[12] trait=Reservable model=InventoryItem field=quantity type=count_type attribute=min args=[0]
+[13] trait=Reservable model=InventoryItem field=quantity type=count_type attribute=max args=[9999]
+[14] trait=Archivable model=InventoryItem field=warehouse type=text_type attribute=max_length args=[64]
+[15] trait=Reservable model=InventoryItem field=warehouse type=text_type attribute=max_length args=[64]
+[16] trait=- model=BillingAddress field=line1 type=text_type attribute=required args=[]
+[17] trait=- model=BillingAddress field=line1 type=text_type attribute=max_length args=[120]
+[18] trait=- model=BillingAddress field=city type=text_type attribute=max_length args=[80]
+[19] trait=- model=BillingAddress field=postal_code type=text_type attribute=pattern args=[[0-9A-Z]+]
+# index by_trait
+Archivable -> {6,7,10,11,14}
+CookieSession -> {1,3,5}
+OauthSession -> {0,2,4}
+Reservable -> {8,9,12,13,15}
+# index by_model
+BillingAddress -> {16,17,18,19}
+InventoryItem -> {6,7,8,9,10,11,12,13,14,15}
+SessionToken -> {0,1,2,3,4,5}
+# index by_field
+city -> {18}
+expires_at -> {4,5}
+issued_at -> {2,3}
+line1 -> {16,17}
+postal_code -> {19}
+quantity -> {10,11,12,13}
+sku -> {6,7,8,9}
+token_id -> {0,1}
+warehouse -> {14,15}
+# index by_type
+count_type -> {10,11,12,13}
+product_code -> {6,7,8,9}
+text_type -> {14,15,16,17,18,19}
+timestamp_type -> {2,3,4,5}
+uuid_type -> {0,1}
+# index by_attribute
+indexed -> {2,3}
+max -> {11,13}
+max_length -> {14,15,17,18}
+min -> {10,12}
+pattern -> {7,9,19}
+required -> {0,1,6,8,16}
+ttl -> {4,5}

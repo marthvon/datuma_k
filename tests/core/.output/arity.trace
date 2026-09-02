@@ -1,0 +1,69 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'a' -> /program/instruction/function-def/args
+'a' -> /program/instruction/function-def/args/ident
+',' -> /program/instruction/function-def/args/ident
+',' -> /program/instruction/function-def/args
+'b' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'a' -> /program/instruction/function-def/program/instruction/return/ident
+' ' -> /program/instruction/function-def/program/instruction/return/ident
+'+' -> /program/instruction/function-def/program/instruction/return/operator
+' ' -> /program/instruction/function-def/program/instruction/return/operator
+'b' -> /program/instruction/function-def/program/instruction/return
+'b' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'1' -> /program/instruction/call/args
+'1' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("add")
+    (anon)
+      ident("a")
+      ident("b")
+    program
+      return
+        ident("a")
+        operator(Add)
+        ident("b")
+  instruction(|arity.dk; 45b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/arity.dk> @ line 2, col 1, idx 3)
+    ident("bad")
+    operator(Assign)
+    invoked_function("add")
+      integer("1")

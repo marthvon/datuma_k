@@ -1,0 +1,180 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'n' -> /program/instruction/function-def/args
+'n' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'n' -> /program/instruction/function-def/program/instruction
+'n' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'n' -> /program/instruction/function-def/program/instruction
+'n' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'<' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'0' -> /program/instruction/function-def/program/instruction
+'0' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'i' -> /program/instruction/function-def/program
+'i' -> /program/instruction/function-def/program/instruction
+'i' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/if
+'(' -> /program/instruction/function-def/program/instruction/if/grouped
+'n' -> /program/instruction/function-def/program/instruction/if/grouped/ident
+')' -> /program/instruction/function-def/program/instruction/if/grouped/ident
+')' -> /program/instruction/function-def/program/instruction/if/grouped
+')' -> /program/instruction/function-def/program/instruction/if/grouped
+'{' -> /program/instruction/function-def/program/instruction/if
+'{' -> /program/instruction/function-def/program/instruction/if/program
+'y' -> /program/instruction/function-def/program/instruction/if/program/instruction
+'y' -> /program/instruction/function-def/program/instruction/if/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield
+'0' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/integer
+' ' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/integer
+'-' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/operator
+' ' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/operator
+'n' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield
+'n' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/ident
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield/ident
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield
+';' -> /program/instruction/function-def/program/instruction/if/program/instruction/yield
+'}' -> /program/instruction/function-def/program/instruction/if/program/instruction
+'}' -> /program/instruction/function-def/program/instruction/if/program
+'}' -> /program/instruction/function-def/program/instruction/if/program
+' ' -> /program/instruction/function-def/program/instruction/if
+'e' -> /program/instruction/function-def/program/instruction/if/ident
+' ' -> /program/instruction/function-def/program/instruction/if/else
+'{' -> /program/instruction/function-def/program/instruction/if/else/program
+'y' -> /program/instruction/function-def/program/instruction/if/else/program/instruction
+'y' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield
+'n' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield/ident
+';' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield/ident
+';' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield
+';' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield
+';' -> /program/instruction/function-def/program/instruction/if/else/program/instruction/yield
+'}' -> /program/instruction/function-def/program/instruction/if/else/program/instruction
+'}' -> /program/instruction/function-def/program/instruction/if/else/program
+'}' -> /program/instruction/function-def/program/instruction/if/else/program
+'}' -> /program/instruction/function-def/program/instruction/if/else/program
+'}' -> /program/instruction/function-def/program/instruction/if/else/program
+'}' -> /program/instruction/function-def/program/instruction/if/else/program
+';' -> /program/instruction/function-def/program/instruction/if/else
+';' -> /program/instruction/function-def/program/instruction/if
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'a' -> /program/instruction/function-def/program/instruction
+'a' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'a' -> /program/instruction/function-def/program/instruction
+'a' -> /program/instruction/function-def/program/instruction/ident
+'(' -> /program/instruction/function-def/program/instruction/call
+'-' -> /program/instruction/function-def/program/instruction/call/args
+'-' -> /program/instruction/function-def/program/instruction/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/call/args
+')' -> /program/instruction/function-def/program/instruction/call/args
+')' -> /program/instruction/function-def/program/instruction/call
+')' -> /program/instruction/function-def/program/instruction/call
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'b' -> /program/instruction/function-def/program
+'b' -> /program/instruction/function-def/program/instruction
+'b' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'a' -> /program/instruction/function-def/program/instruction
+'a' -> /program/instruction/function-def/program/instruction/ident
+'(' -> /program/instruction/function-def/program/instruction/call
+'2' -> /program/instruction/function-def/program/instruction/call/args
+'2' -> /program/instruction/function-def/program/instruction/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/call/args
+')' -> /program/instruction/function-def/program/instruction/call/args
+')' -> /program/instruction/function-def/program/instruction/call
+')' -> /program/instruction/function-def/program/instruction/call
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+'(' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("abs")
+    (anon)
+      ident("n")
+    program
+      instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 2, col 3, idx 5)
+        ident("neg")
+        operator(Assign)
+        ident("n")
+        operator(Lt)
+        integer("0")
+      if
+        grouped
+          ident("neg")
+        (anon)
+          integer("0")
+          operator(Sub)
+          ident("n")
+        ident("n")
+      instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 3, col 46, idx 49)
+  function_def("main")
+    (anon)
+    program
+      instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 6, col 3, idx 9)
+        ident("a")
+        operator(Assign)
+        invoked_function("abs")
+          integer("-3")
+      instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 7, col 3, idx 10)
+        ident("b")
+        operator(Assign)
+        invoked_function("abs")
+          integer("2")
+  instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 9, col 1, idx 10)
+    ident("ret")
+    operator(Assign)
+    invoked_function("main")

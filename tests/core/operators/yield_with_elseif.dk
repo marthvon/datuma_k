@@ -1,0 +1,1 @@
+if (c) { yield 1; } else if (d) { yield 2; } else { yield 3; };

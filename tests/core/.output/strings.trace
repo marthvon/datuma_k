@@ -1,0 +1,135 @@
+# stack changes
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'+' -> /program/instruction/operator
+'"' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'*' -> /program/instruction/operator
+'3' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'l' -> /program
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'.' -> /program/instruction/operator
+'l' -> /program/instruction/operator
+'l' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator
+';' -> /program/instruction
+';' -> /program/instruction
+'e' -> /program
+'e' -> /program/instruction
+'e' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'=' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'!' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'[' -> /program/instruction/accessor
+'1' -> /program/instruction/accessor/integer
+']' -> /program/instruction/accessor/integer
+']' -> /program/instruction/accessor
+']' -> /program/instruction/accessor
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 1, col 1, idx 2)
+    ident("cat")
+    operator(Assign)
+    string("a")
+    operator(Add)
+    string("b")
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 2, col 1, idx 3)
+    ident("rep")
+    operator(Assign)
+    string("xy")
+    operator(Mul)
+    integer("3")
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 3, col 1, idx 4)
+    ident("len")
+    operator(Assign)
+    string("hello")
+    operator(Dot)
+    ident("length")
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 4, col 1, idx 5)
+    ident("eq")
+    operator(Assign)
+    string("a")
+    operator(Equal)
+    string("a")
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 5, col 1, idx 6)
+    ident("ne")
+    operator(Assign)
+    string("a")
+    operator(NotEqual)
+    string("b")
+  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 6, col 1, idx 7)
+    ident("ch")
+    operator(Assign)
+    string("abc")
+    accessor
+      integer("1")

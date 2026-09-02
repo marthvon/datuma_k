@@ -1,0 +1,4 @@
+fn f() { shared = 1; return 0; }
+fn g() { return shared; }
+a = f();
+b = g();

@@ -1,0 +1,8 @@
+fn add(a, b) { return a + b; }
+fn pair(x) { return {z: x}; }
+r = add(1, 0);
+s = add(3, 0) + add(5, 0);
+t = add(1, 2) == 3;
+u = pair(9).z;
+g = (1);
+h = (pair(1));

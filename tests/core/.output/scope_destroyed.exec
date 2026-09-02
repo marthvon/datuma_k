@@ -1,0 +1,9 @@
+{"op":"assign","target":"shared","value":"1","fn":"f","stack":["f"],"frame":["shared"],"scope":{"shared":"1"}}
+
+{"op":"return","value":"0","fn":"f","stack":["f"],"frame":["shared"],"scope":{"shared":"1"}}
+
+{"op":"assign","target":"a","value":"0","fn":null,"stack":[],"frame":["a"],"scope":{"a":"0"}}
+
+{"op":"failed","error":"[Undefined Variable] undefined variable shared\n  in g","fn":"g","stack":["g"],"frame":[],"scope":{"a":"0"}}
+
+{"op":"failed","error":"[Undefined Variable] |scope_destroyed.dk; 77b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/scope_destroyed.dk> (line 4, col 1, idx 5) undefined variable shared\n  in g","fn":null,"stack":[],"frame":["a"],"scope":{"a":"0"}}

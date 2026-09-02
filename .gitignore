@@ -1,0 +1,8 @@
+/target
+/plan
+/.cursor
+/.vscode
+/release/1.0.0/
+/mcp/node_modules
+/mcp/dist
+.DS_Store

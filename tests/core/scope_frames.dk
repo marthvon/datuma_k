@@ -1,0 +1,4 @@
+g = 10;
+fn touch() { before = g; g = 99; mine = g; return before + mine; }
+sum = touch();
+outer = g;

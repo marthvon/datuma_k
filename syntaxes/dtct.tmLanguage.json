@@ -1,0 +1,130 @@
+{
+  "scopeName": "source.dtct",
+  "name": "dtct",
+  "patterns": [
+    { "include": "#model" }
+  ],
+  "repository": {
+    "model": {
+      "begin": "^\\s*([A-Za-z_][A-Za-z0-9_]*)\\b",
+      "beginCaptures": {
+        "1": { "name": "entity.name.type.dtct" }
+      },
+      "end": "(?<=\\})",
+      "patterns": [
+        { "include": "#traits" },
+        { "include": "#fields" }
+      ]
+    },
+    "traits": {
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.tag.begin.dtct" }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.tag.end.dtct" }
+      },
+      "patterns": [
+        {
+          "match": ",",
+          "name": "punctuation.separator.comma.dtct"
+        },
+        {
+          "match": "[A-Za-z_][A-Za-z0-9_]*",
+          "name": "entity.name.tag.dtct"
+        }
+      ]
+    },
+    "fields": {
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": { "name": "punctuation.section.block.begin.dtct" }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": { "name": "punctuation.section.block.end.dtct" }
+      },
+      "patterns": [
+        { "include": "#field" }
+      ]
+    },
+    "field": {
+      "begin": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(:)",
+      "beginCaptures": {
+        "1": { "name": "variable.other.property.dtct" },
+        "2": { "name": "keyword.operator.type.dtct" }
+      },
+      "end": "(,)|(?=\\})",
+      "endCaptures": {
+        "1": { "name": "punctuation.separator.comma.dtct" }
+      },
+      "patterns": [
+        { "include": "#string" },
+        { "include": "#number" },
+        { "include": "#attrs" },
+        { "include": "#parens" },
+        {
+          "match": "[A-Za-z_][A-Za-z0-9_]*",
+          "name": "storage.type.dtct"
+        }
+      ]
+    },
+    "attrs": {
+      "begin": "<",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.generic.begin.dtct" }
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.generic.end.dtct" }
+      },
+      "patterns": [
+        { "include": "#string" },
+        { "include": "#number" },
+        { "include": "#parens" },
+        {
+          "match": ",",
+          "name": "punctuation.separator.comma.dtct"
+        },
+        {
+          "match": "[A-Za-z_][A-Za-z0-9_]*",
+          "name": "entity.name.function.dtct"
+        }
+      ]
+    },
+    "parens": {
+      "begin": "\\(",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.parameters.begin.dtct" }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.parameters.end.dtct" }
+      },
+      "patterns": [
+        { "include": "#string" },
+        { "include": "#number" },
+        {
+          "match": ",",
+          "name": "punctuation.separator.comma.dtct"
+        }
+      ]
+    },
+    "string": {
+      "name": "string.quoted.double.dtct",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.dtct",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.dtct",
+      "match": "\\b\\d+(?:\\.\\d+)?\\b"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+base = {a: 1, b: 2};
+other = {b: 9, c: 3};
+merged = base + other;
+lit = {} + {a: 1};
+subd = base - other;
+interd = base & other;
+symd = base ^ other;
+pairs = base.asArray();
+n = base.length;
+got = base["a"];
+dot = base.b;

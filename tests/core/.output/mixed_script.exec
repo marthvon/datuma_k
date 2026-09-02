@@ -1,0 +1,23 @@
+{"op":"return","value":"{v: [1, 2], tag: \"ok\"}","fn":"pack","stack":["main","pack"],"frame":["v"],"scope":{"v":"[1, 2]"}}
+
+{"op":"assign","target":"data","value":"{v: [1, 2], tag: \"ok\"}","fn":"main","stack":["main"],"frame":["data"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}"}}
+
+{"op":"return","value":"{v: \"z\", tag: \"ok\"}","fn":"pack","stack":["main","pack"],"frame":["v"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","v":"\"z\""}}
+
+{"op":"assign","target":"packed","value":"{v: \"z\", tag: \"ok\"}","fn":"main","stack":["main"],"frame":["data","packed"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","packed":"{v: \"z\", tag: \"ok\"}"}}
+
+{"op":"iterate","index":0,"variable":"row","element":"{v: \"z\", tag: \"ok\"}","fn":"main","stack":["main"],"frame":["data","packed","row"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}"}}
+
+{"op":"assign","target":"tag","value":"\"ok\"","fn":"main","stack":["main"],"frame":["data","packed","row","tag"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","tag":"\"ok\""}}
+
+{"op":"assign","target":"ok","value":"true","fn":"main","stack":["main"],"frame":["data","packed","row","tag","ok"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","ok":"true","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","tag":"\"ok\""}}
+
+{"op":"branch","condition":true,"taken":"then","fn":"main","stack":["main"],"frame":["data","packed","row","tag","ok"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","ok":"true","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","tag":"\"ok\""}}
+
+{"op":"assign","target":"out","value":"[1, 2]","fn":"main","stack":["main"],"frame":["data","packed","row","tag","ok","out"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","ok":"true","out":"[1, 2]","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","tag":"\"ok\""}}
+
+{"op":"assign","target":"score","value":"1.12345678d","fn":"main","stack":["main"],"frame":["data","packed","row","tag","ok","out","score"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","ok":"true","out":"[1, 2]","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","score":"1.12345678d","tag":"\"ok\""}}
+
+{"op":"assign","target":"msg","value":"\"a\\\"b\\\\c\"","fn":"main","stack":["main"],"frame":["data","packed","row","tag","ok","out","score","msg"],"scope":{"data":"{v: [1, 2], tag: \"ok\"}","msg":"\"a\\\"b\\\\c\"","ok":"true","out":"[1, 2]","packed":"{v: \"z\", tag: \"ok\"}","row":"{v: \"z\", tag: \"ok\"}","score":"1.12345678d","tag":"\"ok\""}}
+
+{"op":"assign","target":"ret","value":"null","fn":null,"stack":[],"frame":["ret"],"scope":{"ret":"null"}}

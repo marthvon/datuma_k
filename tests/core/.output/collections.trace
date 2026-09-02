@@ -1,0 +1,324 @@
+# stack changes
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+']' -> /program/instruction/array
+'+' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator/array
+'1' -> /program/instruction/array/operator/array/integer
+']' -> /program/instruction/array/operator/array/integer
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+';' -> /program/instruction/array/operator
+';' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+']' -> /program/instruction/array
+'+' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator
+'[' -> /program/instruction/array/operator/array
+'1' -> /program/instruction/array/operator/array/integer
+']' -> /program/instruction/array/operator/array/integer
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+']' -> /program/instruction/array/operator/array
+'+' -> /program/instruction/array/operator/array/operator
+'[' -> /program/instruction/array/operator/array/operator
+'[' -> /program/instruction/array/operator/array/operator
+'[' -> /program/instruction/array/operator/array/operator/array
+'2' -> /program/instruction/array/operator/array/operator/array/integer
+']' -> /program/instruction/array/operator/array/operator/array/integer
+']' -> /program/instruction/array/operator/array/operator/array
+']' -> /program/instruction/array/operator/array/operator/array
+']' -> /program/instruction/array/operator/array/operator/array
+']' -> /program/instruction/array/operator/array/operator/array
+';' -> /program/instruction/array/operator/array/operator
+';' -> /program/instruction/array/operator/array
+';' -> /program/instruction/array/operator
+';' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'a' -> /program
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'1' -> /program/instruction/array/integer
+',' -> /program/instruction/array/integer
+',' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+',' -> /program/instruction/array/integer
+',' -> /program/instruction/array
+'3' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'-' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'^' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'l' -> /program
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'^' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'[' -> /program/instruction/array/array
+'1' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array
+'2' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array/array
+',' -> /program/instruction/array
+'[' -> /program/instruction/array/array
+'3' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'g' -> /program
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'1' -> /program/instruction/array/integer
+' ' -> /program/instruction/array/integer
+'+' -> /program/instruction/array/operator
+' ' -> /program/instruction/array/operator
+'2' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+',' -> /program/instruction/array/integer
+',' -> /program/instruction/array
+'3' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 1, col 1, idx 2)
+    ident("lit")
+    operator(Assign)
+    array
+    array
+      operator(Add)
+      array
+        integer("1")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 2, col 1, idx 3)
+    ident("chain")
+    operator(Assign)
+    array
+    array
+      operator(Add)
+      array
+        integer("1")
+    array
+      operator(Add)
+      array
+        integer("2")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 3, col 1, idx 4)
+    ident("a")
+    operator(Assign)
+    array
+      integer("1")
+      integer("2")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 4, col 1, idx 5)
+    ident("b")
+    operator(Assign)
+    array
+      integer("2")
+      integer("3")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 5, col 1, idx 6)
+    ident("merge")
+    operator(Assign)
+    ident("a")
+    operator(Add)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 6, col 1, idx 7)
+    ident("sub")
+    operator(Assign)
+    ident("a")
+    operator(Sub)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 7, col 1, idx 8)
+    ident("sym")
+    operator(Assign)
+    ident("a")
+    operator(Xor)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 8, col 1, idx 9)
+    ident("inter")
+    operator(Assign)
+    ident("a")
+    operator(BitAnd)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 9, col 1, idx 10)
+    ident("ldiff")
+    operator(Assign)
+    ident("a")
+    operator(LeftDiff)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 10, col 1, idx 11)
+    ident("rdiff")
+    operator(Assign)
+    ident("a")
+    operator(RightDiff)
+    ident("b")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 11, col 1, idx 12)
+    ident("nested")
+    operator(Assign)
+    array
+      array
+        integer("1")
+        integer("2")
+      array
+        integer("3")
+  instruction(|collections.dk; 198b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/collections.dk> @ line 12, col 1, idx 13)
+    ident("grouped")
+    operator(Assign)
+    array
+      integer("1")
+      operator(Add)
+      integer("2")
+      integer("3")

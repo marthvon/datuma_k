@@ -1,0 +1,126 @@
+# stack changes
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'b' -> /program/instruction/function-def/program/instruction
+'b' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'g' -> /program/instruction/function-def/program/instruction
+'g' -> /program/instruction/function-def/program/instruction/ident
+';' -> /program/instruction/function-def/program/instruction/ident
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'g' -> /program/instruction/function-def/program
+'g' -> /program/instruction/function-def/program/instruction
+'g' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'9' -> /program/instruction/function-def/program/instruction
+'9' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction/integer
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'m' -> /program/instruction/function-def/program
+'m' -> /program/instruction/function-def/program/instruction
+'m' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/ident
+'=' -> /program/instruction/function-def/program/instruction/operator
+' ' -> /program/instruction/function-def/program/instruction/operator
+'g' -> /program/instruction/function-def/program/instruction
+'g' -> /program/instruction/function-def/program/instruction/ident
+';' -> /program/instruction/function-def/program/instruction/ident
+';' -> /program/instruction/function-def/program/instruction
+';' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'b' -> /program/instruction/function-def/program/instruction/return/ident
+' ' -> /program/instruction/function-def/program/instruction/return/ident
+'+' -> /program/instruction/function-def/program/instruction/return/operator
+' ' -> /program/instruction/function-def/program/instruction/return/operator
+'m' -> /program/instruction/function-def/program/instruction/return
+'m' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+'(' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'o' -> /program
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 1, col 1, idx 2)
+    ident("g")
+    operator(Assign)
+    integer("10")
+  function_def("touch")
+    (anon)
+    program
+      instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 2, col 14, idx 16)
+        ident("before")
+        operator(Assign)
+        ident("g")
+      instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 2, col 26, idx 28)
+        ident("g")
+        operator(Assign)
+        integer("99")
+      instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 2, col 34, idx 36)
+        ident("mine")
+        operator(Assign)
+        ident("g")
+      return
+        ident("before")
+        operator(Add)
+        ident("mine")
+  instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 3, col 1, idx 4)
+    ident("sum")
+    operator(Assign)
+    invoked_function("touch")
+  instruction(|scope_frames.dk; 101b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/scope_frames.dk> @ line 4, col 1, idx 5)
+    ident("outer")
+    operator(Assign)
+    ident("g")

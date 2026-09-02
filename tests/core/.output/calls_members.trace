@@ -1,0 +1,270 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'a' -> /program/instruction/function-def/args
+'a' -> /program/instruction/function-def/args/ident
+',' -> /program/instruction/function-def/args/ident
+',' -> /program/instruction/function-def/args
+'b' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'a' -> /program/instruction/function-def/program/instruction/return/ident
+' ' -> /program/instruction/function-def/program/instruction/return/ident
+'+' -> /program/instruction/function-def/program/instruction/return/operator
+' ' -> /program/instruction/function-def/program/instruction/return/operator
+'b' -> /program/instruction/function-def/program/instruction/return
+'b' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return/ident
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'x' -> /program/instruction/function-def/args
+'x' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'{' -> /program/instruction/function-def/program/instruction/return/dict
+'z' -> /program/instruction/function-def/program/instruction/return/dict/ident
+':' -> /program/instruction/function-def/program/instruction/return/dict/ident
+':' -> /program/instruction/function-def/program/instruction/return/dict
+'x' -> /program/instruction/function-def/program/instruction/return/dict/ident
+'}' -> /program/instruction/function-def/program/instruction/return/dict/ident
+'}' -> /program/instruction/function-def/program/instruction/return/dict
+'}' -> /program/instruction/function-def/program/instruction/return/dict
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'r' -> /program
+'r' -> /program/instruction
+'r' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'1' -> /program/instruction/call/args
+'1' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args
+'0' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'s' -> /program
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'3' -> /program/instruction/call/args
+'3' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args
+'0' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'5' -> /program/instruction/call/args
+'5' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args
+'0' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+'t' -> /program
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'1' -> /program/instruction/call/args
+'1' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args/integer
+',' -> /program/instruction/call/args
+'2' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+'=' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'u' -> /program
+'u' -> /program/instruction
+'u' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'9' -> /program/instruction/call/args
+'9' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+'.' -> /program/instruction/operator
+'z' -> /program/instruction/operator
+'z' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator
+';' -> /program/instruction
+';' -> /program/instruction
+'g' -> /program
+'g' -> /program/instruction
+'g' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'1' -> /program/instruction/grouped/integer
+')' -> /program/instruction/grouped/integer
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+'h' -> /program
+'h' -> /program/instruction
+'h' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'p' -> /program/instruction/grouped/ident
+'(' -> /program/instruction/grouped/call
+'1' -> /program/instruction/grouped/call/args
+'1' -> /program/instruction/grouped/call/args/integer
+')' -> /program/instruction/grouped/call/args/integer
+')' -> /program/instruction/grouped/call/args
+')' -> /program/instruction/grouped/call/args
+')' -> /program/instruction/grouped/call
+')' -> /program/instruction/grouped/call
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("add")
+    (anon)
+      ident("a")
+      ident("b")
+    program
+      return
+        ident("a")
+        operator(Add)
+        ident("b")
+  function_def("pair")
+    (anon)
+      ident("x")
+    program
+      return
+        dict
+          (anon)
+            ident("z")
+            ident("x")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 3, col 1, idx 4)
+    ident("r")
+    operator(Assign)
+    invoked_function("add")
+      integer("1")
+      integer("0")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 4, col 1, idx 5)
+    ident("s")
+    operator(Assign)
+    invoked_function("add")
+      integer("3")
+      integer("0")
+    operator(Add)
+    invoked_function("add")
+      integer("5")
+      integer("0")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 5, col 1, idx 6)
+    ident("t")
+    operator(Assign)
+    invoked_function("add")
+      integer("1")
+      integer("2")
+    operator(Equal)
+    integer("3")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 6, col 1, idx 7)
+    ident("u")
+    operator(Assign)
+    invoked_function("pair")
+      integer("9")
+    operator(Dot)
+    ident("z")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 7, col 1, idx 8)
+    ident("g")
+    operator(Assign)
+    grouped
+      integer("1")
+  instruction(|calls_members.dk; 162b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/calls_members.dk> @ line 8, col 1, idx 9)
+    ident("h")
+    operator(Assign)
+    grouped
+      invoked_function("pair")
+        integer("1")

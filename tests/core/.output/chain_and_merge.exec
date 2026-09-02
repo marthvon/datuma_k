@@ -1,0 +1,25 @@
+{"op":"return","value":"{a: {b: \"c\"}}","fn":"get","stack":["get"],"frame":[],"scope":{}}
+
+{"op":"assign","target":"a","value":"{a: {b: \"c\"}}","fn":null,"stack":[],"frame":["a"],"scope":{"a":"{a: {b: \"c\"}}"}}
+
+{"op":"assign","target":"x","value":"0","fn":null,"stack":[],"frame":["a","x"],"scope":{"a":"{a: {b: \"c\"}}","x":"0"}}
+
+{"op":"assign","target":"p","value":"\"c\"","fn":null,"stack":[],"frame":["a","x","p"],"scope":{"a":"{a: {b: \"c\"}}","p":"\"c\"","x":"0"}}
+
+{"op":"return","value":"{a: {b: \"c\"}}","fn":"get","stack":["get"],"frame":[],"scope":{"a":"{a: {b: \"c\"}}","p":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"q","value":"\"c\"","fn":null,"stack":[],"frame":["a","x","p","q"],"scope":{"a":"{a: {b: \"c\"}}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"m","value":"[1, 2]","fn":null,"stack":[],"frame":["a","x","p","q","m"],"scope":{"a":"{a: {b: \"c\"}}","m":"[1, 2]","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"md","value":"{a: 1, b: 2}","fn":null,"stack":[],"frame":["a","x","p","q","m","md"],"scope":{"a":"{a: {b: \"c\"}}","m":"[1, 2]","md":"{a: 1, b: 2}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"dd","value":"{}","fn":null,"stack":[],"frame":["a","x","p","q","m","md","dd"],"scope":{"a":"{a: {b: \"c\"}}","dd":"{}","m":"[1, 2]","md":"{a: 1, b: 2}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"arr","value":"[0, 0.5f]","fn":null,"stack":[],"frame":["a","x","p","q","m","md","dd","arr"],"scope":{"a":"{a: {b: \"c\"}}","arr":"[0, 0.5f]","dd":"{}","m":"[1, 2]","md":"{a: 1, b: 2}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"bare","value":"\"hi\"","fn":null,"stack":[],"frame":["a","x","p","q","m","md","dd","arr","bare"],"scope":{"a":"{a: {b: \"c\"}}","arr":"[0, 0.5f]","bare":"\"hi\"","dd":"{}","m":"[1, 2]","md":"{a: 1, b: 2}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"lst","value":"[1]","fn":null,"stack":[],"frame":["a","x","p","q","m","md","dd","arr","bare","lst"],"scope":{"a":"{a: {b: \"c\"}}","arr":"[0, 0.5f]","bare":"\"hi\"","dd":"{}","lst":"[1]","m":"[1, 2]","md":"{a: 1, b: 2}","p":"\"c\"","q":"\"c\"","x":"0"}}
+
+{"op":"assign","target":"obj","value":"{a: 1}","fn":null,"stack":[],"frame":["a","x","p","q","m","md","dd","arr","bare","lst","obj"],"scope":{"a":"{a: {b: \"c\"}}","arr":"[0, 0.5f]","bare":"\"hi\"","dd":"{}","lst":"[1]","m":"[1, 2]","md":"{a: 1, b: 2}","obj":"{a: 1}","p":"\"c\"","q":"\"c\"","x":"0"}}

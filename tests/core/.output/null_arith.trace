@@ -1,0 +1,41 @@
+# stack changes
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+';' -> /program/instruction/null
+';' -> /program/instruction/null
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|null_arith.dk; 35b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/null_arith.dk> @ line 1, col 1, idx 2)
+    ident("nothing")
+    operator(Assign)
+    null
+  instruction(|null_arith.dk; 35b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/null_arith.dk> @ line 2, col 1, idx 3)
+    ident("bad")
+    operator(Assign)
+    ident("nothing")
+    operator(Add)
+    integer("1")

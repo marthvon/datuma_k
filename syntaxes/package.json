@@ -1,0 +1,39 @@
+{
+  "name": "datuma-syntax",
+  "displayName": "datuma_k",
+  "description": "Syntax highlighting for .dtct and .ngin",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dtct",
+        "aliases": ["dtct"],
+        "extensions": [".dtct"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "ngin",
+        "aliases": ["ngin"],
+        "extensions": [".ngin", ".def.ngin"],
+        "filenamePatterns": ["*.ngin", "*.def.ngin"],
+        "configuration": "./ngin.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dtct",
+        "scopeName": "source.dtct",
+        "path": "./dtct.tmLanguage.json"
+      },
+      {
+        "language": "ngin",
+        "scopeName": "source.ngin",
+        "path": "./ngin.tmLanguage.json"
+      }
+    ]
+  }
+}

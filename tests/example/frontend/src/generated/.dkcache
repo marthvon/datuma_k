@@ -1,0 +1,3737 @@
+{
+  "version": 1,
+  "files": {
+    "types.ts": {
+      "tree": [
+        {
+          "id": "5533b8418e031e38",
+          "line": 1,
+          "col": 1,
+          "text": "\n"
+        },
+        {
+          "id": "054a47d53b989548",
+          "line": 2,
+          "col": 1,
+          "children": [
+            {
+              "id": "02c121f0e083f6bb",
+              "line": 2,
+              "col": 1,
+              "text": "\nexport type "
+            },
+            {
+              "id": "b8fa7e4aad60e4bf",
+              "line": 3,
+              "col": 13,
+              "text": "Event"
+            },
+            {
+              "id": "d1ce2a85201b467d",
+              "line": 3,
+              "col": 18,
+              "text": " = {\n"
+            },
+            {
+              "id": "620f19d12a873840",
+              "line": 4,
+              "col": 1,
+              "children": [
+                {
+                  "id": "efd41e58c4f97cca",
+                  "line": 4,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "e376019bfa54cd53",
+                  "line": 4,
+                  "col": 3,
+                  "text": "title"
+                },
+                {
+                  "id": "81cfd5940b4942cc",
+                  "line": 4,
+                  "col": 8,
+                  "text": ": "
+                },
+                {
+                  "id": "07a8e6ef46567b82",
+                  "line": 4,
+                  "col": 10,
+                  "text": "string"
+                },
+                {
+                  "id": "c08cb5234981cf8e",
+                  "line": 4,
+                  "col": 16,
+                  "text": ";\n"
+                }
+              ]
+            },
+            {
+              "id": "1ff22fb0c89be67a",
+              "line": 5,
+              "col": 1,
+              "children": [
+                {
+                  "id": "5600330d1e890028",
+                  "line": 5,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "5d9d1ea50d3518f7",
+                  "line": 5,
+                  "col": 3,
+                  "text": "capacity"
+                },
+                {
+                  "id": "53ae4ae3216f0696",
+                  "line": 5,
+                  "col": 11,
+                  "text": ": "
+                },
+                {
+                  "id": "2c1a0798c93ec2d0",
+                  "line": 5,
+                  "col": 13,
+                  "text": "number"
+                },
+                {
+                  "id": "39ab42dfc9fe2eec",
+                  "line": 5,
+                  "col": 19,
+                  "text": ";\n"
+                }
+              ]
+            },
+            {
+              "id": "b37095e25c23b025",
+              "line": 6,
+              "col": 1,
+              "children": [
+                {
+                  "id": "12e8da2e5c2298f7",
+                  "line": 6,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "52e5d573b0df008e",
+                  "line": 6,
+                  "col": 3,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "1d2240942b3871a1",
+                  "line": 6,
+                  "col": 12,
+                  "text": ": "
+                },
+                {
+                  "id": "5847cca6cd08d9ff",
+                  "line": 6,
+                  "col": 14,
+                  "text": "Date"
+                },
+                {
+                  "id": "eba384aa45e0a84b",
+                  "line": 6,
+                  "col": 18,
+                  "text": ";\n"
+                }
+              ]
+            },
+            {
+              "id": "04f5f4eeee1ec4c7",
+              "line": 7,
+              "col": 1,
+              "text": "\n};\n\nexport type "
+            },
+            {
+              "id": "e3d637af4f10a857",
+              "line": 10,
+              "col": 13,
+              "text": "Event"
+            },
+            {
+              "id": "ff5281cbf7670c39",
+              "line": 10,
+              "col": 18,
+              "text": "Record = { id: number } & "
+            },
+            {
+              "id": "8c35be1008b4fc84",
+              "line": 10,
+              "col": 44,
+              "text": "Event"
+            },
+            {
+              "id": "c2360fddfb4d8583",
+              "line": 10,
+              "col": 49,
+              "text": ";\n\n"
+            }
+          ]
+        },
+        {
+          "id": "abdd5a877a2d8acb",
+          "line": 12,
+          "col": 1,
+          "children": [
+            {
+              "id": "4fa561a2c1699448",
+              "line": 12,
+              "col": 1,
+              "text": "\nexport type "
+            },
+            {
+              "id": "26752e0129370d7c",
+              "line": 13,
+              "col": 13,
+              "text": "Venue"
+            },
+            {
+              "id": "0daf8eb7ab8bf1da",
+              "line": 13,
+              "col": 18,
+              "text": " = {\n"
+            },
+            {
+              "id": "d92184cdf1ff42ec",
+              "line": 14,
+              "col": 1,
+              "children": [
+                {
+                  "id": "4b742dfefd7d990e",
+                  "line": 14,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "05ebb009b78f9ac1",
+                  "line": 14,
+                  "col": 3,
+                  "text": "name"
+                },
+                {
+                  "id": "559ff9febdea6a18",
+                  "line": 14,
+                  "col": 7,
+                  "text": ": "
+                },
+                {
+                  "id": "a5e06e5653b0af56",
+                  "line": 14,
+                  "col": 9,
+                  "text": "string"
+                },
+                {
+                  "id": "342b079725be6322",
+                  "line": 14,
+                  "col": 15,
+                  "text": ";\n"
+                }
+              ]
+            },
+            {
+              "id": "11d1e68ced2e523b",
+              "line": 15,
+              "col": 1,
+              "children": [
+                {
+                  "id": "958b1af87f14a851",
+                  "line": 15,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "27f30ed5a1ff7eb6",
+                  "line": 15,
+                  "col": 3,
+                  "text": "capacity"
+                },
+                {
+                  "id": "90465fb4f37d66c7",
+                  "line": 15,
+                  "col": 11,
+                  "text": ": "
+                },
+                {
+                  "id": "ec9a15eafa569059",
+                  "line": 15,
+                  "col": 13,
+                  "text": "number"
+                },
+                {
+                  "id": "008abf922782b9e5",
+                  "line": 15,
+                  "col": 19,
+                  "text": ";\n"
+                }
+              ]
+            },
+            {
+              "id": "110df3942faecf44",
+              "line": 16,
+              "col": 1,
+              "text": "\n};\n\nexport type "
+            },
+            {
+              "id": "04a36fff0855d494",
+              "line": 19,
+              "col": 13,
+              "text": "Venue"
+            },
+            {
+              "id": "b373348ae2857236",
+              "line": 19,
+              "col": 18,
+              "text": "Record = { id: number } & "
+            },
+            {
+              "id": "41b178f57195a477",
+              "line": 19,
+              "col": 44,
+              "text": "Venue"
+            },
+            {
+              "id": "87edb7395657b9d0",
+              "line": 19,
+              "col": 49,
+              "text": ";\n\n"
+            }
+          ]
+        },
+        {
+          "id": "5533ba418e03219e",
+          "line": 21,
+          "col": 1,
+          "text": "\n"
+        }
+      ]
+    },
+    "schemas.ts": {
+      "tree": [
+        {
+          "id": "40a449a4fb519d62",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { z } from \"zod\";\n\n"
+        },
+        {
+          "id": "648d087b16b7af75",
+          "line": 4,
+          "col": 1,
+          "children": [
+            {
+              "id": "ae9854a1bab41640",
+              "line": 4,
+              "col": 1,
+              "text": "\nexport const "
+            },
+            {
+              "id": "f55b5e53d66e0935",
+              "line": 5,
+              "col": 14,
+              "text": "Event"
+            },
+            {
+              "id": "ebd5c412e7ff7e86",
+              "line": 5,
+              "col": 19,
+              "text": "Schema = z.object({\n"
+            },
+            {
+              "id": "30427cbf5b98c2e9",
+              "line": 6,
+              "col": 1,
+              "children": [
+                {
+                  "id": "ab30dfae7c91c3f3",
+                  "line": 6,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "ebf68e7d067748ec",
+                  "line": 6,
+                  "col": 3,
+                  "text": "title"
+                },
+                {
+                  "id": "5136ef238c0ec165",
+                  "line": 6,
+                  "col": 8,
+                  "text": ": "
+                },
+                {
+                  "id": "1e933f4bee939aad",
+                  "line": 6,
+                  "col": 10,
+                  "text": "z.string()"
+                }
+              ]
+            },
+            {
+              "id": "ed19257235a8db5f",
+              "line": 6,
+              "col": 20,
+              "children": [
+                {
+                  "id": "79bc615926290db0",
+                  "line": 6,
+                  "col": 20,
+                  "text": ".min(1)"
+                }
+              ]
+            },
+            {
+              "id": "57b1a04735262b6c",
+              "line": 6,
+              "col": 27,
+              "children": [
+                {
+                  "id": "d1e51287801a3196",
+                  "line": 6,
+                  "col": 27,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "932c520ff0523ea9",
+              "line": 7,
+              "col": 1,
+              "children": [
+                {
+                  "id": "3504782866817b17",
+                  "line": 7,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "78750385da42bb36",
+                  "line": 7,
+                  "col": 3,
+                  "text": "capacity"
+                },
+                {
+                  "id": "5a6886f0c9725f85",
+                  "line": 7,
+                  "col": 11,
+                  "text": ": "
+                },
+                {
+                  "id": "d5f2fa3c0584cb5d",
+                  "line": 7,
+                  "col": 13,
+                  "text": "z.number()"
+                }
+              ]
+            },
+            {
+              "id": "e6670a7633b2a3a5",
+              "line": 7,
+              "col": 23,
+              "children": [
+                {
+                  "id": "40bfce8546189874",
+                  "line": 7,
+                  "col": 23,
+                  "text": ".min("
+                },
+                {
+                  "id": "1250026426e66d32",
+                  "line": 7,
+                  "col": 28,
+                  "text": "1"
+                },
+                {
+                  "id": "4d3dbe1f3a5c4ff2",
+                  "line": 7,
+                  "col": 29,
+                  "text": ")"
+                }
+              ]
+            },
+            {
+              "id": "c7a75df8ac8f131c",
+              "line": 7,
+              "col": 30,
+              "children": [
+                {
+                  "id": "27466b4a17fdf2f3",
+                  "line": 7,
+                  "col": 30,
+                  "text": ".max("
+                },
+                {
+                  "id": "d57fda03a90534e3",
+                  "line": 7,
+                  "col": 35,
+                  "text": "500"
+                },
+                {
+                  "id": "55d8f3a5ebb79521",
+                  "line": 7,
+                  "col": 38,
+                  "text": ")"
+                }
+              ]
+            },
+            {
+              "id": "cd8edb3cef4f06b6",
+              "line": 7,
+              "col": 39,
+              "children": [
+                {
+                  "id": "58e9b8099b389604",
+                  "line": 7,
+                  "col": 39,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "2229a5116f71e79c",
+              "line": 8,
+              "col": 1,
+              "children": [
+                {
+                  "id": "b7e1f61962b3a76e",
+                  "line": 8,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "7e5b0d2b32423e01",
+                  "line": 8,
+                  "col": 3,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "918ccf7a1aa55498",
+                  "line": 8,
+                  "col": 12,
+                  "text": ": "
+                },
+                {
+                  "id": "a7cfdf8e761078f0",
+                  "line": 8,
+                  "col": 14,
+                  "text": "z.string()"
+                }
+              ]
+            },
+            {
+              "id": "25901943f6268881",
+              "line": 8,
+              "col": 24,
+              "children": [
+                {
+                  "id": "3f4e80e2c258da03",
+                  "line": 8,
+                  "col": 24,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "aba01bc2d1e59f94",
+              "line": 9,
+              "col": 1,
+              "text": "\n});\n\n"
+            }
+          ]
+        },
+        {
+          "id": "596ad563bb17b692",
+          "line": 12,
+          "col": 1,
+          "children": [
+            {
+              "id": "5f1d50fa73991f43",
+              "line": 12,
+              "col": 1,
+              "text": "\nexport const "
+            },
+            {
+              "id": "e4e53392b08aa152",
+              "line": 13,
+              "col": 14,
+              "text": "Venue"
+            },
+            {
+              "id": "58976ba420f58319",
+              "line": 13,
+              "col": 19,
+              "text": "Schema = z.object({\n"
+            },
+            {
+              "id": "44a8ed4bc086da8f",
+              "line": 14,
+              "col": 1,
+              "children": [
+                {
+                  "id": "f018eaac396322e1",
+                  "line": 14,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "358060fb33214db8",
+                  "line": 14,
+                  "col": 3,
+                  "text": "name"
+                },
+                {
+                  "id": "e4a19da9cd8624ab",
+                  "line": 14,
+                  "col": 7,
+                  "text": ": "
+                },
+                {
+                  "id": "4d93c0c7bfa5e2e3",
+                  "line": 14,
+                  "col": 9,
+                  "text": "z.string()"
+                }
+              ]
+            },
+            {
+              "id": "fbb30b39a7c6d5ad",
+              "line": 14,
+              "col": 19,
+              "children": [
+                {
+                  "id": "21ed61032cf219bc",
+                  "line": 14,
+                  "col": 19,
+                  "text": ".min(1)"
+                }
+              ]
+            },
+            {
+              "id": "6325fcae91fca138",
+              "line": 14,
+              "col": 26,
+              "children": [
+                {
+                  "id": "7bfdf68ccf9553ba",
+                  "line": 14,
+                  "col": 26,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "c903d7e15e54bb10",
+              "line": 15,
+              "col": 1,
+              "children": [
+                {
+                  "id": "9150cba7a93f12d6",
+                  "line": 15,
+                  "col": 1,
+                  "text": "  "
+                },
+                {
+                  "id": "58b235b69e5d6c67",
+                  "line": 15,
+                  "col": 3,
+                  "text": "capacity"
+                },
+                {
+                  "id": "5e1b422984cb6dcc",
+                  "line": 15,
+                  "col": 11,
+                  "text": ": "
+                },
+                {
+                  "id": "3e9813f306e08824",
+                  "line": 15,
+                  "col": 13,
+                  "text": "z.number()"
+                }
+              ]
+            },
+            {
+              "id": "d768d831a3ff1fec",
+              "line": 15,
+              "col": 23,
+              "children": [
+                {
+                  "id": "288973ee1886eaed",
+                  "line": 15,
+                  "col": 23,
+                  "text": ".min("
+                },
+                {
+                  "id": "499b6832f64e0393",
+                  "line": 15,
+                  "col": 28,
+                  "text": "1"
+                },
+                {
+                  "id": "c0a130e2eb64e353",
+                  "line": 15,
+                  "col": 29,
+                  "text": ")"
+                }
+              ]
+            },
+            {
+              "id": "2ac5d1aec0a15bd5",
+              "line": 15,
+              "col": 30,
+              "children": [
+                {
+                  "id": "1774cff60f77ec02",
+                  "line": 15,
+                  "col": 30,
+                  "text": ".max("
+                },
+                {
+                  "id": "5d81d756f8b73272",
+                  "line": 15,
+                  "col": 35,
+                  "text": "10000"
+                },
+                {
+                  "id": "1a8aec4a4fdf5fa8",
+                  "line": 15,
+                  "col": 40,
+                  "text": ")"
+                }
+              ]
+            },
+            {
+              "id": "adcc0d6db369b7e7",
+              "line": 15,
+              "col": 41,
+              "children": [
+                {
+                  "id": "bb416a53ad62183d",
+                  "line": 15,
+                  "col": 41,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "9a17d8a2c410f8c7",
+              "line": 16,
+              "col": 1,
+              "text": "\n});\n\n"
+            }
+          ]
+        },
+        {
+          "id": "40a447a4fb5199fc",
+          "line": 19,
+          "col": 1,
+          "text": "\n"
+        }
+      ]
+    },
+    "transforms.ts": {
+      "tree": [
+        {
+          "id": "ee6294f679215e74",
+          "line": 1,
+          "col": 1,
+          "text": "\n"
+        },
+        {
+          "id": "c4150ae168cf9807",
+          "line": 2,
+          "col": 1,
+          "children": [
+            {
+              "id": "84557403847997c8",
+              "line": 2,
+              "col": 1,
+              "text": "import type { "
+            },
+            {
+              "id": "ff562c0518bc8886",
+              "line": 2,
+              "col": 15,
+              "text": "Event, EventRecord, Venue, VenueRecord"
+            },
+            {
+              "id": "8455760384799b2e",
+              "line": 2,
+              "col": 53,
+              "text": " } from \"./types\";\n"
+            }
+          ]
+        },
+        {
+          "id": "ee6296f6792161da",
+          "line": 3,
+          "col": 1,
+          "text": "\n\nfunction pad(n: number): string {\n  if (n < 10) {\n    return \"0\" + n;\n  } else {\n    return \"\" + n;\n  }\n}\n\nexport function toLocalDate(iso: string): Date {\n  return new Date(iso);\n}\n\nexport function toDatetimeLocalInput(value: Date): string {\n  return value.getFullYear() + \"-\" + pad(value.getMonth() + 1) + \"-\" + pad(value.getDate()) + \"T\" + pad(value.getHours()) + \":\" + pad(value.getMinutes());\n}\n\n"
+        },
+        {
+          "id": "6b4287b11810c49a",
+          "line": 21,
+          "col": 1,
+          "children": [
+            {
+              "id": "c8110415ad90516d",
+              "line": 21,
+              "col": 1,
+              "text": "\nexport function parse"
+            },
+            {
+              "id": "56860f949e139a3f",
+              "line": 22,
+              "col": 22,
+              "text": "Event"
+            },
+            {
+              "id": "2ad20c1c18b9c46b",
+              "line": 22,
+              "col": 27,
+              "text": "(raw: any): "
+            },
+            {
+              "id": "e67f73926bea7c22",
+              "line": 22,
+              "col": 39,
+              "text": "Event"
+            },
+            {
+              "id": "514601e29f29d729",
+              "line": 22,
+              "col": 44,
+              "text": "Record {\n  return {\n    id: raw.id,\n"
+            },
+            {
+              "id": "cb12629d132b443a",
+              "line": 25,
+              "col": 1,
+              "children": [
+                {
+                  "id": "3d660322d11efddb",
+                  "line": 25,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "e6aae8e6fd562006",
+                  "line": 25,
+                  "col": 5,
+                  "text": "title"
+                },
+                {
+                  "id": "174a6b50f63c8cad",
+                  "line": 25,
+                  "col": 10,
+                  "text": ": raw."
+                },
+                {
+                  "id": "adc05c1009552694",
+                  "line": 25,
+                  "col": 16,
+                  "text": "title"
+                },
+                {
+                  "id": "a03eb66eee327b37",
+                  "line": 25,
+                  "col": 21,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "0e23886086cf9658",
+              "line": 26,
+              "col": 1,
+              "children": [
+                {
+                  "id": "436c97ea26c56c8f",
+                  "line": 26,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "2cdd9fcad68a9674",
+                  "line": 26,
+                  "col": 5,
+                  "text": "capacity"
+                },
+                {
+                  "id": "70e8ec6c217a715d",
+                  "line": 26,
+                  "col": 13,
+                  "text": ": raw."
+                },
+                {
+                  "id": "b5838211aee621ee",
+                  "line": 26,
+                  "col": 19,
+                  "text": "capacity"
+                },
+                {
+                  "id": "1cfdfe52ff4271ab",
+                  "line": 26,
+                  "col": 27,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "7fc44bbf7013d513",
+              "line": 27,
+              "col": 1,
+              "children": [
+                {
+                  "id": "1d9ab84fa4b5be02",
+                  "line": 27,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "e7f74ee94c5649f7",
+                  "line": 27,
+                  "col": 5,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "b64a95d3daadfccc",
+                  "line": 27,
+                  "col": 14,
+                  "text": ": toLocalDate(raw."
+                },
+                {
+                  "id": "cca99bb8b858c170",
+                  "line": 27,
+                  "col": 32,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "88dcb3f3c49582c6",
+                  "line": 27,
+                  "col": 41,
+                  "text": "),\n"
+                }
+              ]
+            },
+            {
+              "id": "d990c7efed9f00f7",
+              "line": 28,
+              "col": 1,
+              "text": "\n  };\n}\n\nexport function serialize"
+            },
+            {
+              "id": "8a901f9567946e33",
+              "line": 32,
+              "col": 26,
+              "text": "Event"
+            },
+            {
+              "id": "3559675bb79647b5",
+              "line": 32,
+              "col": 31,
+              "text": "(row: "
+            },
+            {
+              "id": "9895d12b3cfd6189",
+              "line": 32,
+              "col": 37,
+              "text": "Event"
+            },
+            {
+              "id": "9be3b8fb21e4f1fc",
+              "line": 32,
+              "col": 42,
+              "text": "): Record<string, unknown> {\n  return {\n"
+            },
+            {
+              "id": "9f4ec10c466f41f0",
+              "line": 34,
+              "col": 1,
+              "children": [
+                {
+                  "id": "64d0c778f800b0f1",
+                  "line": 34,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "dd0c656efc664168",
+                  "line": 34,
+                  "col": 5,
+                  "text": "title"
+                },
+                {
+                  "id": "1e061c02bff17a6f",
+                  "line": 34,
+                  "col": 10,
+                  "text": ": row."
+                },
+                {
+                  "id": "4596715df46574a2",
+                  "line": 34,
+                  "col": 16,
+                  "text": "title"
+                },
+                {
+                  "id": "656f43492fad1165",
+                  "line": 34,
+                  "col": 21,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "b609e927297935ea",
+              "line": 35,
+              "col": 1,
+              "children": [
+                {
+                  "id": "b81f84f1bec133e1",
+                  "line": 35,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "6e6332c8cfc83332",
+                  "line": 35,
+                  "col": 5,
+                  "text": "capacity"
+                },
+                {
+                  "id": "88e357797b012bb3",
+                  "line": 35,
+                  "col": 13,
+                  "text": ": row."
+                },
+                {
+                  "id": "5a507b9ff9940970",
+                  "line": 35,
+                  "col": 19,
+                  "text": "capacity"
+                },
+                {
+                  "id": "247b31865791cf85",
+                  "line": 35,
+                  "col": 27,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "7feb7b1612605300",
+              "line": 36,
+              "col": 1,
+              "children": [
+                {
+                  "id": "7d68a7003649789b",
+                  "line": 36,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "fbbf7a759de21930",
+                  "line": 36,
+                  "col": 5,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "01643d349a735e25",
+                  "line": 36,
+                  "col": 14,
+                  "text": ": row."
+                },
+                {
+                  "id": "b20c08a3220579ae",
+                  "line": 36,
+                  "col": 20,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "b13dd3863e019f07",
+                  "line": 36,
+                  "col": 29,
+                  "text": " instanceof Date ? row."
+                },
+                {
+                  "id": "fcf18341dfa1ddd3",
+                  "line": 36,
+                  "col": 52,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "e54cd44d6657f231",
+                  "line": 36,
+                  "col": 61,
+                  "text": ".toISOString() : toLocalDate(\"\" + row."
+                },
+                {
+                  "id": "733a04d0112d1325",
+                  "line": 36,
+                  "col": 99,
+                  "text": "starts_at"
+                },
+                {
+                  "id": "acf61a85a13f9303",
+                  "line": 36,
+                  "col": 108,
+                  "text": ").toISOString(),\n"
+                }
+              ]
+            },
+            {
+              "id": "e502d280dbb6b9c2",
+              "line": 37,
+              "col": 1,
+              "text": "\n  };\n}\n\n"
+            }
+          ]
+        },
+        {
+          "id": "57d86f3ea2216f3d",
+          "line": 41,
+          "col": 1,
+          "children": [
+            {
+              "id": "f09a28647441f18a",
+              "line": 41,
+              "col": 1,
+              "text": "\nexport function parse"
+            },
+            {
+              "id": "c400bf4b19e9c2fc",
+              "line": 42,
+              "col": 22,
+              "text": "Venue"
+            },
+            {
+              "id": "0ea5035f35e7a578",
+              "line": 42,
+              "col": 27,
+              "text": "(raw: any): "
+            },
+            {
+              "id": "0660eb0855202585",
+              "line": 42,
+              "col": 39,
+              "text": "Venue"
+            },
+            {
+              "id": "f25eee436cb9c426",
+              "line": 42,
+              "col": 44,
+              "text": "Record {\n  return {\n    id: raw.id,\n"
+            },
+            {
+              "id": "f125f5e8eb2d4c1e",
+              "line": 45,
+              "col": 1,
+              "children": [
+                {
+                  "id": "67678554a9eca5d9",
+                  "line": 45,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "b1c63b93a16a96ca",
+                  "line": 45,
+                  "col": 5,
+                  "text": "name"
+                },
+                {
+                  "id": "5950ec6e4eac28e3",
+                  "line": 45,
+                  "col": 9,
+                  "text": ": raw."
+                },
+                {
+                  "id": "6a4248fef324fe10",
+                  "line": 45,
+                  "col": 15,
+                  "text": "name"
+                },
+                {
+                  "id": "bfd6bab44582f3d5",
+                  "line": 45,
+                  "col": 19,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "21ce20880601a7c1",
+              "line": 46,
+              "col": 1,
+              "children": [
+                {
+                  "id": "7da9b254345271ee",
+                  "line": 46,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "14a74533a8f8e8ed",
+                  "line": 46,
+                  "col": 5,
+                  "text": "capacity"
+                },
+                {
+                  "id": "d98e062322d62e24",
+                  "line": 46,
+                  "col": 13,
+                  "text": ": raw."
+                },
+                {
+                  "id": "8aab00b9e33131df",
+                  "line": 46,
+                  "col": 19,
+                  "text": "capacity"
+                },
+                {
+                  "id": "12b46ff12e0e1c5a",
+                  "line": 46,
+                  "col": 27,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "fa5f003fa6e5e034",
+              "line": 47,
+              "col": 1,
+              "text": "\n  };\n}\n\nexport function serialize"
+            },
+            {
+              "id": "b8bbc8ec8a3e28c0",
+              "line": 51,
+              "col": 26,
+              "text": "Venue"
+            },
+            {
+              "id": "24e33c9a91b2dfd2",
+              "line": 51,
+              "col": 31,
+              "text": "(row: "
+            },
+            {
+              "id": "39aebd8c0a8d4e86",
+              "line": 51,
+              "col": 37,
+              "text": "Venue"
+            },
+            {
+              "id": "1cd9c4e61b2eb24f",
+              "line": 51,
+              "col": 42,
+              "text": "): Record<string, unknown> {\n  return {\n"
+            },
+            {
+              "id": "a1c9123d7d59bafc",
+              "line": 53,
+              "col": 1,
+              "children": [
+                {
+                  "id": "a8faa02f7e16e327",
+                  "line": 53,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "4b3583b97c11cb04",
+                  "line": 53,
+                  "col": 5,
+                  "text": "name"
+                },
+                {
+                  "id": "ca68a06cef306fdd",
+                  "line": 53,
+                  "col": 9,
+                  "text": ": row."
+                },
+                {
+                  "id": "1f1a9bd1d05d2976",
+                  "line": 53,
+                  "col": 15,
+                  "text": "name"
+                },
+                {
+                  "id": "ef7d96cb6f2694ab",
+                  "line": 53,
+                  "col": 19,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "3949d8f8bfc5b5eb",
+              "line": 54,
+              "col": 1,
+              "children": [
+                {
+                  "id": "8cddd671f71b2168",
+                  "line": 54,
+                  "col": 1,
+                  "text": "    "
+                },
+                {
+                  "id": "a5ae98979f2fc993",
+                  "line": 54,
+                  "col": 5,
+                  "text": "capacity"
+                },
+                {
+                  "id": "b4201aaebf5c49c2",
+                  "line": 54,
+                  "col": 13,
+                  "text": ": row."
+                },
+                {
+                  "id": "a0c44ae407562a79",
+                  "line": 54,
+                  "col": 19,
+                  "text": "capacity"
+                },
+                {
+                  "id": "282decbf12eaddcc",
+                  "line": 54,
+                  "col": 27,
+                  "text": ",\n"
+                }
+              ]
+            },
+            {
+              "id": "04e449f6c4ec6325",
+              "line": 55,
+              "col": 1,
+              "text": "\n  };\n}\n\n"
+            }
+          ]
+        },
+        {
+          "id": "ee6290f6792157a8",
+          "line": 59,
+          "col": 1,
+          "text": "\n"
+        }
+      ]
+    },
+    "EventList.tsx": {
+      "tree": [
+        {
+          "id": "0ae898922b72f695",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState } from \"react\";\nimport { Link } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport type { "
+        },
+        {
+          "id": "532667a786c31af2",
+          "line": 5,
+          "col": 15,
+          "text": "EventRecord"
+        },
+        {
+          "id": "3c43a412a71bc753",
+          "line": 5,
+          "col": 26,
+          "text": " } from \"./types\";\n\nexport function "
+        },
+        {
+          "id": "87f87e8c623e71fe",
+          "line": 7,
+          "col": 17,
+          "text": "EventList"
+        },
+        {
+          "id": "99f944d26f8af131",
+          "line": 7,
+          "col": 26,
+          "text": "() {\n  const [rows, setRows] = useState([] as "
+        },
+        {
+          "id": "9617144c86464afa",
+          "line": 8,
+          "col": 42,
+          "text": "EventRecord"
+        },
+        {
+          "id": "745d8847904b891f",
+          "line": 8,
+          "col": 53,
+          "text": "[]);\n  const [error, setError] = useState(\"\");\n\n  useEffect(() => {\n    api."
+        },
+        {
+          "id": "15b511550a35606d",
+          "line": 12,
+          "col": 9,
+          "text": "Event"
+        },
+        {
+          "id": "359c5b5644a00dcd",
+          "line": 12,
+          "col": 14,
+          "text": ".list().then(setRows).catch(function (err) {\n      setError(String(err));\n    });\n  }, []);\n\n  if (error.length > 0) {\n    return <p className=\"error\">{error}</p>;\n  } else {\n    return (\n      <section>\n        <h1>"
+        },
+        {
+          "id": "5d910d8a8763ba22",
+          "line": 22,
+          "col": 13,
+          "text": "Events"
+        },
+        {
+          "id": "7ddd17aab72a0634",
+          "line": 22,
+          "col": 19,
+          "text": "</h1>\n        <p><Link to=\""
+        },
+        {
+          "id": "22c2a8a2c3adb685",
+          "line": 23,
+          "col": 22,
+          "text": "/events"
+        },
+        {
+          "id": "fef0e1cc3109b87a",
+          "line": 23,
+          "col": 29,
+          "text": "/new\">Create</Link></p>\n        <table>\n          <thead>\n            <tr>\n              <th>id</th>\n"
+        },
+        {
+          "id": "8376756cdfc2efc9",
+          "line": 28,
+          "col": 1,
+          "children": [
+            {
+              "id": "27c4602bce341353",
+              "line": 28,
+              "col": 1,
+              "text": "              <th>"
+            },
+            {
+              "id": "bebe47ea6c4a290d",
+              "line": 28,
+              "col": 19,
+              "text": "title"
+            },
+            {
+              "id": "389fada2f2b8b0c5",
+              "line": 28,
+              "col": 24,
+              "text": "</th>\n"
+            }
+          ]
+        },
+        {
+          "id": "964f4cc73e694f09",
+          "line": 29,
+          "col": 1,
+          "children": [
+            {
+              "id": "cf82a87f44ccdaf7",
+              "line": 29,
+              "col": 1,
+              "text": "              <th>"
+            },
+            {
+              "id": "a539e6ca5312073d",
+              "line": 29,
+              "col": 19,
+              "text": "capacity"
+            },
+            {
+              "id": "3f7b9af366022965",
+              "line": 29,
+              "col": 27,
+              "text": "</th>\n"
+            }
+          ]
+        },
+        {
+          "id": "0c3714de2fe6683c",
+          "line": 30,
+          "col": 1,
+          "children": [
+            {
+              "id": "73b1134027bda68e",
+              "line": 30,
+              "col": 1,
+              "text": "              <th>"
+            },
+            {
+              "id": "933b355d759ae010",
+              "line": 30,
+              "col": 19,
+              "text": "starts_at"
+            },
+            {
+              "id": "93dada6b24b8c338",
+              "line": 30,
+              "col": 28,
+              "text": "</th>\n"
+            }
+          ]
+        },
+        {
+          "id": "d047ea1ee548fc60",
+          "line": 31,
+          "col": 1,
+          "text": "\n              <th></th>\n            </tr>\n          </thead>\n          <tbody>\n            {rows.map(function (row) {\n              return (\n                <tr key={row.id}>\n                  <td>{row.id}</td>\n"
+        },
+        {
+          "id": "ca442269153b41ba",
+          "line": 40,
+          "col": 1,
+          "children": [
+            {
+              "id": "256c3098f6c5065b",
+              "line": 40,
+              "col": 1,
+              "text": "                  <td>{row."
+            },
+            {
+              "id": "527310b52afb8b4f",
+              "line": 40,
+              "col": 28,
+              "text": "title"
+            },
+            {
+              "id": "ff5098c71be2952d",
+              "line": 40,
+              "col": 33,
+              "text": "}</td>\n"
+            }
+          ]
+        },
+        {
+          "id": "2a15ac158382ead8",
+          "line": 41,
+          "col": 1,
+          "children": [
+            {
+              "id": "a1704023b49c1a0f",
+              "line": 41,
+              "col": 1,
+              "text": "                  <td>{row."
+            },
+            {
+              "id": "6452af34ec519313",
+              "line": 41,
+              "col": 28,
+              "text": "capacity"
+            },
+            {
+              "id": "ceec94a5af511edd",
+              "line": 41,
+              "col": 36,
+              "text": "}</td>\n"
+            }
+          ]
+        },
+        {
+          "id": "765113e9548b6bfc",
+          "line": 42,
+          "col": 1,
+          "children": [
+            {
+              "id": "59927425429c0a47",
+              "line": 42,
+              "col": 1,
+              "text": "                  <td>{row."
+            },
+            {
+              "id": "11ec8fbfd04557c9",
+              "line": 42,
+              "col": 28,
+              "text": "starts_at"
+            },
+            {
+              "id": "8eb382985a73c771",
+              "line": 42,
+              "col": 37,
+              "text": ".toLocaleString()}</td>\n"
+            }
+          ]
+        },
+        {
+          "id": "7158ed95f345c826",
+          "line": 43,
+          "col": 1,
+          "text": "\n                  <td>\n                    <Link to={\""
+        },
+        {
+          "id": "07b266613176fb4c",
+          "line": 45,
+          "col": 32,
+          "text": "/events"
+        },
+        {
+          "id": "30c7165649e05bcc",
+          "line": 45,
+          "col": 39,
+          "text": "/\" + row.id}>View</Link>\n                    {\" \"}\n                    <Link to={\""
+        },
+        {
+          "id": "e741fd038217f892",
+          "line": 47,
+          "col": 32,
+          "text": "/events"
+        },
+        {
+          "id": "3bae92b3fc50c1ad",
+          "line": 47,
+          "col": 39,
+          "text": "/\" + row.id + \"/edit\"}>Edit</Link>\n                  </td>\n                </tr>\n              );\n            })}\n          </tbody>\n        </table>\n      </section>\n    );\n  }\n}\n"
+        }
+      ]
+    },
+    "EventDetail.tsx": {
+      "tree": [
+        {
+          "id": "77fa6318c9ab6031",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState } from \"react\";\nimport { Link, useNavigate, useParams } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport type { "
+        },
+        {
+          "id": "1ed2a465137327de",
+          "line": 5,
+          "col": 15,
+          "text": "EventRecord"
+        },
+        {
+          "id": "525ea68dea6bf81f",
+          "line": 5,
+          "col": 26,
+          "text": " } from \"./types\";\n\nexport function "
+        },
+        {
+          "id": "9ab1529adb86e0fa",
+          "line": 7,
+          "col": 17,
+          "text": "EventDetail"
+        },
+        {
+          "id": "e8e9b6d885936595",
+          "line": 7,
+          "col": 28,
+          "text": "() {\n  const params = useParams();\n  const navigate = useNavigate();\n  const [row, setRow] = useState(null as "
+        },
+        {
+          "id": "58f21fa64a58dfec",
+          "line": 10,
+          "col": 42,
+          "text": "EventRecord"
+        },
+        {
+          "id": "1a44c259013c3653",
+          "line": 10,
+          "col": 53,
+          "text": " | null);\n  const [error, setError] = useState(\"\");\n  const id = Number(params.id);\n\n  useEffect(() => {\n    api."
+        },
+        {
+          "id": "5f6f09a18c7c0774",
+          "line": 15,
+          "col": 9,
+          "text": "Event"
+        },
+        {
+          "id": "52f3f94be57fac09",
+          "line": 15,
+          "col": 14,
+          "text": ".get(id).then(setRow).catch(function (err) {\n      setError(String(err));\n    });\n  }, [id]);\n\n  if (error.length > 0) {\n    return <p className=\"error\">{error}</p>;\n  } else if (row === null) {\n    return <p>Loading...</p>;\n  } else {\n    return (\n      <section>\n        <p><Link to=\""
+        },
+        {
+          "id": "7567a117ab8f086d",
+          "line": 27,
+          "col": 22,
+          "text": "/events"
+        },
+        {
+          "id": "38707285901c6098",
+          "line": 27,
+          "col": 29,
+          "text": "\">Back to list</Link></p>\n        <h1>"
+        },
+        {
+          "id": "f961ca21700596e8",
+          "line": 28,
+          "col": 13,
+          "text": "Event"
+        },
+        {
+          "id": "ed97a61314ed9a5e",
+          "line": 28,
+          "col": 18,
+          "text": " {row.id}</h1>\n        <dl>\n"
+        },
+        {
+          "id": "078bfe67770c126d",
+          "line": 30,
+          "col": 1,
+          "children": [
+            {
+              "id": "629427d645c7cf0e",
+              "line": 30,
+              "col": 1,
+              "text": "          <dt>"
+            },
+            {
+              "id": "5ac7d66ed5b72d92",
+              "line": 30,
+              "col": 15,
+              "text": "title"
+            },
+            {
+              "id": "1fa07b4f85490b50",
+              "line": 30,
+              "col": 20,
+              "text": "</dt>\n          <dd>{row."
+            },
+            {
+              "id": "728157383ead18d1",
+              "line": 31,
+              "col": 20,
+              "text": "title"
+            },
+            {
+              "id": "91db910bc13f7c4a",
+              "line": 31,
+              "col": 25,
+              "text": "}</dd>\n"
+            }
+          ]
+        },
+        {
+          "id": "680faf4679ca5d1d",
+          "line": 32,
+          "col": 1,
+          "children": [
+            {
+              "id": "7127b1e34cc0d96c",
+              "line": 32,
+              "col": 1,
+              "text": "          <dt>"
+            },
+            {
+              "id": "179c029053ded820",
+              "line": 32,
+              "col": 15,
+              "text": "capacity"
+            },
+            {
+              "id": "a7b92784ec47c3ca",
+              "line": 32,
+              "col": 23,
+              "text": "</dt>\n          <dd>{row."
+            },
+            {
+              "id": "5263e90778d3b841",
+              "line": 33,
+              "col": 20,
+              "text": "capacity"
+            },
+            {
+              "id": "8d7ca210a14baaa8",
+              "line": 33,
+              "col": 28,
+              "text": "}</dd>\n"
+            }
+          ]
+        },
+        {
+          "id": "efc29d2b6c02bb9c",
+          "line": 34,
+          "col": 1,
+          "children": [
+            {
+              "id": "d3f45c72652750e7",
+              "line": 34,
+              "col": 1,
+              "text": "          <dt>"
+            },
+            {
+              "id": "f603fd5111b854d3",
+              "line": 34,
+              "col": 15,
+              "text": "starts_at"
+            },
+            {
+              "id": "dffc640c38ce0611",
+              "line": 34,
+              "col": 24,
+              "text": "</dt>\n          <dd>{row."
+            },
+            {
+              "id": "e0605587ca5c5fd8",
+              "line": 35,
+              "col": 20,
+              "text": "starts_at"
+            },
+            {
+              "id": "c3f0f53285393d7b",
+              "line": 35,
+              "col": 29,
+              "text": ".toLocaleString()}</dd>\n"
+            }
+          ]
+        },
+        {
+          "id": "8cc4768a3f0dac8c",
+          "line": 36,
+          "col": 1,
+          "text": "\n        </dl>\n        <p>\n          <Link to={\""
+        },
+        {
+          "id": "32bc1bc93554d376",
+          "line": 39,
+          "col": 22,
+          "text": "/events"
+        },
+        {
+          "id": "b646545a1e039392",
+          "line": 39,
+          "col": 29,
+          "text": "/\" + row.id + \"/edit\"}>Edit</Link>\n          {\" \"}\n          <button type=\"button\" onClick={function () {\n            api."
+        },
+        {
+          "id": "ac10d0fc57fe8a00",
+          "line": 42,
+          "col": 17,
+          "text": "Event"
+        },
+        {
+          "id": "6f452ee914f78620",
+          "line": 42,
+          "col": 22,
+          "text": ".remove(row.id).then(function () {\n              navigate(\""
+        },
+        {
+          "id": "abd4bfe537e926ba",
+          "line": 43,
+          "col": 25,
+          "text": "/events"
+        },
+        {
+          "id": "75434810dfd33461",
+          "line": 43,
+          "col": 32,
+          "text": "\");\n            }).catch(function (err) {\n              setError(String(err));\n            });\n          }}>Delete</button>\n        </p>\n      </section>\n    );\n  }\n}\n"
+        }
+      ]
+    },
+    "EventForm.tsx": {
+      "tree": [
+        {
+          "id": "79966083b5b7577d",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState, type FormEvent } from \"react\";\nimport { Link, useNavigate, useParams } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport { "
+        },
+        {
+          "id": "d5b6da8924b5bac2",
+          "line": 5,
+          "col": 10,
+          "text": "EventSchema"
+        },
+        {
+          "id": "aa8957ef762007bb",
+          "line": 5,
+          "col": 21,
+          "text": " } from \"./schemas\";\n"
+        },
+        {
+          "id": "5d3df7c6da0242ee",
+          "line": 6,
+          "col": 1,
+          "children": [
+            {
+              "id": "7cf2e3462695ec64",
+              "line": 6,
+              "col": 1,
+              "text": "import { toDatetimeLocalInput, toLocalDate } from \"./transforms\";\n"
+            }
+          ]
+        },
+        {
+          "id": "a71ab7ca8d031d39",
+          "line": 7,
+          "col": 1,
+          "text": "\nimport type { "
+        },
+        {
+          "id": "2d908888c59f496f",
+          "line": 8,
+          "col": 15,
+          "text": "Event"
+        },
+        {
+          "id": "acbe2aed83bad5c7",
+          "line": 8,
+          "col": 20,
+          "text": " } from \"./types\";\n\ntype FormState = {\n"
+        },
+        {
+          "id": "8b2452913bb36496",
+          "line": 11,
+          "col": 1,
+          "children": [
+            {
+              "id": "93ffb631c0681388",
+              "line": 11,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "d68e015e62c6dfa9",
+              "line": 11,
+              "col": 3,
+              "text": "title"
+            },
+            {
+              "id": "8cf8c556c8656c66",
+              "line": 11,
+              "col": 8,
+              "text": ": string;\n"
+            }
+          ]
+        },
+        {
+          "id": "0dead2b4f027a704",
+          "line": 12,
+          "col": 1,
+          "children": [
+            {
+              "id": "4ffde58734205cd2",
+              "line": 12,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "98ba45140410d069",
+              "line": 12,
+              "col": 3,
+              "text": "capacity"
+            },
+            {
+              "id": "d6bab754a8da6954",
+              "line": 12,
+              "col": 11,
+              "text": ": string;\n"
+            }
+          ]
+        },
+        {
+          "id": "bf3fd2041492bd03",
+          "line": 13,
+          "col": 1,
+          "children": [
+            {
+              "id": "0759c4b376fcde7d",
+              "line": 13,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "9e31685bbf5fb35c",
+              "line": 13,
+              "col": 3,
+              "text": "starts_at"
+            },
+            {
+              "id": "e2df77d4c9ef31b3",
+              "line": 13,
+              "col": 12,
+              "text": ": string;\n"
+            }
+          ]
+        },
+        {
+          "id": "575204c42a567585",
+          "line": 14,
+          "col": 1,
+          "text": "\n};\n\nconst empty: FormState = {\n"
+        },
+        {
+          "id": "3e2cb7a555e2c866",
+          "line": 18,
+          "col": 1,
+          "children": [
+            {
+              "id": "a015d668a8f70698",
+              "line": 18,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "c592541e9b1fc679",
+              "line": 18,
+              "col": 3,
+              "text": "title"
+            },
+            {
+              "id": "6081abde38204ff6",
+              "line": 18,
+              "col": 8,
+              "text": ": \"\",\n"
+            }
+          ]
+        },
+        {
+          "id": "952323bd90dedd54",
+          "line": 19,
+          "col": 1,
+          "children": [
+            {
+              "id": "732d4af9f50a76e2",
+              "line": 19,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "077d4dc89ea2edf9",
+              "line": 19,
+              "col": 3,
+              "text": "capacity"
+            },
+            {
+              "id": "990f4cf09ed5f0e4",
+              "line": 19,
+              "col": 11,
+              "text": ": \"\",\n"
+            }
+          ]
+        },
+        {
+          "id": "72c3ae1709804db3",
+          "line": 20,
+          "col": 1,
+          "children": [
+            {
+              "id": "40305001d679f2ed",
+              "line": 20,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "a8b1676498c678cc",
+              "line": 20,
+              "col": 3,
+              "text": "starts_at"
+            },
+            {
+              "id": "6ff0bcd0903863a3",
+              "line": 20,
+              "col": 12,
+              "text": ": \"\",\n"
+            }
+          ]
+        },
+        {
+          "id": "f38a01e5222a584c",
+          "line": 21,
+          "col": 1,
+          "text": "\n};\n\nexport function "
+        },
+        {
+          "id": "37b7841ad0400063",
+          "line": 24,
+          "col": 17,
+          "text": "EventForm"
+        },
+        {
+          "id": "8b7fc33aff6d6052",
+          "line": 24,
+          "col": 26,
+          "text": "() {\n  const params = useParams();\n  const navigate = useNavigate();\n  const editing = params.id !== undefined;\n  const [form, setForm] = useState(empty);\n  const [error, setError] = useState(\"\");\n  const id = Number(params.id);\n\n  useEffect(() => {\n    if (editing) {\n      api."
+        },
+        {
+          "id": "ea5685139b2a211b",
+          "line": 34,
+          "col": 11,
+          "text": "Event"
+        },
+        {
+          "id": "ec5e90887cca2b58",
+          "line": 34,
+          "col": 16,
+          "text": ".get(id).then(function (row) {\n        setForm({\n"
+        },
+        {
+          "id": "621fcc5a5eb73d6f",
+          "line": 36,
+          "col": 1,
+          "children": [
+            {
+              "id": "ef1398b03d3b7700",
+              "line": 36,
+              "col": 1,
+              "text": "          "
+            },
+            {
+              "id": "df1ad0bb22bab11c",
+              "line": 36,
+              "col": 11,
+              "text": "title"
+            },
+            {
+              "id": "369bb2f40082953e",
+              "line": 36,
+              "col": 16,
+              "text": ": String(row."
+            },
+            {
+              "id": "416b2f3170b25f19",
+              "line": 36,
+              "col": 29,
+              "text": "title"
+            },
+            {
+              "id": "d5f5ba8a16853ebc",
+              "line": 36,
+              "col": 34,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "c03f6d07b5946cb3",
+          "line": 37,
+          "col": 1,
+          "children": [
+            {
+              "id": "1d63aa8c7341653a",
+              "line": 37,
+              "col": 1,
+              "text": "          "
+            },
+            {
+              "id": "745d61b98304a7e6",
+              "line": 37,
+              "col": 11,
+              "text": "capacity"
+            },
+            {
+              "id": "f9e2d4cae46c38dc",
+              "line": 37,
+              "col": 19,
+              "text": ": String(row."
+            },
+            {
+              "id": "9340b4f2a0a36a19",
+              "line": 37,
+              "col": 32,
+              "text": "capacity"
+            },
+            {
+              "id": "bd75f5263b34d706",
+              "line": 37,
+              "col": 40,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "b4cbd2527fa3070c",
+          "line": 38,
+          "col": 1,
+          "children": [
+            {
+              "id": "4b4897c3fb331957",
+              "line": 38,
+              "col": 1,
+              "text": "          "
+            },
+            {
+              "id": "67c782a21c8a59ef",
+              "line": 38,
+              "col": 11,
+              "text": "starts_at"
+            },
+            {
+              "id": "4314a1df948cd101",
+              "line": 38,
+              "col": 20,
+              "text": ": toDatetimeLocalInput(row."
+            },
+            {
+              "id": "23edd91b77c00aa6",
+              "line": 38,
+              "col": 47,
+              "text": "starts_at"
+            },
+            {
+              "id": "fecbfdb916306eab",
+              "line": 38,
+              "col": 56,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "a30e67c4cd55361e",
+          "line": 39,
+          "col": 1,
+          "text": "\n        });\n      }).catch(function (err) {\n        setError(String(err));\n      });\n    }\n  }, [editing, id]);\n\n  function setField(name: keyof FormState, value: string) {\n    setForm(function (prev) {\n      return { ...prev, [name]: value };\n    });\n  }\n\n  function onSubmit(ev: FormEvent) {\n    ev.preventDefault();\n    const checked = "
+        },
+        {
+          "id": "9e70cfb7059e8484",
+          "line": 55,
+          "col": 21,
+          "text": "EventSchema"
+        },
+        {
+          "id": "40a003398f7402b4",
+          "line": 55,
+          "col": 32,
+          "text": ".safeParse({\n"
+        },
+        {
+          "id": "eed1f125b9f90622",
+          "line": 56,
+          "col": 1,
+          "children": [
+            {
+              "id": "da5a9ff65a748883",
+              "line": 56,
+              "col": 1,
+              "text": "      "
+            },
+            {
+              "id": "488a40d40c02d370",
+              "line": 56,
+              "col": 7,
+              "text": "title"
+            },
+            {
+              "id": "ac4ce23d95691275",
+              "line": 56,
+              "col": 12,
+              "text": ": form."
+            },
+            {
+              "id": "24695faa6cba2137",
+              "line": 56,
+              "col": 19,
+              "text": "title"
+            },
+            {
+              "id": "93b7f3feab9f88bf",
+              "line": 56,
+              "col": 24,
+              "text": ",\n"
+            }
+          ]
+        },
+        {
+          "id": "d3f596b74dca298c",
+          "line": 57,
+          "col": 1,
+          "children": [
+            {
+              "id": "ea87cfdad40e1623",
+              "line": 57,
+              "col": 1,
+              "text": "      "
+            },
+            {
+              "id": "7ac5eebf889870ae",
+              "line": 57,
+              "col": 7,
+              "text": "capacity"
+            },
+            {
+              "id": "22eb13c939140a11",
+              "line": 57,
+              "col": 15,
+              "text": ": Number(form."
+            },
+            {
+              "id": "6d510660abc019c7",
+              "line": 57,
+              "col": 29,
+              "text": "capacity"
+            },
+            {
+              "id": "d40a8c29b4ed7a47",
+              "line": 57,
+              "col": 37,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "bb89308f045046df",
+          "line": 58,
+          "col": 1,
+          "children": [
+            {
+              "id": "8092e1136ffcb41e",
+              "line": 58,
+              "col": 1,
+              "text": "      "
+            },
+            {
+              "id": "621818a19e3af8b5",
+              "line": 58,
+              "col": 7,
+              "text": "starts_at"
+            },
+            {
+              "id": "b41cdddbc25dddc8",
+              "line": 58,
+              "col": 16,
+              "text": ": form."
+            },
+            {
+              "id": "a4c6054b08a246c2",
+              "line": 58,
+              "col": 23,
+              "text": "starts_at"
+            },
+            {
+              "id": "206264bdbc2f3f1a",
+              "line": 58,
+              "col": 32,
+              "text": ",\n"
+            }
+          ]
+        },
+        {
+          "id": "83d42332345b1785",
+          "line": 59,
+          "col": 1,
+          "text": "\n    });\n    if (!checked.success) {\n      setError(checked.error.issues.map(function (issue) { return issue.message; }).join(\"; \"));\n    } else {\n      const payload: "
+        },
+        {
+          "id": "84291b74e5a8a46d",
+          "line": 64,
+          "col": 22,
+          "text": "Event"
+        },
+        {
+          "id": "9680644a9aee3883",
+          "line": 64,
+          "col": 27,
+          "text": " = {\n"
+        },
+        {
+          "id": "7deb34beae6ed328",
+          "line": 65,
+          "col": 1,
+          "children": [
+            {
+              "id": "b5701128aba1bac9",
+              "line": 65,
+              "col": 1,
+              "text": "        "
+            },
+            {
+              "id": "fe8db5b90a83e301",
+              "line": 65,
+              "col": 9,
+              "text": "title"
+            },
+            {
+              "id": "cc13ac426b3984c7",
+              "line": 65,
+              "col": 14,
+              "text": ": form."
+            },
+            {
+              "id": "b22481965074e2da",
+              "line": 65,
+              "col": 21,
+              "text": "title"
+            },
+            {
+              "id": "dd56bede679b06bd",
+              "line": 65,
+              "col": 26,
+              "text": ",\n"
+            }
+          ]
+        },
+        {
+          "id": "2e1fbae23359de76",
+          "line": 66,
+          "col": 1,
+          "children": [
+            {
+              "id": "72892ad44e061ded",
+              "line": 66,
+              "col": 1,
+              "text": "        "
+            },
+            {
+              "id": "4df33f626599e3d5",
+              "line": 66,
+              "col": 9,
+              "text": "capacity"
+            },
+            {
+              "id": "b708e81228b59adf",
+              "line": 66,
+              "col": 17,
+              "text": ": Number(form."
+            },
+            {
+              "id": "c943387fa671ca6f",
+              "line": 66,
+              "col": 31,
+              "text": "capacity"
+            },
+            {
+              "id": "05247f9e9ab36389",
+              "line": 66,
+              "col": 39,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "f87bf467020ae89b",
+          "line": 67,
+          "col": 1,
+          "children": [
+            {
+              "id": "a33b7bd237d0f6aa",
+              "line": 67,
+              "col": 1,
+              "text": "        "
+            },
+            {
+              "id": "177acd3d1ca91f2b",
+              "line": 67,
+              "col": 9,
+              "text": "starts_at"
+            },
+            {
+              "id": "e92546ab7aac8f94",
+              "line": 67,
+              "col": 18,
+              "text": ": toLocalDate(form."
+            },
+            {
+              "id": "4e7a1be2c88706c2",
+              "line": 67,
+              "col": 37,
+              "text": "starts_at"
+            },
+            {
+              "id": "906bf546f8ab68ae",
+              "line": 67,
+              "col": 46,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "29efdc71c759e021",
+          "line": 68,
+          "col": 1,
+          "text": "\n      };\n      const saved = editing ? api."
+        },
+        {
+          "id": "d6e9f11e0d407cd6",
+          "line": 70,
+          "col": 35,
+          "text": "Event"
+        },
+        {
+          "id": "1cc5d5bfb46bc98f",
+          "line": 70,
+          "col": 40,
+          "text": ".update(id, payload) : api."
+        },
+        {
+          "id": "f4f2bac6e1f29312",
+          "line": 70,
+          "col": 67,
+          "text": "Event"
+        },
+        {
+          "id": "a6187ef1bfbbf97d",
+          "line": 70,
+          "col": 72,
+          "text": ".create(payload);\n      saved.then(function (row) {\n        navigate(\""
+        },
+        {
+          "id": "7b31e7e158c6f9bc",
+          "line": 72,
+          "col": 19,
+          "text": "/events"
+        },
+        {
+          "id": "8bf11ba0ffdb8ebe",
+          "line": 72,
+          "col": 26,
+          "text": "/\" + row.id);\n      }).catch(function (err) {\n        setError(String(err));\n      });\n    }\n  }\n\n  return (\n    <section>\n      <p><Link to=\""
+        },
+        {
+          "id": "b90bfe97a7d5eadb",
+          "line": 81,
+          "col": 20,
+          "text": "/events"
+        },
+        {
+          "id": "cc17f1e3c72ec5f8",
+          "line": 81,
+          "col": 27,
+          "text": "\">Back to list</Link></p>\n      <h1>{editing ? \"Update\" : \"Create\"} "
+        },
+        {
+          "id": "11df162d9f12eb43",
+          "line": 82,
+          "col": 43,
+          "text": "Event"
+        },
+        {
+          "id": "55576fa9ab0d5072",
+          "line": 82,
+          "col": 48,
+          "text": "</h1>\n      {error.length > 0 ? <p className=\"error\">{error}</p> : null}\n      <form onSubmit={onSubmit}>\n"
+        },
+        {
+          "id": "b26cb0c89ef757dd",
+          "line": 85,
+          "col": 1,
+          "children": [
+            {
+              "id": "9caa66906f4b3617",
+              "line": 85,
+              "col": 1,
+              "text": "        <label>\n          "
+            },
+            {
+              "id": "0981ec0091461a3a",
+              "line": 86,
+              "col": 11,
+              "text": "title"
+            },
+            {
+              "id": "260e0da6c10a0299",
+              "line": 86,
+              "col": 16,
+              "text": "\n          <input type=\""
+            },
+            {
+              "id": "060aaff0e9d0c1ef",
+              "line": 87,
+              "col": 24,
+              "text": "text"
+            },
+            {
+              "id": "535ae9a1d52b093b",
+              "line": 87,
+              "col": 28,
+              "text": "\" value={form."
+            },
+            {
+              "id": "170a099a8329a91c",
+              "line": 87,
+              "col": 42,
+              "text": "title"
+            },
+            {
+              "id": "227c6645b84d8d8d",
+              "line": 87,
+              "col": 47,
+              "text": "} onChange={function (ev) { setField(\""
+            },
+            {
+              "id": "9d5472e145eb0f42",
+              "line": 87,
+              "col": 85,
+              "text": "title"
+            },
+            {
+              "id": "849c3127cbd8ec2f",
+              "line": 87,
+              "col": 90,
+              "text": "\", ev.target.value); }} />\n        </label>\n"
+            }
+          ]
+        },
+        {
+          "id": "b1628e2d3a198c0d",
+          "line": 89,
+          "col": 1,
+          "children": [
+            {
+              "id": "58f4612202b18e0b",
+              "line": 89,
+              "col": 1,
+              "text": "        <label>\n          "
+            },
+            {
+              "id": "1e863a837d108858",
+              "line": 90,
+              "col": 11,
+              "text": "capacity"
+            },
+            {
+              "id": "80ef10a8c7e6a099",
+              "line": 90,
+              "col": 19,
+              "text": "\n          <input type=\""
+            },
+            {
+              "id": "be223ab28096ee33",
+              "line": 91,
+              "col": 24,
+              "text": "number"
+            },
+            {
+              "id": "0d49792ac2e3bb6f",
+              "line": 91,
+              "col": 30,
+              "text": "\" value={form."
+            },
+            {
+              "id": "03cfc09ecf344fe6",
+              "line": 91,
+              "col": 44,
+              "text": "capacity"
+            },
+            {
+              "id": "b2b1e7d3268d28bd",
+              "line": 91,
+              "col": 52,
+              "text": "} onChange={function (ev) { setField(\""
+            },
+            {
+              "id": "facaa4b961787890",
+              "line": 91,
+              "col": 90,
+              "text": "capacity"
+            },
+            {
+              "id": "3d3fdcff60e4fb73",
+              "line": 91,
+              "col": 98,
+              "text": "\", ev.target.value); }} />\n        </label>\n"
+            }
+          ]
+        },
+        {
+          "id": "94fdd7a908dbab80",
+          "line": 93,
+          "col": 1,
+          "children": [
+            {
+              "id": "f0e8ba63d6776f62",
+              "line": 93,
+              "col": 1,
+              "text": "        <label>\n          "
+            },
+            {
+              "id": "0eea556c50e06287",
+              "line": 94,
+              "col": 11,
+              "text": "starts_at"
+            },
+            {
+              "id": "bf5f7f60fdb4b5ac",
+              "line": 94,
+              "col": 20,
+              "text": "\n          <input type=\""
+            },
+            {
+              "id": "9f5f8e09c0b9e1ea",
+              "line": 95,
+              "col": 24,
+              "text": "datetime-local"
+            },
+            {
+              "id": "1464c90d96119ba6",
+              "line": 95,
+              "col": 38,
+              "text": "\" value={form."
+            },
+            {
+              "id": "9d0edad0f70f1911",
+              "line": 95,
+              "col": 52,
+              "text": "starts_at"
+            },
+            {
+              "id": "f146775ccfd4cc90",
+              "line": 95,
+              "col": 61,
+              "text": "} onChange={function (ev) { setField(\""
+            },
+            {
+              "id": "76e802b8295ba2bf",
+              "line": 95,
+              "col": 99,
+              "text": "starts_at"
+            },
+            {
+              "id": "5c5a510fff22132a",
+              "line": 95,
+              "col": 108,
+              "text": "\", ev.target.value); }} />\n        </label>\n"
+            }
+          ]
+        },
+        {
+          "id": "d12f020bd2bc746c",
+          "line": 97,
+          "col": 1,
+          "text": "\n        <button type=\"submit\">Save</button>\n      </form>\n    </section>\n  );\n}\n"
+        }
+      ]
+    },
+    "VenueList.tsx": {
+      "tree": [
+        {
+          "id": "ffc6657acfd2fdb2",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState } from \"react\";\nimport { Link } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport type { "
+        },
+        {
+          "id": "8d889f338aac8b15",
+          "line": 5,
+          "col": 15,
+          "text": "VenueRecord"
+        },
+        {
+          "id": "13e94d6eb1c279e0",
+          "line": 5,
+          "col": 26,
+          "text": " } from \"./types\";\n\nexport function "
+        },
+        {
+          "id": "bf46d72a8854fcd1",
+          "line": 7,
+          "col": 17,
+          "text": "VenueList"
+        },
+        {
+          "id": "6e50a8995f0fdbae",
+          "line": 7,
+          "col": 26,
+          "text": "() {\n  const [rows, setRows] = useState([] as "
+        },
+        {
+          "id": "26d504352e13e49d",
+          "line": 8,
+          "col": 42,
+          "text": "VenueRecord"
+        },
+        {
+          "id": "e1d837fe0c21b1dc",
+          "line": 8,
+          "col": 53,
+          "text": "[]);\n  const [error, setError] = useState(\"\");\n\n  useEffect(() => {\n    api."
+        },
+        {
+          "id": "3e3e35a3d0e7008a",
+          "line": 12,
+          "col": 9,
+          "text": "Venue"
+        },
+        {
+          "id": "5e257fa50b51adea",
+          "line": 12,
+          "col": 14,
+          "text": ".list().then(setRows).catch(function (err) {\n      setError(String(err));\n    });\n  }, []);\n\n  if (error.length > 0) {\n    return <p className=\"error\">{error}</p>;\n  } else {\n    return (\n      <section>\n        <h1>"
+        },
+        {
+          "id": "7d72850070996385",
+          "line": 22,
+          "col": 13,
+          "text": "Venues"
+        },
+        {
+          "id": "c2d9d485c156b467",
+          "line": 22,
+          "col": 19,
+          "text": "</h1>\n        <p><Link to=\""
+        },
+        {
+          "id": "ad3e7be5d90df162",
+          "line": 23,
+          "col": 22,
+          "text": "/venues"
+        },
+        {
+          "id": "8faed1b4d8d7521d",
+          "line": 23,
+          "col": 29,
+          "text": "/new\">Create</Link></p>\n        <table>\n          <thead>\n            <tr>\n              <th>id</th>\n"
+        },
+        {
+          "id": "85de41bc10a1a06f",
+          "line": 28,
+          "col": 1,
+          "children": [
+            {
+              "id": "6f68d8dcbb943cc1",
+              "line": 28,
+              "col": 1,
+              "text": "              <th>"
+            },
+            {
+              "id": "564d23aa0fa398c3",
+              "line": 28,
+              "col": 19,
+              "text": "name"
+            },
+            {
+              "id": "a1b71297daa9f78b",
+              "line": 28,
+              "col": 23,
+              "text": "</th>\n"
+            }
+          ]
+        },
+        {
+          "id": "5c35a8a843f1bdf0",
+          "line": 29,
+          "col": 1,
+          "children": [
+            {
+              "id": "99d898afd99740b6",
+              "line": 29,
+              "col": 1,
+              "text": "              <th>"
+            },
+            {
+              "id": "a76c2466f033b604",
+              "line": 29,
+              "col": 19,
+              "text": "capacity"
+            },
+            {
+              "id": "1a44a8fdf57a64ac",
+              "line": 29,
+              "col": 27,
+              "text": "</th>\n"
+            }
+          ]
+        },
+        {
+          "id": "80cce6779e2e0563",
+          "line": 30,
+          "col": 1,
+          "text": "\n              <th></th>\n            </tr>\n          </thead>\n          <tbody>\n            {rows.map(function (row) {\n              return (\n                <tr key={row.id}>\n                  <td>{row.id}</td>\n"
+        },
+        {
+          "id": "81c8ea495067989e",
+          "line": 39,
+          "col": 1,
+          "children": [
+            {
+              "id": "972eb1de0ea53b59",
+              "line": 39,
+              "col": 1,
+              "text": "                  <td>{row."
+            },
+            {
+              "id": "3eed9526db7983bd",
+              "line": 39,
+              "col": 28,
+              "text": "name"
+            },
+            {
+              "id": "891818f7b364be63",
+              "line": 39,
+              "col": 32,
+              "text": "}</td>\n"
+            }
+          ]
+        },
+        {
+          "id": "3dc0443d02b4fc41",
+          "line": 40,
+          "col": 1,
+          "children": [
+            {
+              "id": "dbad5a8dc2291f6e",
+              "line": 40,
+              "col": 1,
+              "text": "                  <td>{row."
+            },
+            {
+              "id": "a5efd011a62c62a2",
+              "line": 40,
+              "col": 28,
+              "text": "capacity"
+            },
+            {
+              "id": "3791ae5cb0acdba4",
+              "line": 40,
+              "col": 36,
+              "text": "}</td>\n"
+            }
+          ]
+        },
+        {
+          "id": "34a09522443ed4b9",
+          "line": 41,
+          "col": 1,
+          "text": "\n                  <td>\n                    <Link to={\""
+        },
+        {
+          "id": "6e26b236100b41df",
+          "line": 43,
+          "col": 32,
+          "text": "/venues"
+        },
+        {
+          "id": "973b622b2874a25f",
+          "line": 43,
+          "col": 39,
+          "text": "/\" + row.id}>View</Link>\n                    {\" \"}\n                    <Link to={\""
+        },
+        {
+          "id": "c7ba34946b1e9db5",
+          "line": 45,
+          "col": 32,
+          "text": "/venues"
+        },
+        {
+          "id": "6437b702c30261ca",
+          "line": 45,
+          "col": 39,
+          "text": "/\" + row.id + \"/edit\"}>Edit</Link>\n                  </td>\n                </tr>\n              );\n            })}\n          </tbody>\n        </table>\n      </section>\n    );\n  }\n}\n"
+        }
+      ]
+    },
+    "VenueDetail.tsx": {
+      "tree": [
+        {
+          "id": "4c51c6dfb9304aae",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState } from \"react\";\nimport { Link, useNavigate, useParams } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport type { "
+        },
+        {
+          "id": "aca4fcfe518954b1",
+          "line": 5,
+          "col": 15,
+          "text": "VenueRecord"
+        },
+        {
+          "id": "bfd95644664220dc",
+          "line": 5,
+          "col": 26,
+          "text": " } from \"./types\";\n\nexport function "
+        },
+        {
+          "id": "2b6f428383547a9d",
+          "line": 7,
+          "col": 17,
+          "text": "VenueDetail"
+        },
+        {
+          "id": "ddc783c129f36cb2",
+          "line": 7,
+          "col": 28,
+          "text": "() {\n  const params = useParams();\n  const navigate = useNavigate();\n  const [row, setRow] = useState(null as "
+        },
+        {
+          "id": "bf656b7b28eb737f",
+          "line": 10,
+          "col": 42,
+          "text": "VenueRecord"
+        },
+        {
+          "id": "f1ea6bb50be2e8e0",
+          "line": 10,
+          "col": 53,
+          "text": " | null);\n  const [error, setError] = useState(\"\");\n  const id = Number(params.id);\n\n  useEffect(() => {\n    api."
+        },
+        {
+          "id": "514cc681818a89a7",
+          "line": 15,
+          "col": 9,
+          "text": "Venue"
+        },
+        {
+          "id": "f40ce5acb30f9906",
+          "line": 15,
+          "col": 14,
+          "text": ".get(id).then(setRow).catch(function (err) {\n      setError(String(err));\n    });\n  }, [id]);\n\n  if (error.length > 0) {\n    return <p className=\"error\">{error}</p>;\n  } else if (row === null) {\n    return <p>Loading...</p>;\n  } else {\n    return (\n      <section>\n        <p><Link to=\""
+        },
+        {
+          "id": "9df0c5667240a88a",
+          "line": 27,
+          "col": 22,
+          "text": "/venues"
+        },
+        {
+          "id": "f646bee24893631b",
+          "line": 27,
+          "col": 29,
+          "text": "\">Back to list</Link></p>\n        <h1>"
+        },
+        {
+          "id": "9ff4dcd3ae9a8c6b",
+          "line": 28,
+          "col": 13,
+          "text": "Venue"
+        },
+        {
+          "id": "7b69feac5303c731",
+          "line": 28,
+          "col": 18,
+          "text": " {row.id}</h1>\n        <dl>\n"
+        },
+        {
+          "id": "4dd17a0f7f3af9a3",
+          "line": 30,
+          "col": 1,
+          "children": [
+            {
+              "id": "469569d71e15a5a2",
+              "line": 30,
+              "col": 1,
+              "text": "          <dt>"
+            },
+            {
+              "id": "bde486b6e0f82fc6",
+              "line": 30,
+              "col": 15,
+              "text": "name"
+            },
+            {
+              "id": "2f7bd64e71577a5c",
+              "line": 30,
+              "col": 19,
+              "text": "</dt>\n          <dd>{row."
+            },
+            {
+              "id": "2e5395f23b451187",
+              "line": 31,
+              "col": 20,
+              "text": "name"
+            },
+            {
+              "id": "5dde903ef5d4db8e",
+              "line": 31,
+              "col": 24,
+              "text": "}</dd>\n"
+            }
+          ]
+        },
+        {
+          "id": "7f605cd974d62ee4",
+          "line": 32,
+          "col": 1,
+          "children": [
+            {
+              "id": "38072e95aa456465",
+              "line": 32,
+              "col": 1,
+              "text": "          <dt>"
+            },
+            {
+              "id": "fad48df08df1ae29",
+              "line": 32,
+              "col": 15,
+              "text": "capacity"
+            },
+            {
+              "id": "40c1e5bd0049b54b",
+              "line": 32,
+              "col": 23,
+              "text": "</dt>\n          <dd>{row."
+            },
+            {
+              "id": "b6712fe7a7750fc8",
+              "line": 33,
+              "col": 20,
+              "text": "capacity"
+            },
+            {
+              "id": "cd0789fc01d752d1",
+              "line": 33,
+              "col": 28,
+              "text": "}</dd>\n"
+            }
+          ]
+        },
+        {
+          "id": "f338c25f1da1f31f",
+          "line": 34,
+          "col": 1,
+          "text": "\n        </dl>\n        <p>\n          <Link to={\""
+        },
+        {
+          "id": "dc5b433f6c50c3c9",
+          "line": 37,
+          "col": 22,
+          "text": "/venues"
+        },
+        {
+          "id": "96be8beb070a38b5",
+          "line": 37,
+          "col": 29,
+          "text": "/\" + row.id + \"/edit\"}>Edit</Link>\n          {\" \"}\n          <button type=\"button\" onClick={function () {\n            api."
+        },
+        {
+          "id": "5c96cd5510e54603",
+          "line": 40,
+          "col": 17,
+          "text": "Venue"
+        },
+        {
+          "id": "23302b41d0bfb823",
+          "line": 40,
+          "col": 22,
+          "text": ".remove(row.id).then(function () {\n              navigate(\""
+        },
+        {
+          "id": "986aa772c1f9d15d",
+          "line": 41,
+          "col": 25,
+          "text": "/venues"
+        },
+        {
+          "id": "8b50657c25c8fb5e",
+          "line": 41,
+          "col": 32,
+          "text": "\");\n            }).catch(function (err) {\n              setError(String(err));\n            });\n          }}>Delete</button>\n        </p>\n      </section>\n    );\n  }\n}\n"
+        }
+      ]
+    },
+    "VenueForm.tsx": {
+      "tree": [
+        {
+          "id": "b577c4b6412802da",
+          "line": 1,
+          "col": 1,
+          "text": "\nimport { useEffect, useState, type FormEvent } from \"react\";\nimport { Link, useNavigate, useParams } from \"react-router-dom\";\nimport { api } from \"../api\";\nimport { "
+        },
+        {
+          "id": "f59851ff0deb6425",
+          "line": 5,
+          "col": 10,
+          "text": "VenueSchema"
+        },
+        {
+          "id": "f76d97a15705a548",
+          "line": 5,
+          "col": 21,
+          "text": " } from \"./schemas\";\n"
+        },
+        {
+          "id": "5b3b6a8978218336",
+          "line": 6,
+          "col": 1,
+          "text": "\nimport type { "
+        },
+        {
+          "id": "5bf231dfe876936c",
+          "line": 7,
+          "col": 15,
+          "text": "Venue"
+        },
+        {
+          "id": "b8d62992c54ae044",
+          "line": 7,
+          "col": 20,
+          "text": " } from \"./types\";\n\ntype FormState = {\n"
+        },
+        {
+          "id": "013fb97e1edfd4ba",
+          "line": 10,
+          "col": 1,
+          "children": [
+            {
+              "id": "c2767796c32d8d24",
+              "line": 10,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "17848d73ee14004f",
+              "line": 10,
+              "col": 3,
+              "text": "name"
+            },
+            {
+              "id": "26606a0e620d8c2a",
+              "line": 10,
+              "col": 7,
+              "text": ": string;\n"
+            }
+          ]
+        },
+        {
+          "id": "704284ff0251293d",
+          "line": 11,
+          "col": 1,
+          "children": [
+            {
+              "id": "dfea540470f037b3",
+              "line": 11,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "1b17d86691aa91d0",
+              "line": 11,
+              "col": 3,
+              "text": "capacity"
+            },
+            {
+              "id": "214762edad2da64d",
+              "line": 11,
+              "col": 11,
+              "text": ": string;\n"
+            }
+          ]
+        },
+        {
+          "id": "e1cdd8073fb6b062",
+          "line": 12,
+          "col": 1,
+          "text": "\n};\n\nconst empty: FormState = {\n"
+        },
+        {
+          "id": "3aec7a80bbd4c02a",
+          "line": 16,
+          "col": 1,
+          "children": [
+            {
+              "id": "dfdc2b4a99e9f214",
+              "line": 16,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "8c9216b0ce9666bf",
+              "line": 16,
+              "col": 3,
+              "text": "name"
+            },
+            {
+              "id": "9028ebc83ea1c19a",
+              "line": 16,
+              "col": 7,
+              "text": ": \"\",\n"
+            }
+          ]
+        },
+        {
+          "id": "dfafcf5695321a4d",
+          "line": 17,
+          "col": 1,
+          "children": [
+            {
+              "id": "2cf5f4a26ee85b03",
+              "line": 17,
+              "col": 1,
+              "text": "  "
+            },
+            {
+              "id": "b5ceb214a562cfe0",
+              "line": 17,
+              "col": 3,
+              "text": "capacity"
+            },
+            {
+              "id": "95de5f2a9efccd1d",
+              "line": 17,
+              "col": 11,
+              "text": ": \"\",\n"
+            }
+          ]
+        },
+        {
+          "id": "59fe4dba00be9edf",
+          "line": 18,
+          "col": 1,
+          "text": "\n};\n\nexport function "
+        },
+        {
+          "id": "fb8133cc63e9eeb0",
+          "line": 21,
+          "col": 17,
+          "text": "VenueForm"
+        },
+        {
+          "id": "6a09032221120c75",
+          "line": 21,
+          "col": 26,
+          "text": "() {\n  const params = useParams();\n  const navigate = useNavigate();\n  const editing = params.id !== undefined;\n  const [form, setForm] = useState(empty);\n  const [error, setError] = useState(\"\");\n  const id = Number(params.id);\n\n  useEffect(() => {\n    if (editing) {\n      api."
+        },
+        {
+          "id": "373ac4c57c0fbea8",
+          "line": 31,
+          "col": 11,
+          "text": "Venue"
+        },
+        {
+          "id": "fd52dce04a5da6db",
+          "line": 31,
+          "col": 16,
+          "text": ".get(id).then(function (row) {\n        setForm({\n"
+        },
+        {
+          "id": "d4446145b4b420dd",
+          "line": 33,
+          "col": 1,
+          "children": [
+            {
+              "id": "9fb05b27253a8aac",
+              "line": 33,
+              "col": 1,
+              "text": "          "
+            },
+            {
+              "id": "51c74bb10f6f6688",
+              "line": 33,
+              "col": 11,
+              "text": "name"
+            },
+            {
+              "id": "4086d95b56757132",
+              "line": 33,
+              "col": 15,
+              "text": ": String(row."
+            },
+            {
+              "id": "ce0cad26083a3a5f",
+              "line": 33,
+              "col": 28,
+              "text": "name"
+            },
+            {
+              "id": "5819e4624eedad28",
+              "line": 33,
+              "col": 32,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "eb7c303cf9ef8ac2",
+          "line": 34,
+          "col": 1,
+          "children": [
+            {
+              "id": "83440dee8ecb4afb",
+              "line": 34,
+              "col": 1,
+              "text": "          "
+            },
+            {
+              "id": "04eb68075800ead7",
+              "line": 34,
+              "col": 11,
+              "text": "capacity"
+            },
+            {
+              "id": "00891cd7d4bf9495",
+              "line": 34,
+              "col": 19,
+              "text": ": String(row."
+            },
+            {
+              "id": "1a0893ba628f2780",
+              "line": 34,
+              "col": 32,
+              "text": "capacity"
+            },
+            {
+              "id": "fcaf0e18c8df2f77",
+              "line": 34,
+              "col": 40,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "2d7ac05e088839f1",
+          "line": 35,
+          "col": 1,
+          "text": "\n        });\n      }).catch(function (err) {\n        setError(String(err));\n      });\n    }\n  }, [editing, id]);\n\n  function setField(name: keyof FormState, value: string) {\n    setForm(function (prev) {\n      return { ...prev, [name]: value };\n    });\n  }\n\n  function onSubmit(ev: FormEvent) {\n    ev.preventDefault();\n    const checked = "
+        },
+        {
+          "id": "53ec8a9c6e7f2c77",
+          "line": 51,
+          "col": 21,
+          "text": "VenueSchema"
+        },
+        {
+          "id": "859cc01499a0b0e7",
+          "line": 51,
+          "col": 32,
+          "text": ".safeParse({\n"
+        },
+        {
+          "id": "edb67590f2f391f6",
+          "line": 52,
+          "col": 1,
+          "children": [
+            {
+              "id": "3d914577fb057151",
+              "line": 52,
+              "col": 1,
+              "text": "      "
+            },
+            {
+              "id": "7064ebfc9ff0237c",
+              "line": 52,
+              "col": 7,
+              "text": "name"
+            },
+            {
+              "id": "c37fa0e6d509d9db",
+              "line": 52,
+              "col": 11,
+              "text": ": form."
+            },
+            {
+              "id": "077965c2884db5d5",
+              "line": 52,
+              "col": 18,
+              "text": "name"
+            },
+            {
+              "id": "5e96d02f13f5878d",
+              "line": 52,
+              "col": 22,
+              "text": ",\n"
+            }
+          ]
+        },
+        {
+          "id": "67a52ae1a942d685",
+          "line": 53,
+          "col": 1,
+          "children": [
+            {
+              "id": "a1e189189c62cab2",
+              "line": 53,
+              "col": 1,
+              "text": "      "
+            },
+            {
+              "id": "364f6aa45cb4189f",
+              "line": 53,
+              "col": 7,
+              "text": "capacity"
+            },
+            {
+              "id": "c828a2f28f077698",
+              "line": 53,
+              "col": 15,
+              "text": ": Number(form."
+            },
+            {
+              "id": "94f457793939a986",
+              "line": 53,
+              "col": 29,
+              "text": "capacity"
+            },
+            {
+              "id": "fbaddd4242670a06",
+              "line": 53,
+              "col": 37,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "0e4ff67549bb5262",
+          "line": 54,
+          "col": 1,
+          "text": "\n    });\n    if (!checked.success) {\n      setError(checked.error.issues.map(function (issue) { return issue.message; }).join(\"; \"));\n    } else {\n      const payload: "
+        },
+        {
+          "id": "acb23fc3ac5a448a",
+          "line": 59,
+          "col": 22,
+          "text": "Venue"
+        },
+        {
+          "id": "5c380ba5f5f86cd0",
+          "line": 59,
+          "col": 27,
+          "text": " = {\n"
+        },
+        {
+          "id": "6095e5e7496e50c4",
+          "line": 60,
+          "col": 1,
+          "children": [
+            {
+              "id": "b16a947bc2d4296f",
+              "line": 60,
+              "col": 1,
+              "text": "        "
+            },
+            {
+              "id": "59b0c09809f9d157",
+              "line": 60,
+              "col": 9,
+              "text": "name"
+            },
+            {
+              "id": "993769eb53842f85",
+              "line": 60,
+              "col": 13,
+              "text": ": form."
+            },
+            {
+              "id": "2a8ce1ab26a3a93e",
+              "line": 60,
+              "col": 20,
+              "text": "name"
+            },
+            {
+              "id": "d3480f412efdc753",
+              "line": 60,
+              "col": 24,
+              "text": ",\n"
+            }
+          ]
+        },
+        {
+          "id": "8ce1312b55e608a7",
+          "line": 61,
+          "col": 1,
+          "children": [
+            {
+              "id": "bb3696d99cb05074",
+              "line": 61,
+              "col": 1,
+              "text": "        "
+            },
+            {
+              "id": "d5b390eb9e23c95c",
+              "line": 61,
+              "col": 9,
+              "text": "capacity"
+            },
+            {
+              "id": "9339853ad85ac53e",
+              "line": 61,
+              "col": 17,
+              "text": ": Number(form."
+            },
+            {
+              "id": "0d2845afaf92084e",
+              "line": 61,
+              "col": 31,
+              "text": "capacity"
+            },
+            {
+              "id": "cb0adb7fa03bd270",
+              "line": 61,
+              "col": 39,
+              "text": "),\n"
+            }
+          ]
+        },
+        {
+          "id": "e977f9e1f54e521e",
+          "line": 62,
+          "col": 1,
+          "text": "\n      };\n      const saved = editing ? api."
+        },
+        {
+          "id": "80891894443c6d29",
+          "line": 64,
+          "col": 35,
+          "text": "Venue"
+        },
+        {
+          "id": "4b277f16d743138c",
+          "line": 64,
+          "col": 40,
+          "text": ".update(id, payload) : api."
+        },
+        {
+          "id": "d56af257caf93835",
+          "line": 64,
+          "col": 67,
+          "text": "Venue"
+        },
+        {
+          "id": "e1f9e3244b2ca4da",
+          "line": 64,
+          "col": 72,
+          "text": ".create(payload);\n      saved.then(function (row) {\n        navigate(\""
+        },
+        {
+          "id": "a04dfc276fca430f",
+          "line": 66,
+          "col": 19,
+          "text": "/venues"
+        },
+        {
+          "id": "19c3743a3df1bb91",
+          "line": 66,
+          "col": 26,
+          "text": "/\" + row.id);\n      }).catch(function (err) {\n        setError(String(err));\n      });\n    }\n  }\n\n  return (\n    <section>\n      <p><Link to=\""
+        },
+        {
+          "id": "b4c035f83aff5568",
+          "line": 75,
+          "col": 20,
+          "text": "/venues"
+        },
+        {
+          "id": "dd0c3e3b94c2417b",
+          "line": 75,
+          "col": 27,
+          "text": "\">Back to list</Link></p>\n      <h1>{editing ? \"Update\" : \"Create\"} "
+        },
+        {
+          "id": "7f23c5e41abb8490",
+          "line": 76,
+          "col": 43,
+          "text": "Venue"
+        },
+        {
+          "id": "8fb9a735aef6c095",
+          "line": 76,
+          "col": 48,
+          "text": "</h1>\n      {error.length > 0 ? <p className=\"error\">{error}</p> : null}\n      <form onSubmit={onSubmit}>\n"
+        },
+        {
+          "id": "4709d6b288677a73",
+          "line": 79,
+          "col": 1,
+          "children": [
+            {
+              "id": "f48d1cf5095fb9b5",
+              "line": 79,
+              "col": 1,
+              "text": "        <label>\n          "
+            },
+            {
+              "id": "8682212fc4a01e1e",
+              "line": 80,
+              "col": 11,
+              "text": "name"
+            },
+            {
+              "id": "e84f84c2417f48df",
+              "line": 80,
+              "col": 15,
+              "text": "\n          <input type=\""
+            },
+            {
+              "id": "ca6a7d2937154a5d",
+              "line": 81,
+              "col": 24,
+              "text": "text"
+            },
+            {
+              "id": "d0ffd61af0344139",
+              "line": 81,
+              "col": 28,
+              "text": "\" value={form."
+            },
+            {
+              "id": "8a9a704f4b188e88",
+              "line": 81,
+              "col": 42,
+              "text": "name"
+            },
+            {
+              "id": "4691613ba1c36243",
+              "line": 81,
+              "col": 46,
+              "text": "} onChange={function (ev) { setField(\""
+            },
+            {
+              "id": "8f971b632fd3ee16",
+              "line": 81,
+              "col": 84,
+              "text": "name"
+            },
+            {
+              "id": "4634d99a1ea0c19d",
+              "line": 81,
+              "col": 88,
+              "text": "\", ev.target.value); }} />\n        </label>\n"
+            }
+          ]
+        },
+        {
+          "id": "de078b16ce569f14",
+          "line": 83,
+          "col": 1,
+          "children": [
+            {
+              "id": "f14be634a59ff23a",
+              "line": 83,
+              "col": 1,
+              "text": "        <label>\n          "
+            },
+            {
+              "id": "3230d2aafc4299c1",
+              "line": 84,
+              "col": 11,
+              "text": "capacity"
+            },
+            {
+              "id": "07b6ef7089d25e00",
+              "line": 84,
+              "col": 19,
+              "text": "\n          <input type=\""
+            },
+            {
+              "id": "e95efde7c4f20c42",
+              "line": 85,
+              "col": 24,
+              "text": "number"
+            },
+            {
+              "id": "512e865acc03f94e",
+              "line": 85,
+              "col": 30,
+              "text": "\" value={form."
+            },
+            {
+              "id": "945dc6eca43092d7",
+              "line": 85,
+              "col": 44,
+              "text": "capacity"
+            },
+            {
+              "id": "b4e4256fc3aed784",
+              "line": 85,
+              "col": 52,
+              "text": "} onChange={function (ev) { setField(\""
+            },
+            {
+              "id": "afcb1ae8e6f7ae19",
+              "line": 85,
+              "col": 90,
+              "text": "capacity"
+            },
+            {
+              "id": "2d6e41ab585ef482",
+              "line": 85,
+              "col": 98,
+              "text": "\", ev.target.value); }} />\n        </label>\n"
+            }
+          ]
+        },
+        {
+          "id": "37a24de0b14f07ff",
+          "line": 87,
+          "col": 1,
+          "text": "\n        <button type=\"submit\">Save</button>\n      </form>\n    </section>\n  );\n}\n"
+        }
+      ]
+    }
+  }
+}

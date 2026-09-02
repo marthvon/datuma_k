@@ -1,0 +1,37 @@
+# facts 9
+[0] trait=Toggleable model=FeatureFlag field=name type=text_type attribute=required args=[]
+[1] trait=Toggleable model=FeatureFlag field=name type=text_type attribute=indexed args=[]
+[2] trait=Toggleable model=FeatureFlag field=enabled type=bool_type attribute=default args=[true]
+[3] trait=Toggleable model=FeatureFlag field=rollout type=percent_type attribute=min args=[0]
+[4] trait=Toggleable model=FeatureFlag field=rollout type=percent_type attribute=max args=[100]
+[5] trait=Throttled model=RateLimit field=window type=duration_type attribute=seconds args=[60]
+[6] trait=Throttled model=RateLimit field=max_hits type=count_type attribute=required args=[]
+[7] trait=Throttled model=RateLimit field=burst type=count_type attribute=optional args=[]
+[8] trait=Throttled model=RateLimit field=burst type=count_type attribute=default args=[10]
+# index by_trait
+Throttled -> {5,6,7,8}
+Toggleable -> {0,1,2,3,4}
+# index by_model
+FeatureFlag -> {0,1,2,3,4}
+RateLimit -> {5,6,7,8}
+# index by_field
+burst -> {7,8}
+enabled -> {2}
+max_hits -> {6}
+name -> {0,1}
+rollout -> {3,4}
+window -> {5}
+# index by_type
+bool_type -> {2}
+count_type -> {6,7,8}
+duration_type -> {5}
+percent_type -> {3,4}
+text_type -> {0,1}
+# index by_attribute
+default -> {2,8}
+indexed -> {1}
+max -> {4}
+min -> {3}
+optional -> {7}
+required -> {0,6}
+seconds -> {5}

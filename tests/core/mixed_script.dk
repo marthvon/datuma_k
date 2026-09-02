@@ -1,0 +1,13 @@
+fn pack(v) { return {v: v, "tag": "ok"}; }
+fn main() {
+  data = pack([1, 2]);
+  packed = pack("z");
+  for (row in [packed]) {
+    tag = row.tag;
+    ok = tag == "ok";
+    if (ok) { out = data.v; };
+  }
+  score = 1.12345678;
+  msg = "a\"b\\c";
+}
+ret = main();

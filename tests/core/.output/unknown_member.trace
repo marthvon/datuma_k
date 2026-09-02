@@ -1,0 +1,45 @@
+# stack changes
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'1' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'m' -> /program/instruction/ident/operator
+'m' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|unknown_member.dk; 28b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/unknown_member.dk> @ line 1, col 1, idx 2)
+    ident("xs")
+    operator(Assign)
+    array
+      integer("1")
+  instruction(|unknown_member.dk; 28b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/unknown_member.dk> @ line 2, col 1, idx 3)
+    ident("bad")
+    operator(Assign)
+    ident("xs")
+    operator(Dot)
+    ident("missing")

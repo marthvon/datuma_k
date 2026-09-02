@@ -1,0 +1,26 @@
+# stack changes
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'1' -> /program/instruction/call/args
+'1' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|undefined_fn.dk; 18b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/undefined_fn.dk> @ line 1, col 1, idx 2)
+    ident("bad")
+    operator(Assign)
+    invoked_function("missing")
+      integer("1")

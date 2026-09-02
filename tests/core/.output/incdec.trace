@@ -1,0 +1,204 @@
+# stack changes
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+'+' -> /program/instruction/ident
+'+' -> /program/instruction/ident/operator
+'+' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'+' -> /program
+'+' -> /program/instruction
+'+' -> /program/instruction/operator
+'+' -> /program/instruction/operator
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+'-' -> /program/instruction/ident
+'-' -> /program/instruction/ident/operator
+'-' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'-' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'*' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'/' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'%' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'7' -> /program/instruction
+'7' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'*' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 1, col 1, idx 2)
+    ident("i")
+    operator(Assign)
+    integer("1")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 2, col 1, idx 3)
+    ident("i")
+    operator(Increment)
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 3, col 1, idx 4)
+    ident("post")
+    operator(Assign)
+    ident("i")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 4, col 1, idx 5)
+    operator(Increment)
+    ident("i")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 5, col 1, idx 6)
+    ident("pre")
+    operator(Assign)
+    ident("i")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 6, col 1, idx 7)
+    ident("i")
+    operator(Decrement)
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 7, col 1, idx 8)
+    ident("dec")
+    operator(Assign)
+    ident("i")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 8, col 1, idx 9)
+    ident("n")
+    operator(Assign)
+    integer("5")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 9, col 1, idx 10)
+    ident("n")
+    operator(AddAssign)
+    integer("2")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 10, col 1, idx 11)
+    ident("n")
+    operator(SubAssign)
+    integer("1")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 11, col 1, idx 12)
+    ident("n")
+    operator(MulAssign)
+    integer("3")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 12, col 1, idx 13)
+    ident("n")
+    operator(DivAssign)
+    integer("2")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 13, col 1, idx 14)
+    ident("n")
+    operator(ModAssign)
+    integer("7")
+  instruction(|incdec.dk; 106b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/incdec.dk> @ line 14, col 1, idx 15)
+    ident("n")
+    operator(PowAssign)
+    integer("2")

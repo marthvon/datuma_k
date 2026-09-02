@@ -1,0 +1,643 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'[' -> /program/instruction/function-def/program/instruction/return/array
+'"' -> /program/instruction/function-def/program/instruction/return/array/string
+'"' -> /program/instruction/function-def/program/instruction/return/array/string
+']' -> /program/instruction/function-def/program/instruction/return/array
+']' -> /program/instruction/function-def/program/instruction/return/array
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'[' -> /program/instruction/array/array
+'1' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array
+'2' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array/array
+',' -> /program/instruction/array
+'[' -> /program/instruction/array/array
+'3' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array/integer
+',' -> /program/instruction/array/array
+'4' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array/integer
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array/array
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'=' -> /program/instruction/ident/operator
+' ' -> /program/instruction/ident/operator
+'9' -> /program/instruction/ident
+'9' -> /program/instruction
+'9' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'a' -> /program
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'a' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'1' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'"' -> /program/instruction/ident/accessor/string
+'"' -> /program/instruction/ident/accessor/string
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'=' -> /program/instruction/ident/operator
+' ' -> /program/instruction/ident/operator
+'2' -> /program/instruction/ident
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'"' -> /program/instruction/ident/accessor/string
+'"' -> /program/instruction/ident/accessor/string
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'c' -> /program/instruction/ident/operator
+'c' -> /program/instruction/ident/operator/ident
+' ' -> /program/instruction/ident/operator/ident
+'=' -> /program/instruction/ident/operator/operator
+' ' -> /program/instruction/ident/operator/operator
+'3' -> /program/instruction/ident/operator
+'3' -> /program/instruction/ident
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'d' -> /program
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'d' -> /program/instruction
+'d' -> /program/instruction/ident
+'.' -> /program/instruction/ident
+'.' -> /program/instruction/ident/operator
+'c' -> /program/instruction/ident/operator
+'c' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator/ident
+';' -> /program/instruction/ident/operator
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'5' -> /program/instruction
+'5' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'+' -> /program/instruction/ident/operator
+'=' -> /program/instruction/ident/operator
+'1' -> /program/instruction/ident
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'i' -> /program
+'i' -> /program/instruction
+'i' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'k' -> /program
+'k' -> /program/instruction
+'k' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'o' -> /program
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'"' -> /program/instruction/dict/string
+'"' -> /program/instruction/dict/string
+':' -> /program/instruction/dict
+'7' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'a' -> /program
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'[' -> /program/instruction/accessor
+'i' -> /program/instruction/accessor/ident
+']' -> /program/instruction/accessor/ident
+']' -> /program/instruction/accessor
+']' -> /program/instruction/accessor
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+'(' -> /program/instruction/call
+')' -> /program/instruction/call
+'[' -> /program/instruction/accessor
+'k' -> /program/instruction/accessor/ident
+']' -> /program/instruction/accessor/ident
+']' -> /program/instruction/accessor
+']' -> /program/instruction/accessor
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'"' -> /program/instruction/ident/accessor/string
+'"' -> /program/instruction/ident/accessor/string
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'0' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+'[' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'a' -> /program/instruction
+'a' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'1' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+'[' -> /program/instruction/ident
+'[' -> /program/instruction/ident/accessor
+'i' -> /program/instruction/ident/accessor/ident
+' ' -> /program/instruction/ident/accessor/ident
+'+' -> /program/instruction/ident/accessor/operator
+' ' -> /program/instruction/ident/accessor/operator
+'1' -> /program/instruction/ident/accessor
+'1' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor/integer
+']' -> /program/instruction/ident/accessor
+']' -> /program/instruction/ident/accessor
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'p' -> /program
+'p' -> /program/instruction
+'p' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'(' -> /program/instruction
+'(' -> /program/instruction/grouped
+'x' -> /program/instruction/grouped/ident
+')' -> /program/instruction/grouped/ident
+')' -> /program/instruction/grouped
+')' -> /program/instruction/grouped
+'[' -> /program/instruction/accessor
+'0' -> /program/instruction/accessor/integer
+']' -> /program/instruction/accessor/integer
+']' -> /program/instruction/accessor
+']' -> /program/instruction/accessor
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("foo")
+    (anon)
+    program
+      return
+        array
+          string("k")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 2, col 1, idx 3)
+    ident("xs")
+    operator(Assign)
+    array
+      array
+        integer("1")
+        integer("2")
+      array
+        integer("3")
+        integer("4")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 3, col 1, idx 4)
+    ident("deep")
+    operator(Assign)
+    ident("xs")
+    accessor
+      integer("0")
+    accessor
+      integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 4, col 1, idx 5)
+    ident("xs")
+    accessor
+      integer("0")
+    accessor
+      integer("1")
+    operator(Assign)
+    integer("9")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 5, col 1, idx 6)
+    ident("after")
+    operator(Assign)
+    ident("xs")
+    accessor
+      integer("0")
+    accessor
+      integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 6, col 1, idx 7)
+    ident("d")
+    operator(Assign)
+    dict
+      (anon)
+        ident("a")
+        integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 7, col 1, idx 8)
+    ident("d")
+    accessor
+      string("b")
+    operator(Assign)
+    integer("2")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 8, col 1, idx 9)
+    ident("db")
+    operator(Assign)
+    ident("d")
+    accessor
+      string("b")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 9, col 1, idx 10)
+    ident("d")
+    operator(Dot)
+    ident("c")
+    operator(Assign)
+    integer("3")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 10, col 1, idx 11)
+    ident("dc")
+    operator(Assign)
+    ident("d")
+    operator(Dot)
+    ident("c")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 11, col 1, idx 12)
+    ident("plus")
+    operator(Assign)
+    integer("0")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 12, col 1, idx 13)
+    ident("plus")
+    operator(AddAssign)
+    integer("5")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 13, col 1, idx 14)
+    ident("xs")
+    accessor
+      integer("1")
+    accessor
+      integer("0")
+    operator(AddAssign)
+    integer("10")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 14, col 1, idx 15)
+    ident("inc")
+    operator(Assign)
+    ident("xs")
+    accessor
+      integer("1")
+    accessor
+      integer("0")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 15, col 1, idx 16)
+    ident("i")
+    operator(Assign)
+    integer("0")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 16, col 1, idx 17)
+    ident("k")
+    operator(Assign)
+    integer("0")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 17, col 1, idx 18)
+    ident("obj")
+    operator(Assign)
+    dict
+      (anon)
+        string("k")
+        integer("7")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 18, col 1, idx 19)
+    ident("arr")
+    operator(Assign)
+    array
+      integer("2")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 19, col 1, idx 20)
+    ident("pa")
+    operator(Assign)
+    ident("xs")
+    accessor
+      integer("0")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 20, col 1, idx 21)
+    ident("pb")
+    operator(Assign)
+    string("hi")
+    accessor
+      ident("i")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 21, col 1, idx 22)
+    ident("pc")
+    operator(Assign)
+    invoked_function("foo")
+    accessor
+      ident("k")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 22, col 1, idx 23)
+    ident("pd")
+    operator(Assign)
+    ident("obj")
+    accessor
+      string("k")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 23, col 1, idx 24)
+    ident("pe")
+    operator(Assign)
+    ident("xs")
+    accessor
+      integer("0")
+    accessor
+      integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 24, col 1, idx 25)
+    ident("pm")
+    operator(Assign)
+    ident("arr")
+    operator(Add)
+    array
+      integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 25, col 1, idx 26)
+    ident("pn")
+    operator(Assign)
+    ident("xs")
+    accessor
+      ident("i")
+      operator(Add)
+      integer("1")
+  instruction(|accessors.dk; 366b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/accessors.dk> @ line 26, col 1, idx 27)
+    ident("pp")
+    operator(Assign)
+    grouped
+      ident("xs")
+    accessor
+      integer("0")

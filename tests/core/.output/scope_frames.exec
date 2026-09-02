@@ -1,0 +1,13 @@
+{"op":"assign","target":"g","value":"10","fn":null,"stack":[],"frame":["g"],"scope":{"g":"10"}}
+
+{"op":"assign","target":"before","value":"10","fn":"touch","stack":["touch"],"frame":["before"],"scope":{"before":"10","g":"10"}}
+
+{"op":"assign","target":"g","value":"99","fn":"touch","stack":["touch"],"frame":["before","g"],"scope":{"before":"10","g":"99"}}
+
+{"op":"assign","target":"mine","value":"99","fn":"touch","stack":["touch"],"frame":["before","g","mine"],"scope":{"before":"10","g":"99","mine":"99"}}
+
+{"op":"return","value":"109","fn":"touch","stack":["touch"],"frame":["before","g","mine"],"scope":{"before":"10","g":"99","mine":"99"}}
+
+{"op":"assign","target":"sum","value":"109","fn":null,"stack":[],"frame":["g","sum"],"scope":{"g":"10","sum":"109"}}
+
+{"op":"assign","target":"outer","value":"10","fn":null,"stack":[],"frame":["g","sum","outer"],"scope":{"g":"10","outer":"10","sum":"109"}}

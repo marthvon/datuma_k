@@ -1,0 +1,73 @@
+# stack changes
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/function-def
+'n' -> /program/instruction/function-def/args
+'n' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args/ident
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def/args
+')' -> /program/instruction/function-def
+'{' -> /program/instruction/function-def/program
+'r' -> /program/instruction/function-def/program/instruction
+'r' -> /program/instruction/function-def/program/instruction/ident
+' ' -> /program/instruction/function-def/program/instruction/return
+'s' -> /program/instruction/function-def/program/instruction/return/ident
+'(' -> /program/instruction/function-def/program/instruction/return/call
+'n' -> /program/instruction/function-def/program/instruction/return/call/args
+'n' -> /program/instruction/function-def/program/instruction/return/call/args/ident
+' ' -> /program/instruction/function-def/program/instruction/return/call/args/ident
+'+' -> /program/instruction/function-def/program/instruction/return/call/args/operator
+' ' -> /program/instruction/function-def/program/instruction/return/call/args/operator
+'1' -> /program/instruction/function-def/program/instruction/return/call/args
+'1' -> /program/instruction/function-def/program/instruction/return/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/return/call/args/integer
+')' -> /program/instruction/function-def/program/instruction/return/call/args
+')' -> /program/instruction/function-def/program/instruction/return/call/args
+')' -> /program/instruction/function-def/program/instruction/return/call
+')' -> /program/instruction/function-def/program/instruction/return/call
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+';' -> /program/instruction/function-def/program/instruction/return
+'}' -> /program/instruction/function-def/program/instruction
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'}' -> /program/instruction/function-def/program
+'\n' -> /program/instruction/function-def
+'\n' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'s' -> /program/instruction
+'s' -> /program/instruction/ident
+'(' -> /program/instruction/call
+'0' -> /program/instruction/call/args
+'0' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args/integer
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call/args
+')' -> /program/instruction/call
+')' -> /program/instruction/call
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  function_def("spin")
+    (anon)
+      ident("n")
+    program
+      return
+        invoked_function("spin")
+          ident("n")
+          operator(Add)
+          integer("1")
+  instruction(|recursion_depth.dk; 50b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/recursion_depth.dk> @ line 2, col 1, idx 3)
+    ident("bad")
+    operator(Assign)
+    invoked_function("spin")
+      integer("0")

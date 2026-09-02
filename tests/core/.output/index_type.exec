@@ -1,0 +1,3 @@
+{"op":"assign","target":"xs","value":"[1]","fn":null,"stack":[],"frame":["xs"],"scope":{"xs":"[1]"}}
+
+{"op":"failed","error":"[Invalid Index Type] |index_type.dk; 25b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/index_type.dk> (line 2, col 1, idx 3) cannot index array with string","fn":null,"stack":[],"frame":["xs"],"scope":{"xs":"[1]"}}

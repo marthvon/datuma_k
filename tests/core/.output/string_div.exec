@@ -1,0 +1,5 @@
+{"op":"assign","target":"text","value":"\"a\"","fn":null,"stack":[],"frame":["text"],"scope":{"text":"\"a\""}}
+
+{"op":"assign","target":"count","value":"2","fn":null,"stack":[],"frame":["text","count"],"scope":{"count":"2","text":"\"a\""}}
+
+{"op":"failed","error":"[Invalid Operation] |string_div.dk; 43b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/string_div.dk> (line 3, col 1, idx 4) invalid operation Div between string and integer","fn":null,"stack":[],"frame":["text","count"],"scope":{"count":"2","text":"\"a\""}}

@@ -1,0 +1,318 @@
+# stack changes
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'+' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'-' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'*' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'/' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'3' -> /program/instruction
+'3' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'%' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'*' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'2' -> /program/instruction
+'2' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'y' -> /program
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'|' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'^' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'t' -> /program
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/boolean
+';' -> /program/instruction/boolean
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'t' -> /program/instruction
+'t' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'b' -> /program
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'|' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'1' -> /program/instruction/array/integer
+',' -> /program/instruction/array/integer
+',' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'y' -> /program
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'[' -> /program/instruction
+'[' -> /program/instruction/array
+'2' -> /program/instruction/array/integer
+']' -> /program/instruction/array/integer
+']' -> /program/instruction/array
+']' -> /program/instruction/array
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'^' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'&' -> /program/instruction/operator
+'=' -> /program/instruction/operator
+'y' -> /program/instruction
+'y' -> /program/instruction/ident
+';' -> /program/instruction/ident
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 1, col 1, idx 2)
+    ident("x")
+    operator(Assign)
+    integer("1")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 2, col 1, idx 3)
+    ident("x")
+    operator(AddAssign)
+    integer("2")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 3, col 1, idx 4)
+    ident("x")
+    operator(SubAssign)
+    integer("1")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 4, col 1, idx 5)
+    ident("x")
+    operator(MulAssign)
+    integer("3")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 5, col 1, idx 6)
+    ident("x")
+    operator(DivAssign)
+    integer("3")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 6, col 1, idx 7)
+    ident("x")
+    operator(ModAssign)
+    integer("2")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 7, col 1, idx 8)
+    ident("x")
+    operator(PowAssign)
+    integer("2")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 8, col 1, idx 9)
+    ident("y")
+    operator(Assign)
+    integer("1")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 9, col 1, idx 10)
+    ident("x")
+    operator(AndAssign)
+    ident("y")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 10, col 1, idx 11)
+    ident("x")
+    operator(OrAssign)
+    ident("y")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 11, col 1, idx 12)
+    ident("x")
+    operator(XorAssign)
+    ident("y")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 12, col 1, idx 13)
+    ident("b")
+    operator(Assign)
+    boolean(true)
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 13, col 1, idx 14)
+    ident("t")
+    operator(Assign)
+    boolean(true)
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 14, col 1, idx 15)
+    ident("f")
+    operator(Assign)
+    boolean(false)
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 15, col 1, idx 16)
+    ident("b")
+    operator(AndAndAssign)
+    ident("t")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 16, col 1, idx 17)
+    ident("b")
+    operator(OrOrAssign)
+    ident("f")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 17, col 1, idx 18)
+    ident("xs")
+    operator(Assign)
+    array
+      integer("1")
+      integer("2")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 18, col 1, idx 19)
+    ident("ys")
+    operator(Assign)
+    array
+      integer("2")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 19, col 1, idx 20)
+    ident("xs")
+    operator(RightDiffAssign)
+    ident("ys")
+  instruction(|ident_assigns.dk; 181b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/ident_assigns.dk> @ line 20, col 1, idx 21)
+    ident("xs")
+    operator(LeftDiffAssign)
+    ident("ys")

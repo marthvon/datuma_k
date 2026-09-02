@@ -1,0 +1,25 @@
+# stack changes
+'b' -> /program/instruction
+'b' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'1' -> /program/instruction
+'1' -> /program/instruction/integer
+' ' -> /program/instruction/integer
+'/' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+
+# tree
+program
+  instruction(|divide_zero.dk; 13b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/divide_zero.dk> @ line 1, col 1, idx 2)
+    ident("bad")
+    operator(Assign)
+    integer("1")
+    operator(Div)
+    integer("0")

@@ -1,0 +1,13 @@
+{"op":"assign","target":"andv","value":"false","fn":null,"stack":[],"frame":["andv"],"scope":{"andv":"false"}}
+
+{"op":"assign","target":"orv","value":"true","fn":null,"stack":[],"frame":["andv","orv"],"scope":{"andv":"false","orv":"true"}}
+
+{"op":"assign","target":"xorv","value":"true","fn":null,"stack":[],"frame":["andv","orv","xorv"],"scope":{"andv":"false","orv":"true","xorv":"true"}}
+
+{"op":"assign","target":"nullor","value":"false","fn":null,"stack":[],"frame":["andv","orv","xorv","nullor"],"scope":{"andv":"false","nullor":"false","orv":"true","xorv":"true"}}
+
+{"op":"assign","target":"nulleq","value":"true","fn":null,"stack":[],"frame":["andv","orv","xorv","nullor","nulleq"],"scope":{"andv":"false","nulleq":"true","nullor":"false","orv":"true","xorv":"true"}}
+
+{"op":"assign","target":"numeq","value":"true","fn":null,"stack":[],"frame":["andv","orv","xorv","nullor","nulleq","numeq"],"scope":{"andv":"false","nulleq":"true","nullor":"false","numeq":"true","orv":"true","xorv":"true"}}
+
+{"op":"assign","target":"mix","value":"true","fn":null,"stack":[],"frame":["andv","orv","xorv","nullor","nulleq","numeq","mix"],"scope":{"andv":"false","mix":"true","nulleq":"true","nullor":"false","numeq":"true","orv":"true","xorv":"true"}}

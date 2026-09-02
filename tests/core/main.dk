@@ -1,0 +1,9 @@
+fn abs(n) {
+  neg = n < 0;
+  if (neg) { yield 0 - n; } else { yield n; };
+}
+fn main() {
+  a = abs(-3);
+  b = abs(2);
+}
+ret = main();
