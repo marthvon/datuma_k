@@ -98,3 +98,13 @@ cargo test
 Parser internals and module notes: [`docs/README.md`](docs/README.md).
 
 MCP (stdio, calls this binary): [`mcp/README.md`](mcp/README.md).
+
+## License
+
+Copyright (C) 2026 mamertvonn
+
+datuma_k (the engine, MCP, grammars, and helpers shipped with this repository) is licensed under the GNU Affero General Public License v3.0. See [`LICENSE.md`](LICENSE.md).
+
+Your own `*.dtct` and `*.ngin` files, and the source `datuma_k run` generates from them, are yours. AGPL does not apply to that output just because you used the binary.
+
+Distributing a modified datuma_k, including offering it as a network service, must stay under AGPL.
