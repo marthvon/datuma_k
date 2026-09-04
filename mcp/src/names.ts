@@ -5,4 +5,5 @@ export const TOOL_NAMES = [
   "preview",
   "generate",
   "advise_ngin",
+  "infer_patterns",
 ] as const;

@@ -38,18 +38,20 @@ The process cwd should be the datuma_k **project** (the directory with `.env`), 
 | `preview` | `datuma_k preview` | Plan without writing |
 | `generate` | `datuma_k run` | Writes generated spans |
 | `advise_ngin` | (local rules) | When to use ngin vs handwritten code |
+| `infer_patterns` | `catalog` + `keywords.md` | Traits, widgets, association review notes, sync risks, aliases |
 
 ## Resources
 
 - `datuma://language/dtct`
 - `datuma://language/ngin`
+- `datuma://language/standards`
 - `datuma://docs/keywords`
 - `datuma://docs/practices`
 - `datuma://docs/when-ngin`
 
 ## Prompts
 
-`add-model`, `add-field`, `scaffold-ngin`, `should-use-ngin`
+`add-model`, `add-field`, `scaffold-ngin`, `should-use-ngin`, `infer-contract-patterns`
 
 ## Tests
 

@@ -5,6 +5,7 @@ import { McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import { adviseNgin } from "./advise.js";
 import { jsonToolResult, runDatumaK } from "./cli.js";
+import { inferPatterns, parseKeywordsTable, type Catalog } from "./infer.js";
 import { listProject } from "./listProject.js";
 
 const ROOT = z.object({
@@ -43,6 +44,12 @@ const RESOURCES: { name: string; uri: string; title: string; file: string }[] = 
     uri: "datuma://docs/when-ngin",
     title: "When to use ngin",
     file: "when-ngin.md",
+  },
+  {
+    name: "standards",
+    uri: "datuma://language/standards",
+    title: "Standard dtct vocabulary",
+    file: "standards.md",
   },
 ];
 
@@ -177,6 +184,34 @@ export function createDatumaServer(): McpServer {
     },
   );
 
+  server.registerTool(
+    "infer_patterns",
+    {
+      title: "Infer traits and attributes",
+      description:
+        "Suggest shared Data/Enum traits, field attributes, and UI widgets from the contract. Flag unusual default-vocabulary pairings as association_suggestions (review notes, not errors). Flag single-platform sync risks. Map aliases like text_type to string. Does not write files or reject contracts.",
+      inputSchema: ROOT,
+      annotations: { readOnlyHint: true, destructiveHint: false },
+    },
+    async ({ root }) => {
+      const cwd = root ?? process.cwd();
+      const listed = await listProject(cwd);
+      const result = await runDatumaK(["catalog"], cwd);
+      const failed = jsonToolResult(result.stdout, result.stderr, result.status);
+      if (failed.isError) {
+        return failed;
+      } else {
+        const catalog = JSON.parse(result.stdout.trim()) as Catalog;
+        const keywords = listed.keywords
+          ? parseKeywordsTable(await readFile(listed.keywords, "utf8"))
+          : [];
+        return {
+          content: [{ type: "text", text: JSON.stringify(inferPatterns(catalog, keywords), null, 2) }],
+        };
+      }
+    },
+  );
+
   for (const resource of RESOURCES) {
     const file = path.join(resourcesDir, resource.file);
     server.registerResource(
@@ -215,7 +250,7 @@ export function createDatumaServer(): McpServer {
           role: "user" as const,
           content: {
             type: "text" as const,
-            text: `Add dtct model ${name} for platforms: ${platforms}. Read datuma://language/dtct and datuma://docs/keywords. Add a row to data/keywords.md in the same change. Call advise_ngin, then validate and preview. Do not invent ngin for one-off glue.`,
+            text: `Add dtct model ${name} for platforms: ${platforms}. Read datuma://language/dtct and datuma://language/standards. Prefer Data/Enum, standard types, and flat flags (relationship<model(X), BelongsTo, Select>). Type is not the widget. Call infer_patterns; treat association_suggestions as review notes, not validate failures. Add keywords.md rows, then advise_ngin. Do not invent ngin for a platform that does not exist yet.`,
           },
         },
       ],
@@ -283,6 +318,28 @@ export function createDatumaServer(): McpServer {
           content: {
             type: "text" as const,
             text: `Should this use ngin?\n\n${task}\n\nCall advise_ngin with the intended platforms. Read datuma://docs/when-ngin. Prefer splitting mixed tasks: ngin for contract-derived bits, handwritten glue between generated spans.`,
+          },
+        },
+      ],
+    }),
+  );
+
+  server.registerPrompt(
+    "infer-contract-patterns",
+    {
+      title: "Infer contract patterns",
+      description: "Run infer_patterns, apply shared traits/attributes, update keywords.md, then validate.",
+      argsSchema: z.object({
+        note: z.string().optional().describe("Optional extra context"),
+      }),
+    },
+    ({ note }) => ({
+      messages: [
+        {
+          role: "user" as const,
+          content: {
+            type: "text" as const,
+            text: `Call infer_patterns. Read datuma://language/standards. Apply Data/Enum, cardinality/dependency flags, and explicit UI widgets on the contract (type is not the widget; do not stamp Text on every string). Treat association_suggestions as prevention/mitigation for review — the compiler does not reject them. For single-platform unique/relationship/email, keep the tag and list likely future platforms on the keywords.md row; do not add ngin until a second consumer exists. Then validate.${note ? `\n\n${note}` : ""}`,
           },
         },
       ],

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsc && node --test dist/advise.test.js dist/names.test.js"
+    "test": "tsc && node --test dist/advise.test.js dist/names.test.js dist/infer.test.js"
   },
   "engines": {
     "node": ">=20"

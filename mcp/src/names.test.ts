@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { TOOL_NAMES } from "./names.js";
 
-test("registers the compiler tools plus advise_ngin", () => {
+test("registers the compiler tools plus advise_ngin and infer_patterns", () => {
   assert.deepEqual([...TOOL_NAMES], [
     "list_project",
     "query_contracts",
@@ -10,5 +10,6 @@ test("registers the compiler tools plus advise_ngin", () => {
     "preview",
     "generate",
     "advise_ngin",
+    "infer_patterns",
   ]);
 });

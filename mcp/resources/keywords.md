@@ -16,6 +16,6 @@ Every distinct name in the contracts — models, traits, types, attributes, and 
 | `kind` | `model` \| `trait` \| `type` \| `attribute` \| `field` |
 | `description` | Non-empty: what it is |
 | `purpose` | Non-empty: why it exists in generated code |
-| `platforms` | Comma-separated, non-empty subset of `api_server`, `web_frontend`, `mobile_frontend` |
+| `platforms` | Comma-separated, non-empty subset of `api_server`, `web_frontend`, `mobile_frontend`. For `Data` / `Enum` / `unique` / `relationship` / `email` / `phone_no`, list likely future consumers even if only one platform exists today. That does not mean write ngin for those platforms yet. |
 
 Field names shared across models (for example `capacity`) get one row. `platforms` lists where generated code for that keyword actually ships — not every platform in the company. Do not put `|` inside a cell.

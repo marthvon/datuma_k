@@ -2,6 +2,8 @@
 
 Use ngin when **two or more platforms** must stay in sync on the same contract-derived artifacts: types, validation, serializers, forms, list/detail views keyed off `dk.models` / `dk.fields` / attributes.
 
+**Tag the contract now; generate later.** `Data`, `Enum`, `unique`, `relationship`, cardinality, `email`, and `phone_no` belong on `.dtct` as soon as the shape is known, even if only one platform exists. UI widgets (`Select`, `Text`, …) are for generated forms; they may list only frontend platforms. Document likely future consumers on the `keywords.md` platforms column. Do **not** add an ngin target (or emit files) for a platform that does not exist yet. `advise_ngin` still waits for a second real consumer.
+
 Do **not** use ngin for:
 
 - Routing, auth, middleware, HTTP servers/clients
