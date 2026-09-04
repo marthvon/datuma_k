@@ -57,6 +57,23 @@ if [[ "$docker_ok" -eq 1 ]]; then
   docker_linux linux/arm64 datuma_k-linux-aarch64
   docker_linux linux/amd64 datuma_k-linux-x86_64
 
+  docker_linux_musl() {
+    local platform="$1"
+    local artifact="$2"
+    echo "building $artifact via docker alpine ($platform)"
+    docker run --rm \
+      --platform "$platform" \
+      -v "$ROOT:/src" \
+      -e CARGO_TARGET_DIR=/tmp/dk-target \
+      -w /src \
+      rust:1.92-alpine \
+      sh -c "apk add --no-cache musl-dev && cargo build --release && cp /tmp/dk-target/release/datuma_k /src/release/${VERSION}/${artifact}"
+    chmod +x "$OUT/$artifact"
+  }
+
+  docker_linux_musl linux/arm64 datuma_k-linux-musl-aarch64
+  docker_linux_musl linux/amd64 datuma_k-linux-musl-x86_64
+
   echo "building datuma_k-windows-x86_64.exe via docker"
   docker run --rm \
     --platform linux/amd64 \

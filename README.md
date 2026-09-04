@@ -8,25 +8,54 @@ An API backend and a React client both need the same records: capacity 1–500, 
 
 ## Install
 
-Prebuilt binaries (see [`release/README.md`](release/README.md)):
+The command is `datuma_k`. The package name is `datuma-k`. The Homebrew tap and Scoop bucket use `datuma_k` (underscore) — `brew tap marthvon/datuma-k` clones a repo that does not exist.
 
-| File | Platform |
-| --- | --- |
-| `datuma_k-macos-aarch64` | macOS Apple Silicon |
-| `datuma_k-macos-x86_64` | macOS Intel |
-| `datuma_k-linux-aarch64` | Linux arm64 |
-| `datuma_k-linux-x86_64` | Linux x86_64 |
-| `datuma_k-windows-x86_64.exe` | Windows x86_64 |
+More detail: [guide/getting-started.md](guide/getting-started.md).
 
-Rename the file for your platform to `datuma_k` (or `datuma_k.exe` on Windows) and put it on `PATH`.
-
-Or build from source:
+**macOS (and Linux with Homebrew)** — Homebrew 6 ignores untrusted taps, so `brew install datuma-k` after a bare `brew tap` will not find it:
 
 ```bash
-cargo build --release
+brew install marthvon/datuma_k/datuma-k
 ```
 
-The binary is `target/release/datuma_k`.
+If that still fails after an earlier `brew tap`, run `brew untap marthvon/datuma_k` first.
+
+**Fedora**
+
+```bash
+sudo dnf copr enable marthvon/datuma-k
+sudo dnf install datuma-k
+```
+
+**Debian / Ubuntu** — no apt repo:
+
+```bash
+# x86_64
+curl -fsSL -o /tmp/datuma-k.deb https://github.com/marthvon/datuma_k/releases/download/v1.0.0/datuma-k_1.0.0_amd64.deb && sudo apt install /tmp/datuma-k.deb && rm -f /tmp/datuma-k.deb
+
+# arm64
+curl -fsSL -o /tmp/datuma-k.deb https://github.com/marthvon/datuma_k/releases/download/v1.0.0/datuma-k_1.0.0_arm64.deb && sudo apt install /tmp/datuma-k.deb && rm -f /tmp/datuma-k.deb
+```
+
+**Alpine** — musl `.apk` (unsigned). On Docker Alpine, install `curl` first; skip `sudo` if you are root. If a previous glibc apk is installed, `apk del datuma-k` first.
+
+```sh
+apk add --no-cache curl
+curl -fsSL -o /tmp/datuma-k.apk https://github.com/marthvon/datuma_k/releases/download/v1.0.0/datuma-k_1.0.0_x86_64.apk && apk add --allow-untrusted /tmp/datuma-k.apk && rm -f /tmp/datuma-k.apk
+```
+
+aarch64: `datuma-k_1.0.0_aarch64.apk`. The command is `datuma_k`.
+
+**Windows**
+
+```powershell
+scoop bucket add datuma_k https://github.com/marthvon/scoop-datuma_k
+scoop install datuma-k
+```
+
+**Direct binary** — download a binary or `.rpm` from the same release page, rename to `datuma_k` (or `datuma_k.exe` on Windows), and put it on `PATH`. On Fedora without Copr: `sudo dnf install ./datuma-k-*-1.x86_64.rpm`.
+
+**From source:** `cargo build --release` → `target/release/datuma_k`.
 
 ## Quick start
 

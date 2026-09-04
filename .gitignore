@@ -2,7 +2,14 @@
 /plan
 /.cursor
 /.vscode
-/release/1.0.0/
+/release/[0-9]*/
+/release/.publish/
 /mcp/node_modules
 /mcp/dist
 .DS_Store
+.env
+**/.env
+*.env
+!*.env.example
+!**/*.env.example
+!tests/example/.env
