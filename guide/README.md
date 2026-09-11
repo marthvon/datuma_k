@@ -32,5 +32,6 @@ flowchart LR
 5. [Language](language.md) — the scripting language used in interp blocks and definitions
 6. [Querying](querying.md) — the `dk` host API over the contract
 7. [Generation](generation.md) — `run`, dkcache, and the rest of the CLI
+8. [MCP server](mcp.md) — giving a coding agent the CLI as structured tools
 
 A full FastAPI + React project generated from one contract lives in [`tests/example`](../tests/example). How to generate and start those servers: [`tests/example/README.md`](../tests/example/README.md).

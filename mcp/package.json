@@ -1,15 +1,44 @@
 {
-  "name": "datuma_k-mcp",
+  "name": "@marthvon/datuma-k-mcp",
   "version": "1.0.0",
-  "private": true,
+  "mcpName": "io.github.marthvon/datuma-k",
+  "description": "MCP server for datuma_k: query, validate, preview, and generate from *.dtct data contracts and *.ngin templates.",
   "license": "AGPL-3.0-only",
+  "author": "marthvon",
+  "homepage": "https://github.com/marthvon/datuma_k/tree/master/mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marthvon/datuma_k.git",
+    "directory": "mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/marthvon/datuma_k/issues"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "datuma_k",
+    "dtct",
+    "ngin",
+    "code-generation",
+    "data-contract"
+  ],
   "type": "module",
   "bin": {
-    "datuma_k-mcp": "./dist/index.js"
+    "datuma-k-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "resources",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsc && node --test dist/advise.test.js dist/names.test.js dist/infer.test.js"
+    "test": "tsc && node --test dist/advise.test.js dist/names.test.js dist/infer.test.js",
+    "prepublishOnly": "npm run build"
   },
   "engines": {
     "node": ">=20"

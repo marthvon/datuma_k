@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.marthvon/datuma-k",
+  "title": "datuma_k",
+  "description": "Query, validate, preview, and generate source from *.dtct data contracts and *.ngin templates.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/marthvon/datuma_k",
+  "repository": {
+    "url": "https://github.com/marthvon/datuma_k",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@marthvon/datuma-k-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DATUMA_K",
+          "description": "Absolute path to the datuma_k binary. Omit if datuma_k is already on PATH.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "filepath"
+        }
+      ]
+    }
+  ]
+}
