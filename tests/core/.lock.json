@@ -14,6 +14,7 @@
   "control_more.trace": true,
   "dicts.trace": true,
   "divide_zero.trace": true,
+  "for_in_not_iterable.trace": true,
   "functions.trace": true,
   "grouped_exprs.trace": true,
   "ident_assigns.trace": true,

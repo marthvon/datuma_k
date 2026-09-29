@@ -94,42 +94,88 @@
 ']' -> /program/instruction/accessor
 ';' -> /program/instruction
 ';' -> /program/instruction
+'u' -> /program
+'u' -> /program/instruction
+'u' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'.' -> /program/instruction/operator
+'u' -> /program/instruction/operator
+'u' -> /program/instruction/operator/ident
+'(' -> /program/instruction/operator/call
+')' -> /program/instruction/operator/call
+';' -> /program/instruction/operator
+';' -> /program/instruction
+';' -> /program/instruction
+'l' -> /program
+'l' -> /program/instruction
+'l' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'"' -> /program/instruction
+'"' -> /program/instruction/string
+'"' -> /program/instruction/string
+'.' -> /program/instruction/operator
+'l' -> /program/instruction/operator
+'l' -> /program/instruction/operator/ident
+'(' -> /program/instruction/operator/call
+')' -> /program/instruction/operator/call
+';' -> /program/instruction/operator
+';' -> /program/instruction
+';' -> /program/instruction
 
 # tree
 program
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 1, col 1, idx 2)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 1, col 1, idx 2)
     ident("cat")
     operator(Assign)
     string("a")
     operator(Add)
     string("b")
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 2, col 1, idx 3)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 2, col 1, idx 3)
     ident("rep")
     operator(Assign)
     string("xy")
     operator(Mul)
     integer("3")
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 3, col 1, idx 4)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 3, col 1, idx 4)
     ident("len")
     operator(Assign)
     string("hello")
     operator(Dot)
     ident("length")
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 4, col 1, idx 5)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 4, col 1, idx 5)
     ident("eq")
     operator(Assign)
     string("a")
     operator(Equal)
     string("a")
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 5, col 1, idx 6)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 5, col 1, idx 6)
     ident("ne")
     operator(Assign)
     string("a")
     operator(NotEqual)
     string("b")
-  instruction(|strings.dk; 104b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 6, col 1, idx 7)
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 6, col 1, idx 7)
     ident("ch")
     operator(Assign)
     string("abc")
     accessor
       integer("1")
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 7, col 1, idx 8)
+    ident("up")
+    operator(Assign)
+    string("Ab")
+    operator(Dot)
+    invoked_function("upper")
+  instruction(|strings.dk; 143b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/strings.dk> @ line 8, col 1, idx 9)
+    ident("low")
+    operator(Assign)
+    string("Ab")
+    operator(Dot)
+    invoked_function("lower")

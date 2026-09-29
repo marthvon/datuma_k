@@ -1,0 +1,78 @@
+# stack changes
+'o' -> /program/instruction
+'o' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'x' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'1' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict/integer
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/for
+'e' -> /program/instruction/for/instruction
+'e' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for
+'o' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/operator
+'x' -> /program/instruction/for/operator
+'x' -> /program/instruction/for/operator
+'x' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator
+')' -> /program/instruction/for
+'{' -> /program/instruction/for/program
+'a' -> /program/instruction/for/program/instruction
+'a' -> /program/instruction/for/program/instruction/ident
+' ' -> /program/instruction/for/program/instruction/ident
+'=' -> /program/instruction/for/program/instruction/operator
+' ' -> /program/instruction/for/program/instruction/operator
+'e' -> /program/instruction/for/program/instruction
+'e' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction
+';' -> /program/instruction/for/program/instruction
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'\n' -> /program/instruction/for
+'\n' -> /program/instruction
+
+# tree
+program
+  instruction(|for_in_not_iterable.dk; 42b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/for_in_not_iterable.dk> @ line 1, col 1, idx 2)
+    ident("obj")
+    operator(Assign)
+    dict
+      (anon)
+        ident("x")
+        integer("1")
+  for
+    (anon)
+      ident("e")
+      instruction(|<synthetic>> @ line 0, col 0, idx 0)
+        ident("obj")
+        operator(Dot)
+        ident("x")
+    program
+      instruction(|for_in_not_iterable.dk; 42b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/errors/for_in_not_iterable.dk> @ line 2, col 20, idx 22)
+        ident("a")
+        operator(Assign)
+        ident("e")

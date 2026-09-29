@@ -67,9 +67,6 @@
 ';' -> /program/instruction/if
 ';' -> /program/instruction
 ';' -> /program
-';' -> /program/instruction
-';' -> /program/instruction
-'t' -> /program
 't' -> /program/instruction
 't' -> /program/instruction/ident
 ' ' -> /program/instruction/ident
@@ -178,9 +175,6 @@
 ';' -> /program/instruction/if
 ';' -> /program/instruction
 ';' -> /program
-';' -> /program/instruction
-';' -> /program/instruction
-'t' -> /program
 't' -> /program/instruction
 't' -> /program/instruction/ident
 ' ' -> /program/instruction/ident
@@ -605,14 +599,176 @@
 '}' -> /program/instruction/for/program
 '\n' -> /program/instruction/for
 '\n' -> /program/instruction
+'x' -> /program
+'x' -> /program/instruction
+'x' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'i' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'[' -> /program/instruction/dict/array
+'1' -> /program/instruction/dict/array/integer
+',' -> /program/instruction/dict/array/integer
+',' -> /program/instruction/dict/array
+'2' -> /program/instruction/dict/array/integer
+',' -> /program/instruction/dict/array/integer
+',' -> /program/instruction/dict/array
+'3' -> /program/instruction/dict/array/integer
+']' -> /program/instruction/dict/array/integer
+']' -> /program/instruction/dict/array
+']' -> /program/instruction/dict/array
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'m' -> /program
+'m' -> /program/instruction
+'m' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/for
+'e' -> /program/instruction/for/instruction
+'e' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for
+'x' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator/ident
+')' -> /program/instruction/for/operator
+')' -> /program/instruction/for
+'{' -> /program/instruction/for/program
+'m' -> /program/instruction/for/program/instruction
+'m' -> /program/instruction/for/program/instruction/ident
+' ' -> /program/instruction/for/program/instruction/ident
+'+' -> /program/instruction/for/program/instruction/operator
+'=' -> /program/instruction/for/program/instruction/operator
+'e' -> /program/instruction/for/program/instruction
+'e' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction
+';' -> /program/instruction/for/program/instruction
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'\n' -> /program/instruction/for
+'\n' -> /program/instruction
+'n' -> /program
+'n' -> /program/instruction
+'n' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'{' -> /program/instruction
+'{' -> /program/instruction/dict
+'i' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict/ident
+':' -> /program/instruction/dict
+'{' -> /program/instruction/dict/dict
+'i' -> /program/instruction/dict/dict/ident
+':' -> /program/instruction/dict/dict/ident
+':' -> /program/instruction/dict/dict
+'[' -> /program/instruction/dict/dict/array
+'4' -> /program/instruction/dict/dict/array/integer
+',' -> /program/instruction/dict/dict/array/integer
+',' -> /program/instruction/dict/dict/array
+'5' -> /program/instruction/dict/dict/array/integer
+']' -> /program/instruction/dict/dict/array/integer
+']' -> /program/instruction/dict/dict/array
+']' -> /program/instruction/dict/dict/array
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict/dict
+'}' -> /program/instruction/dict
+'}' -> /program/instruction/dict
+';' -> /program/instruction
+';' -> /program/instruction
+'c' -> /program
+'c' -> /program/instruction
+'c' -> /program/instruction/ident
+' ' -> /program/instruction/ident
+'=' -> /program/instruction/operator
+' ' -> /program/instruction/operator
+'0' -> /program/instruction
+'0' -> /program/instruction/integer
+';' -> /program/instruction/integer
+';' -> /program/instruction
+';' -> /program/instruction
+'f' -> /program
+'f' -> /program/instruction
+'f' -> /program/instruction/ident
+' ' -> /program/instruction/for
+'e' -> /program/instruction/for/instruction
+'e' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+' ' -> /program/instruction/for/instruction/ident
+'i' -> /program/instruction/for/instruction
+'i' -> /program/instruction/for
+'n' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/ident
+'.' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator
+'i' -> /program/instruction/for/operator/ident
+'.' -> /program/instruction/for/operator/ident
+'.' -> /program/instruction/for/operator/ident
+'.' -> /program/instruction/for/operator/operator
+'i' -> /program/instruction/for/operator/operator
+'i' -> /program/instruction/for/operator/operator
+'i' -> /program/instruction/for/operator/operator/ident
+')' -> /program/instruction/for/operator/operator/ident
+')' -> /program/instruction/for/operator/operator/ident
+')' -> /program/instruction/for/operator/operator
+')' -> /program/instruction/for/operator
+')' -> /program/instruction/for
+'{' -> /program/instruction/for/program
+'c' -> /program/instruction/for/program/instruction
+'c' -> /program/instruction/for/program/instruction/ident
+' ' -> /program/instruction/for/program/instruction/ident
+'+' -> /program/instruction/for/program/instruction/operator
+'=' -> /program/instruction/for/program/instruction/operator
+'e' -> /program/instruction/for/program/instruction
+'e' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction/ident
+';' -> /program/instruction/for/program/instruction
+';' -> /program/instruction/for/program/instruction
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'}' -> /program/instruction/for/program
+'\n' -> /program/instruction/for
+'\n' -> /program/instruction
 
 # tree
 program
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 1, col 1, idx 2)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 1, col 1, idx 2)
     ident("flag")
     operator(Assign)
     boolean(true)
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 2, col 1, idx 3)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 2, col 1, idx 3)
     ident("out")
     operator(Assign)
     integer("0")
@@ -620,26 +776,25 @@ program
     grouped
       ident("flag")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 3, col 13, idx 16)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 3, col 13, idx 16)
         ident("out")
         operator(Assign)
         integer("1")
     else
       program
-        instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 3, col 31, idx 34)
+        instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 3, col 31, idx 34)
           ident("out")
           operator(Assign)
           integer("2")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 3, col 41, idx 44)
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 4, col 1, idx 5)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 4, col 1, idx 5)
     ident("tier")
     operator(Assign)
     integer("0")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 5, col 1, idx 6)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 5, col 1, idx 6)
     ident("c1")
     operator(Assign)
     boolean(false)
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 6, col 1, idx 7)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 6, col 1, idx 7)
     ident("c2")
     operator(Assign)
     boolean(true)
@@ -647,7 +802,7 @@ program
     grouped
       ident("c1")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 11, idx 18)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 11, idx 18)
         ident("tier")
         operator(Assign)
         integer("1")
@@ -655,18 +810,17 @@ program
       grouped
         ident("c2")
       program
-        instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 38, idx 45)
+        instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 38, idx 45)
           ident("tier")
           operator(Assign)
           integer("2")
       else
         program
-          instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 57, idx 64)
+          instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 57, idx 64)
             ident("tier")
             operator(Assign)
             integer("3")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 7, col 68, idx 75)
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 8, col 1, idx 9)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 8, col 1, idx 9)
     ident("tern")
     operator(Assign)
     if
@@ -674,7 +828,7 @@ program
         ident("flag")
       integer("10")
       integer("20")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 9, col 1, idx 10)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 9, col 1, idx 10)
     ident("tern2")
     operator(Assign)
     if
@@ -682,29 +836,29 @@ program
         ident("c1")
       integer("10")
       integer("20")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 10, col 1, idx 11)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 10, col 1, idx 11)
     ident("total")
     operator(Assign)
     integer("0")
   for
     (anon)
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 8, idx 19)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 8, idx 19)
         ident("i")
         operator(Assign)
         integer("0")
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 13, idx 24)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 13, idx 24)
         ident("i")
         operator(Lt)
         integer("4")
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 20, idx 31)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 20, idx 31)
         operator(Increment)
         ident("i")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 27, idx 38)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 11, col 27, idx 38)
         ident("total")
         operator(AddAssign)
         ident("i")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 12, col 1, idx 13)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 12, col 1, idx 13)
     ident("count")
     operator(Assign)
     integer("0")
@@ -716,40 +870,40 @@ program
         integer("2")
         integer("3")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 13, col 24, idx 37)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 13, col 24, idx 37)
         ident("count")
         operator(AddAssign)
         ident("e")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 14, col 1, idx 15)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 14, col 1, idx 15)
     ident("cond_only")
     operator(Assign)
     integer("0")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 15, col 1, idx 16)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 15, col 1, idx 16)
     ident("guard")
     operator(Assign)
     boolean(true)
   for
     (anon)
       instruction(|<synthetic>> @ line 0, col 0, idx 0)
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 7, idx 23)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 7, idx 23)
         ident("guard")
       instruction(|<synthetic>> @ line 0, col 0, idx 0)
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 17, idx 33)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 17, idx 33)
         ident("cond_only")
         operator(Assign)
         integer("1")
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 32, idx 48)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 16, col 32, idx 48)
         ident("guard")
         operator(Assign)
         boolean(false)
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 17, col 1, idx 18)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 17, col 1, idx 18)
     ident("init_only")
     operator(Assign)
     integer("0")
   for
     (anon)
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 18, col 16, idx 34)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 18, col 16, idx 34)
         ident("init_only")
         operator(Assign)
         integer("7")
@@ -757,7 +911,7 @@ program
       instruction(|<synthetic>> @ line 0, col 0, idx 0)
     program
       break
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 19, col 1, idx 20)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 19, col 1, idx 20)
     ident("keys")
     operator(Assign)
     string("")
@@ -772,11 +926,11 @@ program
           ident("b")
           integer("2")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 20, col 27, idx 47)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 20, col 27, idx 47)
         ident("keys")
         operator(AddAssign)
         ident("k")
-  instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 21, col 1, idx 22)
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 21, col 1, idx 22)
     ident("chars")
     operator(Assign)
     integer("0")
@@ -785,7 +939,63 @@ program
       ident("ch")
       string("abc")
     program
-      instruction(|control.dk; 586b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 22, col 21, idx 43)
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 22, col 21, idx 43)
         ident("chars")
         operator(AddAssign)
         integer("1")
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 23, col 1, idx 24)
+    ident("xs")
+    operator(Assign)
+    dict
+      (anon)
+        ident("items")
+        array
+          integer("1")
+          integer("2")
+          integer("3")
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 24, col 1, idx 25)
+    ident("member_sum")
+    operator(Assign)
+    integer("0")
+  for
+    (anon)
+      ident("e")
+      instruction(|<synthetic>> @ line 0, col 0, idx 0)
+        ident("xs")
+        operator(Dot)
+        ident("items")
+    program
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 25, col 23, idx 48)
+        ident("member_sum")
+        operator(AddAssign)
+        ident("e")
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 26, col 1, idx 27)
+    ident("nested")
+    operator(Assign)
+    dict
+      (anon)
+        ident("inner")
+        dict
+          (anon)
+            ident("items")
+            array
+              integer("4")
+              integer("5")
+  instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 27, col 1, idx 28)
+    ident("chain_sum")
+    operator(Assign)
+    integer("0")
+  for
+    (anon)
+      ident("e")
+      instruction(|<synthetic>> @ line 0, col 0, idx 0)
+        ident("nested")
+        operator(Dot)
+        ident("inner")
+        operator(Dot)
+        ident("items")
+    program
+      instruction(|control.dk; 768b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control.dk> @ line 28, col 33, idx 61)
+        ident("chain_sum")
+        operator(AddAssign)
+        ident("e")

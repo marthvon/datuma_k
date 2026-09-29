@@ -19,12 +19,11 @@
 'x' -> /program/instruction
 'x' -> /program/instruction/ident
 '.' -> /program/instruction/ident
-'.' -> /program/instruction/ident/operator
-'f' -> /program/instruction/ident/operator
-'f' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator
-';' -> /program/instruction/ident
+'.' -> /program/instruction/operator
+'f' -> /program/instruction/operator
+'f' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator
 ';' -> /program/instruction
 ';' -> /program/instruction
 

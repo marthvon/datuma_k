@@ -171,14 +171,13 @@
 'd' -> /program/instruction
 'd' -> /program/instruction/ident
 '.' -> /program/instruction/ident
-'.' -> /program/instruction/ident/operator
-'c' -> /program/instruction/ident/operator
-'c' -> /program/instruction/ident/operator/ident
-' ' -> /program/instruction/ident/operator/ident
-'=' -> /program/instruction/ident/operator/operator
-' ' -> /program/instruction/ident/operator/operator
-'3' -> /program/instruction/ident/operator
-'3' -> /program/instruction/ident
+'.' -> /program/instruction/operator
+'c' -> /program/instruction/operator
+'c' -> /program/instruction/operator/ident
+' ' -> /program/instruction/operator/ident
+'=' -> /program/instruction/operator/operator
+' ' -> /program/instruction/operator/operator
+'3' -> /program/instruction/operator
 '3' -> /program/instruction
 '3' -> /program/instruction/integer
 ';' -> /program/instruction/integer
@@ -193,12 +192,11 @@
 'd' -> /program/instruction
 'd' -> /program/instruction/ident
 '.' -> /program/instruction/ident
-'.' -> /program/instruction/ident/operator
-'c' -> /program/instruction/ident/operator
-'c' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator
-';' -> /program/instruction/ident
+'.' -> /program/instruction/operator
+'c' -> /program/instruction/operator
+'c' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator
 ';' -> /program/instruction
 ';' -> /program/instruction
 'p' -> /program

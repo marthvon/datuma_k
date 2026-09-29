@@ -114,9 +114,6 @@
 ';' -> /program/instruction/function-def/program/instruction/for/program/instruction/if
 ';' -> /program/instruction/function-def/program/instruction/for/program/instruction
 ';' -> /program/instruction/function-def/program/instruction/for/program
-';' -> /program/instruction/function-def/program/instruction/for/program/instruction
-';' -> /program/instruction/function-def/program/instruction/for/program/instruction
-'}' -> /program/instruction/function-def/program/instruction/for/program
 '}' -> /program/instruction/function-def/program/instruction/for/program
 '}' -> /program/instruction/function-def/program/instruction/for/program
 '}' -> /program/instruction/function-def/program/instruction/for/program
@@ -288,7 +285,6 @@ program
                     ident("c")
                     operator(Assign)
                     integer("2")
-          instruction(|control_flow.dk; 234b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control_flow.dk> @ line 4, col 67, idx 71)
       for
         (anon)
           instruction(|control_flow.dk; 234b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control_flow.dk> @ line 6, col 10, idx 16)

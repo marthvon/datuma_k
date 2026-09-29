@@ -132,12 +132,11 @@
 'd' -> /program/instruction
 'd' -> /program/instruction/ident
 '.' -> /program/instruction/ident
-'.' -> /program/instruction/ident/operator
-'a' -> /program/instruction/ident/operator
-'a' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator/ident
-';' -> /program/instruction/ident/operator
-';' -> /program/instruction/ident
+'.' -> /program/instruction/operator
+'a' -> /program/instruction/operator
+'a' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator/ident
+';' -> /program/instruction/operator
 ';' -> /program/instruction
 ';' -> /program/instruction
 'q' -> /program

@@ -139,9 +139,6 @@
 ';' -> /program/instruction/function-def/program/instruction/if
 ';' -> /program/instruction/function-def/program/instruction
 ';' -> /program/instruction/function-def/program
-';' -> /program/instruction/function-def/program/instruction
-';' -> /program/instruction/function-def/program/instruction
-'f' -> /program/instruction/function-def/program
 'f' -> /program/instruction/function-def/program/instruction
 'f' -> /program/instruction/function-def/program/instruction/ident
 ' ' -> /program/instruction/function-def/program/instruction/for
@@ -310,7 +307,6 @@ program
                   ident("x")
                   operator(Assign)
                   integer("4")
-      instruction(|control_more.dk; 242b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/control_more.dk> @ line 3, col 82, idx 85)
       for
         (anon)
           ident("e")

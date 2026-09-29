@@ -73,9 +73,6 @@
 ';' -> /program/instruction/function-def/program/instruction/if
 ';' -> /program/instruction/function-def/program/instruction
 ';' -> /program/instruction/function-def/program
-';' -> /program/instruction/function-def/program/instruction
-';' -> /program/instruction/function-def/program/instruction
-'}' -> /program/instruction/function-def/program
 '}' -> /program/instruction/function-def/program
 '}' -> /program/instruction/function-def/program
 '}' -> /program/instruction/function-def/program
@@ -160,7 +157,6 @@ program
           operator(Sub)
           ident("n")
         ident("n")
-      instruction(|main.dk; 133b|/Users/marthvon/GitHub/TOOLS/datuma_k/tests/core/main.dk> @ line 3, col 46, idx 49)
   function_def("main")
     (anon)
     program
