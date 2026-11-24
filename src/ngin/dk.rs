@@ -3,7 +3,7 @@ use std::sync::Arc;
 
 use lasso::Spur;
 
-use crate::core::exec::{MemberHost, RuntimeErrorKind, RuntimeValue};
+use mvparser::exec::{MemberHost, RuntimeErrorKind, RuntimeValue};
 use crate::dtct::registry::DtctDb;
 use crate::dtct::types::{AttrArg, Dim, FactId, QueryError};
 

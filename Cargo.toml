@@ -10,15 +10,11 @@ path = "src/lib.rs"
 [features]
 parse-trace = []
 
-[[test]]
-name = "core_program"
-path = "tests/core_program.rs"
-required-features = ["parse-trace"]
-
 [dev-dependencies]
 tokio = { version = "1.53.1", features = ["macros", "rt"] }
 
 [dependencies]
+mvparser = { version = "0.1", features = ["full", "parse-trace"] }
 indexmap = { version = "2.14.0", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1.0.151"

@@ -1,12 +1,10 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::modes::InstructionParseMode;
-use crate::core::parser::{
-  ParseErrorSource, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep,
-  ParseStepMutation, ParsetStepFlow, expected, messages,
-};
-use crate::core::state::DatumaState;
+use mvparser::modes::InstructionParseMode;
+use mvparser::parser::{ParseErrorSource, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 use super::template::NginFenceParseMode;
@@ -54,7 +52,7 @@ impl ParseMode for NginEmitStarter {
 
 #[derive(Debug)]
 pub struct NginEmitParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   line: usize,
   col: usize,
 }
@@ -68,8 +66,8 @@ impl NginEmitParseMode {
     }
   }
 
-  fn close_emit(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_emit(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(NginValue::Emit {
         line: self.line,
         col: self.col,
@@ -119,11 +117,11 @@ impl ParseMode for NginEmitParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.children.push(child);
   }
 
-  fn close_after_adopt(&mut self) -> Option<DatumaState> {
+  fn close_after_adopt(&mut self) -> Option<ParseState> {
     if self.children.is_empty() {
       None
     } else {

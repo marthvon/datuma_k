@@ -1,11 +1,9 @@
 use std::fmt::Display;
 use std::write;
 
-use crate::core::common::starting_buf;
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::starting_buf;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 use super::env::NginEnvParseMode;
@@ -20,7 +18,7 @@ enum PathPhase {
 
 #[derive(Debug)]
 pub struct NginPathParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   lit: String,
   phase: PathPhase,
 }
@@ -38,7 +36,7 @@ impl NginPathParseMode {
     if !self.lit.is_empty() {
       self
         .children
-        .push(DatumaState::leaf(Box::new(NginValue::PathLit {
+        .push(ParseState::leaf(Box::new(NginValue::PathLit {
           text: std::mem::take(&mut self.lit),
         })));
     }
@@ -52,9 +50,9 @@ impl NginPathParseMode {
     }
   }
 
-  fn close_path(&mut self) -> DatumaState {
+  fn close_path(&mut self) -> ParseState {
     self.flush_lit();
-    DatumaState::node(
+    ParseState::node(
       Some(Box::new(NginValue::Path)),
       std::mem::take(&mut self.children),
     )
@@ -89,7 +87,7 @@ impl ParseMode for NginPathParseMode {
           self.flush_lit();
           self
             .children
-            .push(DatumaState::leaf(Box::new(NginValue::PathLit {
+            .push(ParseState::leaf(Box::new(NginValue::PathLit {
               text: "/".to_string(),
             })));
           Ok((ParseStepMutation::Nothing, ParsetStepFlow::Captured))
@@ -129,7 +127,7 @@ impl ParseMode for NginPathParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.children.push(child);
   }
 }

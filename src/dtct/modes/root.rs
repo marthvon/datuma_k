@@ -1,16 +1,14 @@
 use std::fmt::Display;
 use std::write;
 
-use crate::core::modes::is_ident_start;
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-};
-use crate::core::state::DatumaState;
+use mvparser::modes::is_ident_start;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow};
+use mvparser::state::ParseState;
 use crate::dtct::modes::model::ModelParseMode;
 
 #[derive(Debug, Default)]
 pub struct DtctRootParseMode {
-  tree: DatumaState,
+  tree: ParseState,
 }
 
 impl DtctRootParseMode {
@@ -18,7 +16,7 @@ impl DtctRootParseMode {
     Self::default()
   }
 
-  pub fn into_state(self) -> DatumaState {
+  pub fn into_state(self) -> ParseState {
     self.tree
   }
 }
@@ -39,7 +37,7 @@ impl ParseMode for DtctRootParseMode {
         ParsetStepFlow::Captured,
       ))
     } else {
-      Err(crate::core::parser::ParseErrorKind::UnexpectedChar(input))
+      Err(mvparser::parser::ParseErrorKind::UnexpectedChar(input))
     }
   }
 
@@ -47,11 +45,11 @@ impl ParseMode for DtctRootParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.tree.adopt(child);
   }
 
-  fn into_datuma_state(self: Box<Self>) -> Option<DatumaState> {
+  fn into_parse_state(self: Box<Self>) -> Option<ParseState> {
     Some(self.tree)
   }
 }

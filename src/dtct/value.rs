@@ -1,6 +1,6 @@
 use std::any::Any;
 
-use crate::core::value::DatumaFinished;
+use mvparser::value::ParsedValue;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum DtctValue {
@@ -11,7 +11,7 @@ pub enum DtctValue {
   Traits(Vec<String>),
 }
 
-impl DatumaFinished for DtctValue {
+impl ParsedValue for DtctValue {
   fn kind(&self) -> &'static str {
     match self {
       Self::Attribute { .. } => "attribute",

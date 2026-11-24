@@ -1,2 +1,0 @@
-x = null;
-bad = x.field;

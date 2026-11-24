@@ -3,8 +3,8 @@ use std::{vec, write};
 
 use lasso::{Spur, ThreadedRodeo};
 
-use crate::core::state::DatumaState;
-use crate::core::value::{CoreValue, DatumaFinished};
+use mvparser::state::ParseState;
+use mvparser::value::{CoreValue, ParsedValue};
 use crate::dtct::registry::DtctDb;
 use crate::dtct::types::{AttrArg, DtctDbError, DtctFact};
 use crate::dtct::value::DtctValue;
@@ -40,14 +40,14 @@ impl std::fmt::Display for MaterializeError {
 
 impl std::error::Error for MaterializeError {}
 
-pub fn materialize(root: &DatumaState) -> Result<DtctDb, MaterializeError> {
+pub fn materialize(root: &ParseState) -> Result<DtctDb, MaterializeError> {
   let pool = ThreadedRodeo::new();
   let facts = materialize_with(root, &pool)?;
   Ok(DtctDb::build(pool, facts))
 }
 
 pub fn materialize_with(
-  root: &DatumaState,
+  root: &ParseState,
   pool: &ThreadedRodeo,
 ) -> Result<Vec<DtctFact>, MaterializeError> {
   let mut facts = Vec::new();
@@ -63,7 +63,7 @@ fn intern(pool: &ThreadedRodeo, s: &str) -> Spur {
 }
 
 fn expand_model(
-  node: &DatumaState,
+  node: &ParseState,
   pool: &ThreadedRodeo,
   facts: &mut Vec<DtctFact>,
   seen: &mut HashSet<Spur>,
@@ -106,7 +106,7 @@ fn expand_model(
 }
 
 fn expand_field(
-  node: &DatumaState,
+  node: &ParseState,
   pool: &ThreadedRodeo,
   model: Spur,
   traits: &[Option<Spur>],
@@ -129,7 +129,7 @@ fn expand_field(
 }
 
 fn expand_type(
-  node: &DatumaState,
+  node: &ParseState,
   pool: &ThreadedRodeo,
   model: Spur,
   field: Spur,
@@ -170,7 +170,7 @@ fn expand_type(
 }
 
 fn expand_attribute(
-  node: &DatumaState,
+  node: &ParseState,
   pool: &ThreadedRodeo,
 ) -> Result<(Option<Spur>, TinyVec<[AttrArg; 2]>), MaterializeError> {
   let value = dtct_value(node, "attribute")?;
@@ -188,7 +188,7 @@ fn expand_attribute(
   }
 }
 
-fn materialize_arg(node: &DatumaState, pool: &ThreadedRodeo) -> Result<AttrArg, MaterializeError> {
+fn materialize_arg(node: &ParseState, pool: &ThreadedRodeo) -> Result<AttrArg, MaterializeError> {
   let value = node
     .value
     .as_ref()
@@ -237,7 +237,7 @@ fn materialize_arg(node: &DatumaState, pool: &ThreadedRodeo) -> Result<AttrArg, 
 }
 
 fn dtct_value<'a>(
-  node: &'a DatumaState,
+  node: &'a ParseState,
   kind: &'static str,
 ) -> Result<&'a DtctValue, MaterializeError> {
   let value = node
@@ -256,21 +256,21 @@ fn dtct_value<'a>(
 #[cfg(test)]
 mod tests {
   use super::*;
-  use crate::core::state::DatumaState;
-  use crate::core::value::CoreValue;
+  use mvparser::state::ParseState;
+  use mvparser::value::CoreValue;
   use crate::dtct::types::{Dim, Filter, QueryFilter};
   use crate::dtct::value::DtctValue;
 
-  fn ident(text: &str) -> DatumaState {
-    DatumaState::leaf(Box::new(CoreValue::Ident(text.to_string())))
+  fn ident(text: &str) -> ParseState {
+    ParseState::leaf(Box::new(CoreValue::Ident(text.to_string())))
   }
 
-  fn string(text: &str) -> DatumaState {
-    DatumaState::leaf(Box::new(CoreValue::String(text.to_string())))
+  fn string(text: &str) -> ParseState {
+    ParseState::leaf(Box::new(CoreValue::String(text.to_string())))
   }
 
-  fn attribute(name: &str, args: Vec<DatumaState>) -> DatumaState {
-    DatumaState::node(
+  fn attribute(name: &str, args: Vec<ParseState>) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Attribute {
         name: name.to_string(),
       })),
@@ -278,8 +278,8 @@ mod tests {
     )
   }
 
-  fn ty(name: &str, attributes: Vec<DatumaState>) -> DatumaState {
-    DatumaState::node(
+  fn ty(name: &str, attributes: Vec<ParseState>) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Type {
         name: name.to_string(),
       })),
@@ -287,8 +287,8 @@ mod tests {
     )
   }
 
-  fn field(name: &str, ty_node: DatumaState) -> DatumaState {
-    DatumaState::node(
+  fn field(name: &str, ty_node: ParseState) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Field {
         name: name.to_string(),
       })),
@@ -296,8 +296,8 @@ mod tests {
     )
   }
 
-  fn model(name: &str, traits: Vec<&str>, fields: Vec<DatumaState>) -> DatumaState {
-    DatumaState::node(
+  fn model(name: &str, traits: Vec<&str>, fields: Vec<ParseState>) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Model {
         name: name.to_string(),
         traits: traits.into_iter().map(str::to_string).collect(),
@@ -315,7 +315,7 @@ mod tests {
 
   #[test]
   fn materializes_sample_tree() {
-    let root = DatumaState::node(
+    let root = ParseState::node(
       None,
       vec![model(
         "MyModel",
@@ -370,7 +370,7 @@ mod tests {
 
   #[test]
   fn cartesian_expands_traits_and_attributes() {
-    let root = DatumaState::node(
+    let root = ParseState::node(
       None,
       vec![model(
         "AuditEvent",
@@ -401,7 +401,7 @@ mod tests {
 
   #[test]
   fn empty_models_emit_model_only_rows() {
-    let root = DatumaState::node(
+    let root = ParseState::node(
       None,
       vec![
         model("Marker", vec![], vec![]),

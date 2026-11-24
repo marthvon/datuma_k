@@ -1,15 +1,12 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
 use super::attribute::AttributeParseMode;
-use crate::core::common::{on_parse_capture_whitespace, starting_buf};
-use crate::core::modes::{is_ident_continue, is_ident_start};
-use crate::core::parser::messages;
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected_closing,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::{on_parse_capture_whitespace, starting_buf};
+use mvparser::modes::{is_ident_continue, is_ident_start};
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected_closing};
+use mvparser::state::ParseState;
 use crate::dtct::value::DtctValue;
 
 #[derive(Debug)]
@@ -22,7 +19,7 @@ enum TypePhase {
 #[derive(Debug)]
 pub struct TypeExprParseMode {
   name: String,
-  attributes: Vec<DatumaState>,
+  attributes: Vec<ParseState>,
   phase: TypePhase,
 }
 
@@ -81,7 +78,7 @@ impl ParseMode for TypeExprParseMode {
             ))
           } else if input == '>' {
             Ok((
-              ParseStepMutation::CloseMode(Some(DatumaState::node(
+              ParseStepMutation::CloseMode(Some(ParseState::node(
                 Some(Box::new(DtctValue::Type {
                   name: std::mem::take(&mut self.name),
                 })),
@@ -102,7 +99,7 @@ impl ParseMode for TypeExprParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.attributes.push(child);
   }
 }

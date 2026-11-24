@@ -1,6 +1,6 @@
 use std::any::Any;
 
-use crate::core::value::DatumaFinished;
+use mvparser::value::ParsedValue;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum NginValue {
@@ -15,7 +15,7 @@ pub enum NginValue {
   Guard { sep: String },
 }
 
-impl DatumaFinished for NginValue {
+impl ParsedValue for NginValue {
   fn kind(&self) -> &'static str {
     match self {
       Self::File => "ngin_file",

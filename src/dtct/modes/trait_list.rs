@@ -1,14 +1,11 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::common::on_parse_capture_whitespace;
-use crate::core::modes::{is_ident_continue, is_ident_start};
-use crate::core::parser::messages;
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected_closing,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::on_parse_capture_whitespace;
+use mvparser::modes::{is_ident_continue, is_ident_start};
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected_closing};
+use mvparser::state::ParseState;
 use crate::dtct::value::DtctValue;
 
 #[derive(Debug)]
@@ -38,8 +35,8 @@ impl TraitListParseMode {
     self.names.push(std::mem::take(&mut self.current));
   }
 
-  fn close_state(&mut self) -> DatumaState {
-    DatumaState::leaf(Box::new(DtctValue::Traits(std::mem::take(&mut self.names))))
+  fn close_state(&mut self) -> ParseState {
+    ParseState::leaf(Box::new(DtctValue::Traits(std::mem::take(&mut self.names))))
   }
 }
 
@@ -118,7 +115,7 @@ impl ParseMode for TraitListParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn incomplete_close_error(&self, state: &Option<DatumaState>) -> Option<ParseErrorKind> {
+  fn incomplete_close_error(&self, state: &Option<ParseState>) -> Option<ParseErrorKind> {
     if state.is_none() {
       Some(expected_closing(messages::CLOSE_BRACKET))
     } else {

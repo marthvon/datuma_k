@@ -5,9 +5,9 @@ use std::sync::Arc;
 use indexmap::IndexMap;
 use serde::Serialize;
 
-use crate::core::common::{DirFiles, EnvMap, collect_unique_dir_files};
-use crate::core::parser::ParseError;
-use crate::core::state::DatumaState;
+use crate::common::{DirFiles, EnvMap, collect_unique_dir_files};
+use mvparser::parser::ParseError;
+use mvparser::state::ParseState;
 use crate::dkcache::{VNode, merge_planned};
 use crate::dtct::registry::DtctDb;
 use crate::dtct::types::{AttrArg, Dim, Filter, QueryFilter};
@@ -113,8 +113,8 @@ pub struct LoadedProject {
   pub root_str: String,
   pub dtct_dir: PathBuf,
   pub db: Arc<DtctDb>,
-  pub defs: Vec<DatumaState>,
-  pub templates: Vec<(PathBuf, DatumaState)>,
+  pub defs: Vec<ParseState>,
+  pub templates: Vec<(PathBuf, ParseState)>,
 }
 
 impl std::fmt::Display for ProjectError {

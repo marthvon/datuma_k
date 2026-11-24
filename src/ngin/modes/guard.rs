@@ -1,12 +1,10 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::modes::GroupedParseMode;
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-  expected, expected_closing, messages,
-};
-use crate::core::state::DatumaState;
+use mvparser::modes::GroupedParseMode;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected, expected_closing};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 use super::emit::NginEmitStarter;
@@ -24,7 +22,7 @@ enum GuardPhase {
 
 #[derive(Debug)]
 pub struct NginGuardParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   sep: String,
   phase: GuardPhase,
 }
@@ -38,8 +36,8 @@ impl NginGuardParseMode {
     }
   }
 
-  fn close_guard(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_guard(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(NginValue::Guard {
         sep: std::mem::take(&mut self.sep),
       })),
@@ -130,7 +128,7 @@ impl ParseMode for NginGuardParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     match self.phase {
       GuardPhase::Cond => {
         self.children.push(child);
@@ -144,7 +142,7 @@ impl ParseMode for NginGuardParseMode {
     }
   }
 
-  fn close_after_adopt(&mut self) -> Option<DatumaState> {
+  fn close_after_adopt(&mut self) -> Option<ParseState> {
     if self.phase == GuardPhase::Emit && self.children.len() >= 2 {
       Some(self.close_guard())
     } else {

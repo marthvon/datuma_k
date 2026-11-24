@@ -2,12 +2,12 @@ use std::sync::Arc;
 
 use indexmap::IndexMap;
 
-use crate::core::common::EnvMap;
-use crate::core::exec::{
+use crate::common::EnvMap;
+use mvparser::exec::{
   Flow, Interp, MAX_LOOP_ITERATIONS, RuntimeError, RuntimeErrorKind, RuntimeValue, Scope,
 };
-use crate::core::state::DatumaState;
-use crate::core::value::CoreValue;
+use mvparser::state::ParseState;
+use mvparser::value::CoreValue;
 use crate::dkcache::{self, CacheError, VNode, fence_token, sanitize_id};
 use crate::dtct::registry::DtctDb;
 use crate::ngin::dk::dk_host;
@@ -61,7 +61,7 @@ struct Walker<'tree> {
 }
 
 pub fn materialize(
-  root: &DatumaState,
+  root: &ParseState,
   db: Arc<DtctDb>,
   root_directory: &str,
 ) -> Result<IndexMap<String, Vec<VNode>>, MaterializeError> {
@@ -69,8 +69,8 @@ pub fn materialize(
 }
 
 pub fn materialize_with_defs(
-  root: &DatumaState,
-  defs: &[DatumaState],
+  root: &ParseState,
+  defs: &[ParseState],
   db: Arc<DtctDb>,
   root_directory: &str,
 ) -> Result<IndexMap<String, Vec<VNode>>, MaterializeError> {
@@ -78,8 +78,8 @@ pub fn materialize_with_defs(
 }
 
 pub fn materialize_with_env(
-  root: &DatumaState,
-  defs: &[DatumaState],
+  root: &ParseState,
+  defs: &[ParseState],
   db: Arc<DtctDb>,
   root_directory: &str,
   env: &EnvMap,
@@ -90,8 +90,8 @@ pub fn materialize_with_env(
 }
 
 pub fn plan_materialize(
-  root: &DatumaState,
-  defs: &[DatumaState],
+  root: &ParseState,
+  defs: &[ParseState],
   db: Arc<DtctDb>,
   root_directory: &str,
   env: &EnvMap,
@@ -105,7 +105,7 @@ pub fn plan_materialize(
     "ROOT_DIRECTORY",
     RuntimeValue::String(root_directory.to_string()),
   );
-  let mut roots: Vec<&DatumaState> = defs.iter().collect();
+  let mut roots: Vec<&ParseState> = defs.iter().collect();
   roots.push(root);
   let mut interp = Interp::from_roots(&roots, scope)
     .map_err(|kind| MaterializeError::Runtime(RuntimeError::from_kind(kind, Vec::new())))?;
@@ -125,14 +125,14 @@ pub fn plan_materialize(
   Ok(walker.files)
 }
 
-fn core_value(state: &DatumaState) -> Option<&CoreValue> {
+fn core_value(state: &ParseState) -> Option<&CoreValue> {
   state
     .value
     .as_ref()
     .and_then(|value| value.as_any().downcast_ref::<CoreValue>())
 }
 
-fn ngin_value(state: &DatumaState) -> Option<&NginValue> {
+fn ngin_value(state: &ParseState) -> Option<&NginValue> {
   state
     .value
     .as_ref()
@@ -159,7 +159,7 @@ fn region_id(site: &str, keys: &[(String, String)]) -> String {
 }
 
 impl<'tree> Walker<'tree> {
-  fn walk_node(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_node(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     match ngin_value(node) {
       Some(NginValue::File) => self.walk_file(node),
       Some(NginValue::Interp) => {
@@ -212,7 +212,7 @@ impl<'tree> Walker<'tree> {
     }
   }
 
-  fn walk_children(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_children(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     let mut outcome = Ok(Flow::Normal);
     for child in &node.children {
       match self.walk_node(child) {
@@ -226,7 +226,7 @@ impl<'tree> Walker<'tree> {
     outcome
   }
 
-  fn walk_file(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_file(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     let path = match node.children.first() {
       Some(path_node) => self.resolve_path(path_node)?,
       None => {
@@ -243,7 +243,7 @@ impl<'tree> Walker<'tree> {
     Ok(Flow::Normal)
   }
 
-  fn walk_template(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_template(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     let (tline, tcol) = match ngin_value(node) {
       Some(NginValue::Template { line, col }) => (*line, *col),
       _ => (0, 0),
@@ -277,7 +277,7 @@ impl<'tree> Walker<'tree> {
     Ok(Flow::Normal)
   }
 
-  fn walk_guard(&mut self, node: &'tree DatumaState, sep: &str) -> Result<Flow, MaterializeError> {
+  fn walk_guard(&mut self, node: &'tree ParseState, sep: &str) -> Result<Flow, MaterializeError> {
     let Some(cond) = node.children.first() else {
       return Err(MaterializeError::Message("guard missing condition".into()));
     };
@@ -307,7 +307,7 @@ impl<'tree> Walker<'tree> {
     Ok(Flow::Normal)
   }
 
-  fn walk_for(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_for(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     let [head, body] = &node.children[..] else {
       return Err(MaterializeError::Message(
         "for needs a head and a body".into(),
@@ -383,7 +383,7 @@ impl<'tree> Walker<'tree> {
     }
   }
 
-  fn walk_if(&mut self, node: &'tree DatumaState) -> Result<Flow, MaterializeError> {
+  fn walk_if(&mut self, node: &'tree ParseState) -> Result<Flow, MaterializeError> {
     let [condition, then_branch, tail @ ..] = &node.children[..] else {
       return Err(MaterializeError::Message(
         "if needs a condition and a branch".into(),
@@ -406,7 +406,7 @@ impl<'tree> Walker<'tree> {
     }
   }
 
-  fn resolve_path(&mut self, node: &'tree DatumaState) -> Result<String, MaterializeError> {
+  fn resolve_path(&mut self, node: &'tree ParseState) -> Result<String, MaterializeError> {
     let mut out = String::new();
     for child in &node.children {
       match ngin_value(child) {
@@ -438,20 +438,20 @@ impl<'tree> Walker<'tree> {
     Ok(out)
   }
 
-  fn emit_from(&mut self, node: &'tree DatumaState) -> Result<(), MaterializeError> {
+  fn emit_from(&mut self, node: &'tree ParseState) -> Result<(), MaterializeError> {
     let vnode = self.build_emit(node)?;
     self.append_vnode(vnode, true);
     Ok(())
   }
 
-  fn plus_from(&mut self, node: &'tree DatumaState) -> Result<(), MaterializeError> {
+  fn plus_from(&mut self, node: &'tree ParseState) -> Result<(), MaterializeError> {
     if let Some(vnode) = self.build_plus(node)? {
       self.append_vnode(vnode, true);
     }
     Ok(())
   }
 
-  fn emit_site(node: &DatumaState) -> String {
+  fn emit_site(node: &ParseState) -> String {
     match ngin_value(node) {
       Some(NginValue::Emit { line, col } | NginValue::Plus { line, col }) => {
         format!("{line}:{col}")
@@ -460,7 +460,7 @@ impl<'tree> Walker<'tree> {
     }
   }
 
-  fn build_emit(&mut self, node: &'tree DatumaState) -> Result<VNode, MaterializeError> {
+  fn build_emit(&mut self, node: &'tree ParseState) -> Result<VNode, MaterializeError> {
     let site = Self::emit_site(node);
     match node.children.first() {
       Some(child) if matches!(ngin_value(child), Some(NginValue::Template { .. })) => {
@@ -486,7 +486,7 @@ impl<'tree> Walker<'tree> {
     }
   }
 
-  fn build_plus(&mut self, node: &'tree DatumaState) -> Result<Option<VNode>, MaterializeError> {
+  fn build_plus(&mut self, node: &'tree ParseState) -> Result<Option<VNode>, MaterializeError> {
     let site = Self::emit_site(node);
     self.sinks.push(Sink::Nodes {
       children: Vec::new(),
@@ -543,10 +543,10 @@ impl<'tree> Walker<'tree> {
 #[cfg(test)]
 mod tests {
   use super::*;
-  use crate::core::common::EnvMap;
-  use crate::core::exec::execute;
-  use crate::core::modes::ProgramParseMode;
-  use crate::core::{ParseFile, ParseStack, parse_stack};
+  use crate::common::EnvMap;
+  use mvparser::exec::execute;
+  use mvparser::modes::ProgramParseMode;
+  use mvparser::{ParseFile, ParseStack, parse_stack};
   use crate::dtct::types::{AttrArg, DtctFact};
   use crate::ngin::parse::{load_def_ngin, parse_file};
   use lasso::ThreadedRodeo;
@@ -875,7 +875,7 @@ mod tests {
     execute(
       &stack
         .into_root()
-        .into_datuma_state()
+        .into_parse_state()
         .expect("program state"),
     )
     .expect("exec")

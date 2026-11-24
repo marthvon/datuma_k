@@ -1,11 +1,9 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-  expected, expected_closing, messages,
-};
-use crate::core::state::DatumaState;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected, expected_closing};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 use super::glyph::{GlyphAllow, dispatch_ngin_char, start_instruction_or_propagate};
@@ -20,7 +18,7 @@ enum InterpPhase {
 
 #[derive(Debug)]
 pub struct NginInterpParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   phase: InterpPhase,
   allow: GlyphAllow,
 }
@@ -42,8 +40,8 @@ impl NginInterpParseMode {
     }
   }
 
-  fn close_interp(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_interp(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(NginValue::Interp)),
       std::mem::take(&mut self.children),
     )
@@ -107,7 +105,7 @@ impl ParseMode for NginInterpParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.children.push(child);
   }
 }

@@ -1,16 +1,13 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::common::{on_parse_capture_whitespace, starting_buf};
-use crate::core::modes::{
+use mvparser::common::{on_parse_capture_whitespace, starting_buf};
+use mvparser::modes::{
   IdentifierParseMode, IntegerParseMode, StringParseMode, is_ident_continue, is_ident_start,
 };
-use crate::core::parser::messages;
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected_closing,
-};
-use crate::core::state::DatumaState;
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected_closing};
+use mvparser::state::ParseState;
 use crate::dtct::value::DtctValue;
 
 #[derive(Debug)]
@@ -23,7 +20,7 @@ enum AttributePhase {
 #[derive(Debug)]
 pub struct AttributeParseMode {
   name: String,
-  args: Vec<DatumaState>,
+  args: Vec<ParseState>,
   phase: AttributePhase,
 }
 
@@ -36,8 +33,8 @@ impl AttributeParseMode {
     }
   }
 
-  fn close_state(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_state(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Attribute {
         name: std::mem::take(&mut self.name),
       })),
@@ -127,7 +124,7 @@ impl ParseMode for AttributeParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.args.push(child);
   }
 }

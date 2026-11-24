@@ -1,3 +1,0 @@
-text = "a";
-count = 2;
-bad = text / count;

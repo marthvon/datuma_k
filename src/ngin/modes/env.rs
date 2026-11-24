@@ -1,13 +1,11 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::common::starting_buf;
-use crate::core::modes::{is_ident_continue, is_ident_start};
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected, expected_closing, messages,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::starting_buf;
+use mvparser::modes::{is_ident_continue, is_ident_start};
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected, expected_closing};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 #[derive(Debug, PartialEq, Eq)]
@@ -32,8 +30,8 @@ impl NginEnvParseMode {
     }
   }
 
-  fn close_env(&mut self) -> DatumaState {
-    DatumaState::leaf(Box::new(NginValue::Env {
+  fn close_env(&mut self) -> ParseState {
+    ParseState::leaf(Box::new(NginValue::Env {
       name: std::mem::take(&mut self.name),
     }))
   }
@@ -108,7 +106,7 @@ impl ParseMode for NginEnvParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn incomplete_close_error(&self, state: &Option<DatumaState>) -> Option<ParseErrorKind> {
+  fn incomplete_close_error(&self, state: &Option<ParseState>) -> Option<ParseErrorKind> {
     if state.is_some() {
       None
     } else {

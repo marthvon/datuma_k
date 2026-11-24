@@ -1,3 +1,0 @@
-x = true;
-foo = 0;
-if (x) { y = 1; } foo;

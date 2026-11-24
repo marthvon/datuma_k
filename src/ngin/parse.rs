@@ -1,19 +1,17 @@
+use crate::common::messages;
 use std::path::{Path, PathBuf};
 
-use crate::core::common::files_from_dir;
-use crate::core::modes::ProgramParseMode;
-use crate::core::parser::{
-  ParseCursorMetadata, ParseError, ParseErrorKind, ParseErrorSource, ParseFile, ParseFileMetadata,
-  ParseMode, ParseStack, expected, messages, parse_stack,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::files_from_dir;
+use mvparser::modes::ProgramParseMode;
+use mvparser::parser::{ParseCursorMetadata, ParseError, ParseErrorKind, ParseErrorSource, ParseFile, ParseFileMetadata, ParseMode, ParseStack, expected, parse_stack};
+use mvparser::state::ParseState;
 use crate::ngin::modes::NginRootParseMode;
 
-pub async fn parse_file(path: &Path) -> Result<DatumaState, ParseError> {
+pub async fn parse_file(path: &Path) -> Result<ParseState, ParseError> {
   parse_tree(path).await
 }
 
-pub async fn parse_tree(path: &Path) -> Result<DatumaState, ParseError> {
+pub async fn parse_tree(path: &Path) -> Result<ParseState, ParseError> {
   parse_with_root(
     path,
     Box::new(NginRootParseMode::new()),
@@ -22,7 +20,7 @@ pub async fn parse_tree(path: &Path) -> Result<DatumaState, ParseError> {
   .await
 }
 
-pub async fn load_def_ngin(dir: &Path) -> Result<Vec<DatumaState>, ParseError> {
+pub async fn load_def_ngin(dir: &Path) -> Result<Vec<ParseState>, ParseError> {
   if !dir.exists() {
     Ok(Vec::new())
   } else if !dir.is_dir() {
@@ -46,7 +44,7 @@ pub async fn load_def_ngin(dir: &Path) -> Result<Vec<DatumaState>, ParseError> {
   }
 }
 
-pub async fn load_def_ngin_paths(paths: Vec<PathBuf>) -> Result<Vec<DatumaState>, ParseError> {
+pub async fn load_def_ngin_paths(paths: Vec<PathBuf>) -> Result<Vec<ParseState>, ParseError> {
   let mut trees = Vec::new();
   for path in paths {
     trees.push(
@@ -61,7 +59,7 @@ pub async fn load_def_ngin_paths(paths: Vec<PathBuf>) -> Result<Vec<DatumaState>
   Ok(trees)
 }
 
-pub async fn load_ngin_dir(dir: &Path) -> Result<Vec<(PathBuf, DatumaState)>, ParseError> {
+pub async fn load_ngin_dir(dir: &Path) -> Result<Vec<(PathBuf, ParseState)>, ParseError> {
   if !dir.exists() {
     Ok(Vec::new())
   } else if !dir.is_dir() {
@@ -87,7 +85,7 @@ pub async fn load_ngin_dir(dir: &Path) -> Result<Vec<(PathBuf, DatumaState)>, Pa
 
 pub async fn load_ngin_paths(
   paths: Vec<PathBuf>,
-) -> Result<Vec<(PathBuf, DatumaState)>, ParseError> {
+) -> Result<Vec<(PathBuf, ParseState)>, ParseError> {
   let mut trees = Vec::new();
   for path in paths {
     let tree = parse_tree(&path).await?;
@@ -100,7 +98,7 @@ async fn parse_with_root(
   path: &Path,
   root: Box<dyn ParseMode>,
   complete: &'static str,
-) -> Result<DatumaState, ParseError> {
+) -> Result<ParseState, ParseError> {
   let mut stack = ParseStack::with_root(root);
   let mut file = open_file(path).await?;
   run_parse_stack(&mut stack, &mut file).await?;
@@ -125,7 +123,7 @@ fn finish_tree(
   stack: ParseStack,
   source: &dyn ParseErrorSource,
   complete: &'static str,
-) -> Result<DatumaState, ParseError> {
+) -> Result<ParseState, ParseError> {
   let mut stack = stack;
   stack.dismiss_resolved();
   if stack.has_active_frames() {
@@ -133,7 +131,7 @@ fn finish_tree(
   } else {
     let root = stack.into_root();
     root
-      .into_datuma_state()
+      .into_parse_state()
       .ok_or_else(|| source.error(expected(complete)))
   }
 }
@@ -150,8 +148,8 @@ fn io_parse_error(message: String) -> ParseError {
 #[cfg(test)]
 mod tests {
   use super::*;
-  use crate::core::state::DatumaState;
-  use crate::core::state_fmt::format_datuma_tree;
+  use mvparser::state::ParseState;
+  use mvparser::state_fmt::format_parse_tree;
   use crate::ngin::value::NginValue;
   use std::path::PathBuf;
 
@@ -163,14 +161,14 @@ mod tests {
     ngin_dir().join(name)
   }
 
-  fn ngin_kind(state: &DatumaState) -> Option<&NginValue> {
+  fn ngin_kind(state: &ParseState) -> Option<&NginValue> {
     state
       .value
       .as_ref()
       .and_then(|value| value.as_any().downcast_ref::<NginValue>())
   }
 
-  fn contains_kind(state: &DatumaState, want: fn(&NginValue) -> bool) -> bool {
+  fn contains_kind(state: &ParseState, want: fn(&NginValue) -> bool) -> bool {
     ngin_kind(state).is_some_and(want)
       || state
         .children
@@ -183,7 +181,7 @@ mod tests {
     let state = parse_file(&fixture("sample.ngin"))
       .await
       .unwrap_or_else(|err| panic!("{err}"));
-    let dump = format_datuma_tree(&state);
+    let dump = format_parse_tree(&state);
     assert!(
       contains_kind(&state, |v| matches!(v, NginValue::File)),
       "missing file\n{dump}"
@@ -232,13 +230,13 @@ mod tests {
       .expect_err("=> before | should fail");
   }
 
-  fn contains_fn(state: &DatumaState, name: &str) -> bool {
+  fn contains_fn(state: &ParseState, name: &str) -> bool {
     matches!(
       state
         .value
         .as_ref()
-        .and_then(|value| value.as_any().downcast_ref::<crate::core::value::CoreValue>()),
-      Some(crate::core::value::CoreValue::FunctionDef(def)) if def == name
+        .and_then(|value| value.as_any().downcast_ref::<mvparser::value::CoreValue>()),
+      Some(mvparser::value::CoreValue::FunctionDef(def)) if def == name
     ) || state.children.iter().any(|child| contains_fn(child, name))
   }
 

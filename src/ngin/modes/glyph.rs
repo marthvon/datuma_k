@@ -1,5 +1,6 @@
-use crate::core::modes::{InstructionParseMode, KeywordFlags, is_statement_start};
-use crate::core::parser::{ParseStep, ParseStepMutation, ParsetStepFlow, expected, messages};
+use crate::common::messages;
+use mvparser::modes::{InstructionParseMode, KeywordFlags, is_statement_start};
+use mvparser::parser::{ParseStep, ParseStepMutation, ParsetStepFlow, expected};
 
 use super::emit::NginEmitStarter;
 use super::file::NginFileParseMode;

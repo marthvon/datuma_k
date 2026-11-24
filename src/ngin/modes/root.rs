@@ -1,16 +1,14 @@
 use std::fmt::Display;
 use std::write;
 
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-};
-use crate::core::state::DatumaState;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow};
+use mvparser::state::ParseState;
 
 use super::glyph::{GlyphAllow, dispatch_ngin_char};
 
 #[derive(Debug, Default)]
 pub struct NginRootParseMode {
-  tree: DatumaState,
+  tree: ParseState,
 }
 
 impl NginRootParseMode {
@@ -46,11 +44,11 @@ impl ParseMode for NginRootParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.tree.adopt(child);
   }
 
-  fn into_datuma_state(self: Box<Self>) -> Option<DatumaState> {
+  fn into_parse_state(self: Box<Self>) -> Option<ParseState> {
     Some(self.tree)
   }
 }

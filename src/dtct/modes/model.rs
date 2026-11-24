@@ -1,16 +1,13 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
 use super::field::FieldParseMode;
 use super::trait_list::TraitListParseMode;
-use crate::core::common::{on_parse_capture_whitespace, starting_buf};
-use crate::core::modes::{is_ident_continue, is_ident_start};
-use crate::core::parser::messages;
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected, expected_closing,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::{on_parse_capture_whitespace, starting_buf};
+use mvparser::modes::{is_ident_continue, is_ident_start};
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected, expected_closing};
+use mvparser::state::ParseState;
 use crate::dtct::value::DtctValue;
 
 #[derive(Debug, PartialEq)]
@@ -28,7 +25,7 @@ enum ModelPhase {
 pub struct ModelParseMode {
   name: String,
   traits: Vec<String>,
-  fields: Vec<DatumaState>,
+  fields: Vec<ParseState>,
   phase: ModelPhase,
 }
 
@@ -42,8 +39,8 @@ impl ModelParseMode {
     }
   }
 
-  fn close_model(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_model(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(DtctValue::Model {
         name: std::mem::take(&mut self.name),
         traits: std::mem::take(&mut self.traits),
@@ -129,7 +126,7 @@ impl ParseMode for ModelParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     match self.phase {
       ModelPhase::WaitingTraits => {
         self.traits = child

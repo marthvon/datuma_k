@@ -1,11 +1,9 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::parser::{
-  ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow,
-  expected, messages,
-};
-use crate::core::state::DatumaState;
+use mvparser::parser::{ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected};
+use mvparser::state::ParseState;
 use crate::ngin::value::NginValue;
 
 use super::path::NginPathParseMode;
@@ -21,7 +19,7 @@ enum FilePhase {
 
 #[derive(Debug)]
 pub struct NginFileParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   phase: FilePhase,
 }
 
@@ -33,8 +31,8 @@ impl NginFileParseMode {
     }
   }
 
-  fn close_file(&mut self) -> DatumaState {
-    DatumaState::node(
+  fn close_file(&mut self) -> ParseState {
+    ParseState::node(
       Some(Box::new(NginValue::File)),
       std::mem::take(&mut self.children),
     )
@@ -69,7 +67,7 @@ impl ParseMode for NginFileParseMode {
         } else if input.is_whitespace() {
           Ok((ParseStepMutation::Nothing, ParsetStepFlow::Captured))
         } else {
-          Err(crate::core::parser::expected_closing(
+          Err(mvparser::parser::expected_closing(
             messages::NGIN_PATH_GT,
           ))
         }
@@ -93,7 +91,7 @@ impl ParseMode for NginFileParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     match self.phase {
       FilePhase::Path => {
         self.children.push(child);
@@ -106,7 +104,7 @@ impl ParseMode for NginFileParseMode {
     }
   }
 
-  fn close_after_adopt(&mut self) -> Option<DatumaState> {
+  fn close_after_adopt(&mut self) -> Option<ParseState> {
     if self.phase == FilePhase::Template && self.children.len() == 2 {
       Some(self.close_file())
     } else {

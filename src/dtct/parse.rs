@@ -1,15 +1,13 @@
+use crate::common::messages;
 use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
 use lasso::ThreadedRodeo;
 use tokio::task::JoinSet;
 
-use crate::core::common::files_from_dir;
-use crate::core::parser::{
-  ParseCursorMetadata, ParseError, ParseErrorKind, ParseErrorSource, ParseFile, ParseFileMetadata,
-  ParseStack, expected, messages, parse_stack,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::files_from_dir;
+use mvparser::parser::{ParseCursorMetadata, ParseError, ParseErrorKind, ParseErrorSource, ParseFile, ParseFileMetadata, ParseStack, expected, parse_stack};
+use mvparser::state::ParseState;
 use crate::dtct::materialize::{MaterializeError, materialize, materialize_with};
 use crate::dtct::modes::DtctRootParseMode;
 use crate::dtct::registry::{DtctDb, merge_model_names};
@@ -69,7 +67,7 @@ pub async fn load_dtct_paths(paths: Vec<PathBuf>) -> Result<DtctDb, ParseError> 
   Ok(DtctDb::build(pool, all_facts))
 }
 
-fn parse_tree_blocking(path: PathBuf) -> Result<(PathBuf, DatumaState), ParseError> {
+fn parse_tree_blocking(path: PathBuf) -> Result<(PathBuf, ParseState), ParseError> {
   tokio::runtime::Builder::new_current_thread()
     .enable_all()
     .build()
@@ -78,7 +76,7 @@ fn parse_tree_blocking(path: PathBuf) -> Result<(PathBuf, DatumaState), ParseErr
     .map(|state| (path, state))
 }
 
-async fn parse_tree(path: &Path) -> Result<DatumaState, ParseError> {
+async fn parse_tree(path: &Path) -> Result<ParseState, ParseError> {
   let mut stack = ParseStack::with_root(Box::new(DtctRootParseMode::new()));
   let mut file = open_file(path).await?;
   run_parse_stack(&mut stack, &mut file).await?;
@@ -117,7 +115,7 @@ fn dtct_paths(dir: &Path) -> Result<Vec<PathBuf>, ParseError> {
 fn finish_tree(
   stack: ParseStack,
   source: &dyn ParseErrorSource,
-) -> Result<DatumaState, ParseError> {
+) -> Result<ParseState, ParseError> {
   let mut stack = stack;
   stack.dismiss_resolved();
   if stack.has_active_frames() {
@@ -125,7 +123,7 @@ fn finish_tree(
   } else {
     let root = stack.into_root();
     root
-      .into_datuma_state()
+      .into_parse_state()
       .ok_or_else(|| source.error(expected(messages::COMPLETE_INPUT)))
   }
 }

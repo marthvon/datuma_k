@@ -1,15 +1,12 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::{vec, write};
 
 use super::type_expr::TypeExprParseMode;
-use crate::core::common::{on_parse_capture_whitespace, starting_buf};
-use crate::core::modes::{is_ident_continue, is_ident_start};
-use crate::core::parser::messages;
-use crate::core::parser::{
-  ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation,
-  ParsetStepFlow, expected, expected_closing,
-};
-use crate::core::state::DatumaState;
+use mvparser::common::{on_parse_capture_whitespace, starting_buf};
+use mvparser::modes::{is_ident_continue, is_ident_start};
+use mvparser::parser::{ParseErrorKind, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected, expected_closing};
+use mvparser::state::ParseState;
 use crate::dtct::value::DtctValue;
 
 #[derive(Debug)]
@@ -24,7 +21,7 @@ enum FieldPhase {
 #[derive(Debug)]
 pub struct FieldParseMode {
   name: String,
-  ty: Option<DatumaState>,
+  ty: Option<ParseState>,
   phase: FieldPhase,
 }
 
@@ -109,16 +106,16 @@ impl ParseMode for FieldParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.ty = Some(child);
     self.phase = FieldPhase::Ready;
   }
 }
 
 impl FieldParseMode {
-  fn close_state(&mut self) -> Result<Option<DatumaState>, ParseErrorKind> {
+  fn close_state(&mut self) -> Result<Option<ParseState>, ParseErrorKind> {
     let ty = self.ty.take().ok_or(expected(messages::TYPE_EXPR))?;
-    Ok(Some(DatumaState::node(
+    Ok(Some(ParseState::node(
       Some(Box::new(DtctValue::Field {
         name: std::mem::take(&mut self.name),
       })),

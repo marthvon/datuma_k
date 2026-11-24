@@ -1,12 +1,10 @@
+use crate::common::messages;
 use std::fmt::Display;
 use std::write;
 
-use crate::core::parser::{
-  ParseErrorKind, ParseErrorSource, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep,
-  ParseStepMutation, ParsetStepFlow, expected, messages,
-};
-use crate::core::state::DatumaState;
-use crate::core::value::CoreValue;
+use mvparser::parser::{ParseErrorKind, ParseErrorSource, ParseMode, ParseResolveMutation, ParseResolveStep, ParseStep, ParseStepMutation, ParsetStepFlow, expected};
+use mvparser::state::ParseState;
+use mvparser::value::CoreValue;
 use crate::ngin::value::NginValue;
 
 use super::glyph::GlyphAllow;
@@ -51,7 +49,7 @@ impl ParseMode for NginFenceParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn incomplete_close_error(&self, state: &Option<DatumaState>) -> Option<ParseErrorKind> {
+  fn incomplete_close_error(&self, state: &Option<ParseState>) -> Option<ParseErrorKind> {
     if state.is_some() {
       None
     } else {
@@ -62,7 +60,7 @@ impl ParseMode for NginFenceParseMode {
 
 #[derive(Debug)]
 pub struct NginTemplateParseMode {
-  children: Vec<DatumaState>,
+  children: Vec<ParseState>,
   lit: String,
   close_ticks: u8,
   in_plus: bool,
@@ -88,7 +86,7 @@ impl NginTemplateParseMode {
     if !self.lit.is_empty() {
       self
         .children
-        .push(DatumaState::leaf(Box::new(CoreValue::String(
+        .push(ParseState::leaf(Box::new(CoreValue::String(
           std::mem::take(&mut self.lit),
         ))));
     }
@@ -101,13 +99,13 @@ impl NginTemplateParseMode {
     self.close_ticks = 0;
   }
 
-  fn close_template(&mut self) -> DatumaState {
+  fn close_template(&mut self) -> ParseState {
     if self.pending_at {
       self.lit.push('@');
       self.pending_at = false;
     }
     self.flush_lit();
-    DatumaState::node(
+    ParseState::node(
       Some(Box::new(NginValue::Template {
         line: self.line,
         col: self.col,
@@ -171,11 +169,11 @@ impl ParseMode for NginTemplateParseMode {
     Ok((ParseResolveMutation::Dismiss, ParsetStepFlow::Propagate))
   }
 
-  fn adopt(&mut self, child: DatumaState) {
+  fn adopt(&mut self, child: ParseState) {
     self.children.push(child);
   }
 
-  fn incomplete_close_error(&self, state: &Option<DatumaState>) -> Option<ParseErrorKind> {
+  fn incomplete_close_error(&self, state: &Option<ParseState>) -> Option<ParseErrorKind> {
     if state.is_some() {
       None
     } else {

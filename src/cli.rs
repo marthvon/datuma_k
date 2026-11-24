@@ -3,7 +3,7 @@ use std::path::{Path, PathBuf};
 
 use serde::Serialize;
 
-use crate::core::common::is_dangerous_dir;
+use crate::common::is_dangerous_dir;
 use crate::dkcache::commit;
 use crate::dtct::Dim;
 use crate::project::{
